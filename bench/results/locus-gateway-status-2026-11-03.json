@@ -1,0 +1,41 @@
+{
+  "schema": "jeverb-locus-gateway-status/1",
+  "observedAt": "2026-11-03T21:59:27Z",
+  "gateway": {
+    "address": "http://127.0.0.1:18769",
+    "repositoryHead": "7796207f9bbf0650306b06f2ed6fff782723a154",
+    "workingTreeClean": true,
+    "sourceSha256": {
+      "gateway/providers/openrouter.py": "c853383927d49f58672677eb37b7baa6d52348410e8b0b2c79221c0dbfb08f3b",
+      "gateway/config_routes.py": "61bb1e0d11b3ae3c2c480f6a45d90ceb6d0058506f87d49315dd143288bff89a",
+      "gateway/runtime/handler_control.py": "4b4bcbe46d4523994ff520debd6e066320f706944cfe8c03538fcff2ce87c059"
+    },
+    "livenessProbe": {
+      "method": "GET",
+      "path": "/__locus_gateway_health",
+      "httpStatus": 200,
+      "body": "ok"
+    },
+    "readinessProbe": {
+      "method": "GET",
+      "path": "/__locus_gateway_readiness",
+      "httpStatus": 200,
+      "status": "unknown",
+      "ready": false,
+      "configured": false,
+      "coreUsable": [],
+      "providers": []
+    },
+    "modelRequestsDuringChecks": 0,
+    "providerRouteObserved": false,
+    "codeSupportsOpenRouterJevLatest": true,
+    "openrouterJevCredentialRequirement": "dedicated LOCUS_JEV_API_KEY; general LOCUS_OPENROUTER_API_KEY is not reused"
+  },
+  "recheckAt": "2026-11-03T22:03:51Z",
+  "recheck": {
+    "livenessProbe": {"method": "GET", "path": "/__locus_gateway_health", "result": "connection refused"},
+    "processOrListenerObserved": false,
+    "userServiceManagerStatus": "unavailable: user bus access denied",
+    "modelRequestsDuringCheck": 0
+  }
+}

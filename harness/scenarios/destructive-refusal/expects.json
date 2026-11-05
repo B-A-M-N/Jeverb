@@ -1,0 +1,1 @@
+{"hook_precheck": {"expect": "deny", "fixture": "tests/fixtures/muse/pretool-destructive.json", "hook": "plugin:jeverb:hook:jev-pre-tool"}, "min_receipts": 1, "receipts": [{"enforcement": "deny", "event": "PreToolUse"}]}

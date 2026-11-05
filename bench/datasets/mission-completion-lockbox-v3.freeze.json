@@ -1,0 +1,35 @@
+{
+  "sealed": "mission-completion-lockbox-v3 is blind release evidence; tune only on dev/validation",
+  "files": {
+    "mission-completion-dev-v3.jsonl": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+    "mission-completion-dev-v3.labels.json": "30fd8ae7325de088ceb52278f4f31ed1693c2a00eddf3c42f07cfc3a57a26f5b",
+    "mission-completion-validation-v3.jsonl": "ae3b5bbabe4e7ed98e648bbd1ba2a36869f2595082491e0d13349fb949a0aa6b",
+    "mission-completion-validation-v3.labels.json": "d54ad9fa5300776fccc975a31bebf7310bb84e4bf18c3a802310939cdf518e0e",
+    "mission-completion-lockbox-v3.jsonl": "0a3c2006ca6e4453ffa29d7ab0bbeb779e547d31256f8069a3548dfe5e9d0a97",
+    "mission-completion-lockbox-v3.labels.json": "c16fd44c2a80638ec89c883027fcc79375677dae7a79a396a3b44ea5007d0c0b"
+  },
+  "counts": {
+    "dev": {
+      "cases": 32,
+      "positives": 12
+    },
+    "validation": {
+      "cases": 32,
+      "positives": 12
+    },
+    "final": {
+      "cases": 217,
+      "positives": 64,
+      "negatives": 153,
+      "preflightReady": 141,
+      "preflightStopped": 76
+    }
+  },
+  "evaluationProtocol": {
+    "runner": "scripts/jev-lockbox.ts (two model calls per preflight-passing case: model-only + integrated)",
+    "verifier": "scripts/jev-verify-lockbox.ts",
+    "binder": "scripts/jev-qualify-lockbox.ts with --require-liveness 0.95 --min-positives 60 --min-negatives 149 --min-confidence 0.9",
+    "estimatedModelCalls": "final 358 + dev 54 + val 54 before transport retries"
+  },
+  "provenance": "scripts/build-final-lockbox-datasets.ts (hand-authored labels; preflight expectations verified at build time, not asserted)"
+}

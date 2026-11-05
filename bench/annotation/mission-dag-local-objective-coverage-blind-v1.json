@@ -1,0 +1,366 @@
+{
+  "schema": "jev-blind-objective-coverage-annotation/1",
+  "instructions": "Two reviewers independently compare the original objective with the declared criteria. Return every explicit requirement not represented, or mark coverage ambiguous. Do not consult provisional labels, model outputs, or each other. This packet supports scope coverage only; it contains no verifier observations and cannot label criterion fulfillment.",
+  "cases": [
+    {
+      "caseRef": "df2a94fdca13181c",
+      "objective": "Create a service configuration with three retries and a 250 millisecond timeout.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "The retry limit is three."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The request timeout is 250 milliseconds."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "ddb7a63d5309cd0c",
+      "objective": "Allow the operator role to read and write reports while denying administrative access.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "Operator report reads are allowed."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "Operator report writes are allowed and admin actions are denied."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "c90288f2419f1692",
+      "objective": "Run encrypted backups nightly and restore a full account in under one hour.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "A nightly backup is produced with encryption enabled."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The full-account restore completes in less than 60 minutes."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "ce42416fb6136486",
+      "objective": "Index all submitted documents within one minute and rank exact title matches first.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "Index freshness remains below one minute."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "Exact title matches rank first in the query fixture."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "2e1c93c5eab5891b",
+      "objective": "Deliver account alerts and retry transient delivery failures at most twice.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "Account alerts reach the configured delivery sink."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "Transient failures are retried no more than twice."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "b625196334586b14",
+      "objective": "Serve API v2 reads and writes alongside v1 and give six months notice before v1 sunset.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "API v2 reads and writes succeed during coexistence."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The v1 sunset notice is at least six months."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "090939033e7d4670",
+      "objective": "Create encrypted nightly backups in every region and verify a full-account restore under one hour.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "A nightly encrypted backup record is available."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "A primary-region restore measurement is recorded."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "beb7b8321e24e45f",
+      "objective": "Serve API v2 reads and writes alongside v1 during migration.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "The v2 read route probe is recorded."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The v2 write route probe result is recorded."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "ff08280897f7bdc8",
+      "objective": "Redact every access token from audit records while preserving actor identity.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "The audit redaction sample is recorded."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "A second audit redaction sample is recorded."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "270ce4a8ba1ea3f9",
+      "objective": "Make payment submission idempotent when the provider retries a timed-out request.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "The available smoke-test report is captured."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The test report is bound to the current candidate."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "66e7324c40600570",
+      "objective": "Show latency and error-rate dashboards with alerts in every region.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "Latency and error-rate panels are available in the primary region."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "The primary-region alert route is recorded."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    },
+    {
+      "caseRef": "5cb0270f1989eb9c",
+      "objective": "Index the full document corpus within one minute and rank exact title matches first.",
+      "criteria": [
+        {
+          "id": "criterion-01",
+          "statement": "A bounded indexing sample is measured."
+        },
+        {
+          "id": "criterion-02",
+          "statement": "A bounded exact-title ranking sample is measured."
+        }
+      ],
+      "reviewerA": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "reviewerB": {
+        "reviewerId": null,
+        "coverage": "pending",
+        "omittedRequirements": [],
+        "ambiguities": []
+      },
+      "adjudication": {
+        "status": "pending",
+        "coverage": null
+      }
+    }
+  ]
+}

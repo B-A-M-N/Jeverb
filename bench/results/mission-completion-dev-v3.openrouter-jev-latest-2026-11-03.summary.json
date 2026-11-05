@@ -1,0 +1,137 @@
+{
+  "schema": "jeverb-openrouter-lockbox-summary/1",
+  "evaluatedAt": "2026-11-03",
+  "provider": "openrouter",
+  "endpoint": "https://openrouter.ai/api/alpha/decisions",
+  "requestedModel": "typesafe/jev-latest",
+  "wireModel": "~typesafe/jev-latest",
+  "servedModel": "typesafe/jev-1.14-20261014",
+  "adapterVersion": "0.6.3",
+  "policyVersion": "mission-closure/1",
+  "calibrationVersion": "mission-lockbox/1",
+  "minConfidence": 0.9,
+  "dataset": "bench/datasets/mission-completion-dev-v3.jsonl",
+  "datasetHash": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+  "questionHash": "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63",
+  "identityProbe": {
+    "caseId": "dev3-cors-policy-full-complete-v0",
+    "requestId": "gen-dec-1793739045-CwkEl8Cjzg1aUHkiqIok",
+    "scored": false,
+    "inputTokens": 733,
+    "outputTokens": 57,
+    "reportedCostUsd": 0.000030786,
+    "latencyMs": 519
+  },
+  "requestAccounting": {
+    "maximumRequests": 55,
+    "requestsConsumed": 55,
+    "responsesMeasured": 55,
+    "responsesWithReportedCost": 55,
+    "retries": 0,
+    "stoppedEarly": false
+  },
+  "providerTelemetry": {
+    "inputTokens": 39921,
+    "outputTokens": 3154,
+    "reportedCostUsd": 0.001676682,
+    "latencyMs": {
+      "min": 119,
+      "mean": 194.22,
+      "p50": 186,
+      "p95": 289,
+      "max": 519
+    }
+  },
+  "metrics": {
+    "cases": 32,
+    "positives": 12,
+    "negatives": 20,
+    "modelOnlyCorrect": 19,
+    "modelOnlyFalseCompleteVotes": 9,
+    "modelOnlyFalseCompleteRate": 0.45,
+    "integratedCorrect": 16,
+    "positiveCompletions": 2,
+    "falseTerminalCompletions": 0,
+    "thresholdHolds": 12,
+    "semanticRefusals": 8,
+    "preflightStops": 10,
+    "modelErrors": 0,
+    "providerOrProtocolErrors": 0,
+    "integratedConfidenceOnPositiveCases": {
+      "min": 0.53,
+      "mean": 0.7333,
+      "max": 0.95
+    },
+    "integratedPCompleteOnPositiveCases": {
+      "min": 0.65,
+      "mean": 0.8,
+      "max": 0.96
+    }
+  },
+  "confusion": {
+    "modelOnly": {
+      "COMPLETE": { "COMPLETE": 12 },
+      "BLOCKED": { "BLOCKED": 2 },
+      "INCOMPLETE": { "COMPLETE": 9, "INCOMPLETE": 5 },
+      "INSUFFICIENT_EVIDENCE": { "INCOMPLETE": 4 }
+    },
+    "integrated": {
+      "COMPLETE": { "COMPLETE": 2, "INSUFFICIENT_EVIDENCE": 10 },
+      "BLOCKED": { "BLOCKED": 2 },
+      "INCOMPLETE": { "INCOMPLETE": 12, "INSUFFICIENT_EVIDENCE": 2 },
+      "INSUFFICIENT_EVIDENCE": { "INCOMPLETE": 4 }
+    }
+  },
+  "probabilityCalibration": {
+    "method": "multiclass Brier and log loss; top-label ECE in five fixed confidence bins",
+    "candidateModelOnly": {
+      "n": 32,
+      "brier": 0.5691,
+      "logLoss": 1.1145,
+      "topLabelEce": 0.1584
+    },
+    "candidateIntegratedRawVotes": {
+      "n": 22,
+      "brier": 0.3395,
+      "logLoss": 0.6892,
+      "topLabelEce": 0.0759
+    },
+    "gatewayIntegratedRawVotes": {
+      "n": 22,
+      "brier": 0.3305,
+      "logLoss": 0.6734,
+      "topLabelEce": 0.17
+    },
+    "limitations": "Small, clustered, non-adjudicated development labels; these calibration estimates are descriptive only."
+  },
+  "pairedBaselineComparison": {
+    "baselineReceipts": "bench/results/mission-completion-dev-v3.jevgateway-3stage-r1.receipts.jsonl",
+    "candidateReceipts": "bench/results/mission-completion-dev-v3.openrouter-jev-latest-2026-11-03.receipts.jsonl",
+    "sameModelChoiceCases": 32,
+    "sameIntegratedChoiceCases": 32,
+    "sameIntegratedOutcomeCases": 32,
+    "modelConfidenceMeanAbsoluteDelta": 0.0294,
+    "modelConfidenceMeanSignedDeltaCandidateMinusBaseline": 0.0044,
+    "integratedConfidenceMeanAbsoluteDelta": 0.0423,
+    "integratedConfidenceMeanSignedDeltaCandidateMinusBaseline": -0.0177,
+    "result": "no_decision_quality_improvement_measured"
+  },
+  "statisticalUncertainty": {
+    "method": "percentile cluster bootstrap by exact objective text",
+    "clusters": 6,
+    "positiveCasesPerCluster": 2,
+    "resamples": 100000,
+    "randomSeed": 20261103,
+    "intervalLevel": 0.95,
+    "modelOnlyAccuracyInterval": [0.4839, 0.697],
+    "integratedAccuracyInterval": [0.3667, 0.6061],
+    "positiveCompletionRateInterval": [0, 0.3333],
+    "limitations": "Six authored objective clusters are too few for a stable release interval; labels lack independent adjudication."
+  },
+  "independentlyVerified": {
+    "ok": true,
+    "errors": [],
+    "verifier": "scripts/jev-verify-lockbox.ts"
+  },
+  "qualification": "rejected; development labels are not independently adjudicated and release population floors are unmet"
+}

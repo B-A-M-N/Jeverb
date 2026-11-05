@@ -1,0 +1,27 @@
+{
+  "dataset": "bench/datasets/mission-completion-lockbox-v1.jsonl",
+  "datasetRevision": "5e68db62cb9b1371201211d426e7a754a79ce697fd98fa1290f032b12302280b",
+  "configuredModel": "typesafe/jev-1.14",
+  "adapterVersion": "0.6.3",
+  "modelVersion": "typesafe/jev-1.14-20261014",
+  "backend": "jev-gateway",
+  "questionHash": "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63",
+  "policyVersion": "mission-closure/1",
+  "minConfidence": 0.9,
+  "observedModels": [
+    "typesafe/jev-1.14-20261014"
+  ],
+  "benchVersion": "mission-lockbox/1",
+  "calibrationPremise": "policy.calibrated=true: integrated stage measures the production path as if the model under test were the calibrated one",
+  "cases": 40,
+  "modelCorrect": 20,
+  "integratedCorrect": 39,
+  "preflightReadyOnCompleteExpected": {
+    "ready": 4,
+    "total": 4
+  },
+  "preflightStoppedOnNonCompleteExpected": {
+    "stopped": 36,
+    "total": 36
+  }
+}

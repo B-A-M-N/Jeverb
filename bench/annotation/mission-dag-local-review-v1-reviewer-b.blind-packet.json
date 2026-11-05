@@ -1,0 +1,1174 @@
+{
+  "schema": "jev-blind-dag-local-review/1",
+  "reviewer": "B",
+  "reviewerId": null,
+  "instructions": "Independently compare each original objective with its declared criteria, then judge each isolated criterion only from its host graph/verifier context. Do not consult provisional case labels, model outputs, or another reviewer's packet. Record all omitted/ambiguous scope and choose FULFILLED, NOT_FULFILLED, or UNCERTAIN per criterion.",
+  "coverageCases": [
+    {
+      "caseRef": "df2a94fdca13181c",
+      "objective": "Create a service configuration with three retries and a 250 millisecond timeout.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "The retry limit is three."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The request timeout is 250 milliseconds."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "ddb7a63d5309cd0c",
+      "objective": "Allow the operator role to read and write reports while denying administrative access.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "Operator report reads are allowed."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "Operator report writes are allowed and admin actions are denied."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "c90288f2419f1692",
+      "objective": "Run encrypted backups nightly and restore a full account in under one hour.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "A nightly backup is produced with encryption enabled."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The full-account restore completes in less than 60 minutes."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "ce42416fb6136486",
+      "objective": "Index all submitted documents within one minute and rank exact title matches first.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "Index freshness remains below one minute."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "Exact title matches rank first in the query fixture."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "2e1c93c5eab5891b",
+      "objective": "Deliver account alerts and retry transient delivery failures at most twice.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "Account alerts reach the configured delivery sink."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "Transient failures are retried no more than twice."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "b625196334586b14",
+      "objective": "Serve API v2 reads and writes alongside v1 and give six months notice before v1 sunset.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "API v2 reads and writes succeed during coexistence."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The v1 sunset notice is at least six months."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "090939033e7d4670",
+      "objective": "Create encrypted nightly backups in every region and verify a full-account restore under one hour.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "A nightly encrypted backup record is available."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "A primary-region restore measurement is recorded."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "beb7b8321e24e45f",
+      "objective": "Serve API v2 reads and writes alongside v1 during migration.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "The v2 read route probe is recorded."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The v2 write route probe result is recorded."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "ff08280897f7bdc8",
+      "objective": "Redact every access token from audit records while preserving actor identity.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "The audit redaction sample is recorded."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "A second audit redaction sample is recorded."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "270ce4a8ba1ea3f9",
+      "objective": "Make payment submission idempotent when the provider retries a timed-out request.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "The available smoke-test report is captured."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The test report is bound to the current candidate."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "66e7324c40600570",
+      "objective": "Show latency and error-rate dashboards with alerts in every region.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "Latency and error-rate panels are available in the primary region."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "The primary-region alert route is recorded."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    },
+    {
+      "caseRef": "5cb0270f1989eb9c",
+      "objective": "Index the full document corpus within one minute and rank exact title matches first.",
+      "criteria": [
+        {
+          "criterionId": "criterion-01",
+          "requirement": "A bounded indexing sample is measured."
+        },
+        {
+          "criterionId": "criterion-02",
+          "requirement": "A bounded exact-title ranking sample is measured."
+        }
+      ],
+      "objectiveCoverage": {
+        "expected": null,
+        "omittedRequirements": [],
+        "ambiguities": []
+      }
+    }
+  ],
+  "criterionCases": [
+    {
+      "caseRef": "df2a94fdca13181c",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "The retry limit is three.",
+        "claimedOutcome": "Observed config value: retries=3.",
+        "missionRevision": "570037c4a01a18a95ccdcddcbab97f99e33d7af49a4740b2661477bb095e3e69",
+        "candidateDigest": "8afb0cb83b416b8082666e6fdc182f48aac32380f37a9e2ee169c6182e8cd993",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "89da50cebcdcdf67fd35d448c4cd6dd0ccab1a12667a0725eba49b5769902f44",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 260e1afb9eccb1e1bbe173985fcb694c5c8fde9c45a056e42f118bb585ef74ea)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "df2a94fdca13181c",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The request timeout is 250 milliseconds.",
+        "claimedOutcome": "Observed config value: timeout_ms=250.",
+        "missionRevision": "570037c4a01a18a95ccdcddcbab97f99e33d7af49a4740b2661477bb095e3e69",
+        "candidateDigest": "8afb0cb83b416b8082666e6fdc182f48aac32380f37a9e2ee169c6182e8cd993",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "d1633d7b91041fe049f76de13ea5d9d2911b10a8579d404fc165fed96d41948c",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 7b93514c5560489889196733b944f746d7f887da874bffd8c24ba1cbff1b38b6)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ddb7a63d5309cd0c",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "Operator report reads are allowed.",
+        "claimedOutcome": "Host-observed matrix: operator/read_reports=allow.",
+        "missionRevision": "a7b54815f9cd9e127d2ebb53b54486bb2d41a8e42d9a3cc75cdb5607bf5da734",
+        "candidateDigest": "4762d9330022d6f2ba425f94e1cc042916b25e242799f002918d0a5221d1f1ff",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "7d66016f03f739a5e98897aabbf733a57d21bcf7adf617066cc51a30715391d0",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree a16629128a61466fe5909092e4838795e0208b6c59658fddc6d1fd2c2749ba79)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ddb7a63d5309cd0c",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "Operator report writes are allowed and admin actions are denied.",
+        "claimedOutcome": "Host-observed matrix: operator/write_reports=allow; operator/admin=deny.",
+        "missionRevision": "a7b54815f9cd9e127d2ebb53b54486bb2d41a8e42d9a3cc75cdb5607bf5da734",
+        "candidateDigest": "4762d9330022d6f2ba425f94e1cc042916b25e242799f002918d0a5221d1f1ff",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "613a39b056c9d6bb3396fc4b609ac27148c3c9250e61da9b97ff77cdc009ee50",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 2edea9e05ac102585d1c3cf48f7f2e7943b73a73a759d4415f9395bf52da33aa)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "c90288f2419f1692",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "A nightly backup is produced with encryption enabled.",
+        "claimedOutcome": "Host-observed backup record: schedule=nightly; encryption=enabled.",
+        "missionRevision": "ffddb3461243d56ea63de6227093e20b63bd1bf55a9a10125b23ae2a7c4d35d4",
+        "candidateDigest": "62f044a73e4a64422441d2480b8ded559d3a802b0e7c5c0572de1c201a257581",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "a2d58df21a369afd839d5a26858088f7ac04ecc84d88fd8a857a963d5af89bae",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree bb7cd3b6c0cd7553f815610c5206d46fe44c4550972f0451331414fb0c6edb70)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "c90288f2419f1692",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The full-account restore completes in less than 60 minutes.",
+        "claimedOutcome": "Host-observed restore duration: 42 minutes.",
+        "missionRevision": "ffddb3461243d56ea63de6227093e20b63bd1bf55a9a10125b23ae2a7c4d35d4",
+        "candidateDigest": "62f044a73e4a64422441d2480b8ded559d3a802b0e7c5c0572de1c201a257581",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "9c8754283bebb433d6389b908926508ad0e37bab0a1cff4dd01d87b332635313",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 47c2d3b2957cd83de88cb92f21a5b6c68466a40077b439c8813f980af1025487)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ce42416fb6136486",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "Index freshness remains below one minute.",
+        "claimedOutcome": "Host-observed freshness probe: maximum lag=38 seconds.",
+        "missionRevision": "3fb1df3711b5709326d4d04391bfe45ca105e85745ceeab9e6dd3f4710fd31ac",
+        "candidateDigest": "d9bbc7cf924be8d06440a979ea603b9b23cc87908bce4dda61e5030e907b6e8e",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "237bfa236362d92bf763085248b6bd4ece1d3bd331710a74d88ab3c285de26ce",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 809161adfab50fb7356e05096dec40113438e9cb32b76e315fed5606afee83b6)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ce42416fb6136486",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "Exact title matches rank first in the query fixture.",
+        "claimedOutcome": "Host-observed rank check: exact_title_position=1 for every fixture query.",
+        "missionRevision": "3fb1df3711b5709326d4d04391bfe45ca105e85745ceeab9e6dd3f4710fd31ac",
+        "candidateDigest": "d9bbc7cf924be8d06440a979ea603b9b23cc87908bce4dda61e5030e907b6e8e",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "e069ed040caa70c28fe72da90efcf193ee4d31736e1356d113a94d55efc9413f",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 3a131f717eb5b2e66cdb634de89e4adae4130c3a3e81329a88bfb01b96938b66)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "2e1c93c5eab5891b",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "Account alerts reach the configured delivery sink.",
+        "claimedOutcome": "Host-observed delivery record: alert=delivered.",
+        "missionRevision": "bcfcf8d970a7285c10f9a7d167d97705402fdf4558fa60a1f2e2aaec199351c6",
+        "candidateDigest": "28933e600b22ad0a41a32ebbc4ef996765c1f1c795fbde5bc79a7f65a4de8889",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "6c1c4cd7c0bb25edc9da1a55a0d0f7e9226840696b78ee087411b0145bb38a5c",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree b08230523adb529948aa1b1843c5a11a5a694cedd8cb636e39b00bfe92cdfa03)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "2e1c93c5eab5891b",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "Transient failures are retried no more than twice.",
+        "claimedOutcome": "Host-observed retry record: transient_retries=2; terminal=delivered.",
+        "missionRevision": "bcfcf8d970a7285c10f9a7d167d97705402fdf4558fa60a1f2e2aaec199351c6",
+        "candidateDigest": "28933e600b22ad0a41a32ebbc4ef996765c1f1c795fbde5bc79a7f65a4de8889",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "5cdd727a37e71418115fb70b01656d90e3928511bcb533f06c1708cb569802f3",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 22a47564c634aafab20d9e89488553440b82af90f7f19b12f7e56af02ebffce9)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "b625196334586b14",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "API v2 reads and writes succeed during coexistence.",
+        "claimedOutcome": "Host-observed route probes: v2_read=200; v2_write=201; v1=available.",
+        "missionRevision": "54f6453fc76d77dbb67e2a48cc92e561495814fa92b490a79d87f19128975d13",
+        "candidateDigest": "f80ce2b415c9eaa49858eaed15969d7f43ce556db1601f7ac552d5fab0027941",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "47f2d1e8e8fb1182a18e6998dbb60f30c0096c232f9eabad5bceb19a7a1d0db6",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree b231a734a8846cf2142bb9e22f95964c42898e4358467e72a86299c3cf6fc5e3)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "b625196334586b14",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The v1 sunset notice is at least six months.",
+        "claimedOutcome": "Host-observed notice interval: 183 days.",
+        "missionRevision": "54f6453fc76d77dbb67e2a48cc92e561495814fa92b490a79d87f19128975d13",
+        "candidateDigest": "f80ce2b415c9eaa49858eaed15969d7f43ce556db1601f7ac552d5fab0027941",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "959573de96022b83924799a15a562d0cbdd1404db5abff08a0737f030c0e6bd4",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree a3ede158d60c355da5c4c770dec585fc6ca24d84a2ffbe6a9c39736b83f29d70)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "090939033e7d4670",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "A nightly encrypted backup record is available.",
+        "claimedOutcome": "Host-observed record covers the primary region only; secondary regions are not represented.",
+        "missionRevision": "58f18b9b246282428873a681c116f97fe8d630cf281960997e87db7f1bac8e51",
+        "candidateDigest": "d6eda56af844002de2808426cf22a6d29be613044a45e59b1b5be2bbe1dae901",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "15edcc5be51a4595c657bc1e3de42406fc59aa2bcde8ec4646578e84267559bb",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree f11d27bfbbdc2467875849406b663e5747384ea61f962fd6f901169e3314e5c2)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "090939033e7d4670",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "A primary-region restore measurement is recorded.",
+        "claimedOutcome": "Host-observed primary-region restore duration: 41 minutes; no secondary-region restore was measured.",
+        "missionRevision": "58f18b9b246282428873a681c116f97fe8d630cf281960997e87db7f1bac8e51",
+        "candidateDigest": "d6eda56af844002de2808426cf22a6d29be613044a45e59b1b5be2bbe1dae901",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "4ec50810938a568f82a323e1637d86b93efc4ef86e952cfd66d5d2ba3d75bba1",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree ea286fe20630ae1fe3c02c715b95477300c8d8f72f217c654b20ef59a612c4af)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "beb7b8321e24e45f",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "The v2 read route probe is recorded.",
+        "claimedOutcome": "Host-observed route result: v2_read=200.",
+        "missionRevision": "289037fe7b4883b01889894e500338088452e6952ccac719b43ba1a48b267d5a",
+        "candidateDigest": "04ea6133dfcdbdb99c36af4810ce080fd24805e44f71d84276df8688ae5423b3",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "2358c5d2e36c387f62376e1b17a43456f828265e7f20631957080eea307d531a",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree ffdc15f5243d254924ff7018c0c7a1737a6a751c66305f662c5ff1ada49e93d8)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "beb7b8321e24e45f",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The v2 write route probe result is recorded.",
+        "claimedOutcome": "Host-observed route result: v2_write=unavailable; the requested write capability is not demonstrated.",
+        "missionRevision": "289037fe7b4883b01889894e500338088452e6952ccac719b43ba1a48b267d5a",
+        "candidateDigest": "04ea6133dfcdbdb99c36af4810ce080fd24805e44f71d84276df8688ae5423b3",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "1f3fa56295057749970e98a025364c3777f6bc509d482b3fb890febeeb22a686",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 58d77fa68240a6def9e8561309af8e435eb170904e41d036e99497a7475cc9d5)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ff08280897f7bdc8",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "The audit redaction sample is recorded.",
+        "claimedOutcome": "Host-observed sample A: token=[REDACTED]; actor=present.",
+        "missionRevision": "0c4a4660f1b33d956ae09d4f3fee031dec2b0b69ac66c8dcafb1f58579e51fea",
+        "candidateDigest": "8d6e89c41ccf64bf36993c873537eec5bc2006976e8f67d71e7e6a5a5fd95f2d",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "2be44fad560a6c5829723244651460e603ad356bbdcdf0f3e1284a9bc404c7e4",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 11f827c73945e306a69be955ac1920f92e821f3d0770dc00f7ec31da520494c9)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "ff08280897f7bdc8",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "A second audit redaction sample is recorded.",
+        "claimedOutcome": "Host-observed sample B for the same token path: token=[REDACTED]; actor=present.",
+        "missionRevision": "0c4a4660f1b33d956ae09d4f3fee031dec2b0b69ac66c8dcafb1f58579e51fea",
+        "candidateDigest": "8d6e89c41ccf64bf36993c873537eec5bc2006976e8f67d71e7e6a5a5fd95f2d",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "fc8ddf8a7fda9ebf8e0c028026ec551b3e49f1151b66c40df62303ebac5b6e2d",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 92bcf207cca680a4d81803ef84f1ec6f97052b2a6e5968c28dd02068382aff7a)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "270ce4a8ba1ea3f9",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "The available smoke-test report is captured.",
+        "claimedOutcome": "Host-observed report: smoke=pass; provider retry path=not exercised.",
+        "missionRevision": "87b04fd661bba9cdd5f634974d12337eecf2158e94a81dbe8e9dbfbd0449de4e",
+        "candidateDigest": "5db9e217a244d9827f3b03e965f332bd1a9e9fb3812aa11570855c1d346eb53a",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "2609cd69ac0ac0babe53dbd03d99834820d50a5f89924412893740b2e4db3819",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree a4acc44de2c26036bc53eb9498bb30d1748cc8f984ed16e165458cab77e57010)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "270ce4a8ba1ea3f9",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The test report is bound to the current candidate.",
+        "claimedOutcome": "Host-observed report digest is bound to this candidate; no idempotency assertion is present.",
+        "missionRevision": "87b04fd661bba9cdd5f634974d12337eecf2158e94a81dbe8e9dbfbd0449de4e",
+        "candidateDigest": "5db9e217a244d9827f3b03e965f332bd1a9e9fb3812aa11570855c1d346eb53a",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "246cbd519ffa30087b60ac60f1c310356d0fc01d449f6f5310e5f8cff617947e",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 9c2827faf877afcaf2d0213022546334b1879b0da9dc5cfbc6a893d8ddf94944)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "66e7324c40600570",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "Latency and error-rate panels are available in the primary region.",
+        "claimedOutcome": "Host-observed dashboard: latency=present; errors=present; region=primary.",
+        "missionRevision": "41e9d87e996a296632ada30cbd8a4c16bb8f294e35352452dc80aace01ab3ef8",
+        "candidateDigest": "93bfbbcf3fb8755a628974beb0a8ec9e3e408784fd52cb7999d8cd01e7a4135a",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "0044bf7d2c4b80a7e64ed781981a0a28ff158e62e638f7a67448d4f69b1cc55f",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 202826f078bb6d55c7e27cdec4b1929d612171364fb19dadad0f8781c10ab2de)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "66e7324c40600570",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "The primary-region alert route is recorded.",
+        "claimedOutcome": "Host-observed alert route: primary=enabled; other regions are not measured.",
+        "missionRevision": "41e9d87e996a296632ada30cbd8a4c16bb8f294e35352452dc80aace01ab3ef8",
+        "candidateDigest": "93bfbbcf3fb8755a628974beb0a8ec9e3e408784fd52cb7999d8cd01e7a4135a",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "7b0fd9012bd32027bff132fbc1115f8d6a3dc224fe5366f42f7a651703a461ab",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 619359e4f457e8b1e8db12efa2f155c226a082fd6b71ff61ab9aca3458b72482)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "5cb0270f1989eb9c",
+      "criterionId": "criterion-01",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-01",
+        "requirement": "A bounded indexing sample is measured.",
+        "claimedOutcome": "Host-observed sample: first 100 documents indexed within 44 seconds; remaining corpus unmeasured.",
+        "missionRevision": "1f7bffe7e3ea0694feddb6a613c9c20b0d3bb35ce2778ac090da4a3013a9c63d",
+        "candidateDigest": "85a5b1037d3d94b64c6ac1ff90a479bd9b11b7b60f5f6034f58762727d23779e",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "eaaa2e23d0956666112032fb55338b7793ff7500c45fcc7f9700103953bcad37",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 0b65c5f7401ce0c89448efc964be4193065ce40c3d28ed844e330b0fa0ce8307)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    },
+    {
+      "caseRef": "5cb0270f1989eb9c",
+      "criterionId": "criterion-02",
+      "isolatedEvidenceContext": {
+        "criterionId": "criterion-02",
+        "requirement": "A bounded exact-title ranking sample is measured.",
+        "claimedOutcome": "Host-observed sample: exact-title position=1 for the same 100-document subset only.",
+        "missionRevision": "1f7bffe7e3ea0694feddb6a613c9c20b0d3bb35ce2778ac090da4a3013a9c63d",
+        "candidateDigest": "85a5b1037d3d94b64c6ac1ff90a479bd9b11b7b60f5f6034f58762727d23779e",
+        "predecessorStates": [
+          {
+            "runId": "run-1",
+            "nodeId": "produce-evidence",
+            "attemptId": "produce-evidence/1",
+            "status": "succeeded",
+            "bindingState": "bound",
+            "provenance": "host:journal-projection/v2"
+          }
+        ],
+        "verifierObservation": {
+          "result": "satisfied",
+          "observationState": "observed",
+          "detail": "an allowlisted verifier reports this criterion satisfied on this candidate",
+          "verifierId": "file-state",
+          "receiptCorrelationId": "df680befc108fbb83bc54ead97e3197ee857396ee3760d4683c1c8e0ddbc1978",
+          "adapterVersion": "mission-verifiers/1",
+          "observedResult": "all 1 paths match (tree 6a782c81c4992134d9619eceaa41429fbe3848dd1d4ff09ae3b0fb3e72c45ef1)",
+          "graphNodes": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1"
+            }
+          ]
+        }
+      },
+      "expected": null,
+      "rationale": null
+    }
+  ]
+}

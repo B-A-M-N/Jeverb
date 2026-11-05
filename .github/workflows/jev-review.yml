@@ -1,0 +1,43 @@
+name: Jev Review
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # Deterministic detectors over the PR diff. Runs on every PR including
+  # forks: no secrets, no network, fail-closed on hard findings.
+  offline-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run review:config-check
+      - run: npm run review:detectors -- --base "${{ github.event.pull_request.base.sha }}"
+
+  # Full Jev review. Internal PRs only: the head repo check keeps the Jev
+  # API key out of fork builds, which must never receive it.
+  live-jev:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run review:ci -- --base "${{ github.event.pull_request.base.sha }}"
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          JEV_MODEL: jev-1.14.0

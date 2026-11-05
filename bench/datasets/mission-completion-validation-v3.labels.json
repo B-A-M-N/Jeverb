@@ -1,0 +1,194 @@
+{
+  "val3-deploy-freeze-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-deploy-freeze-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-storage-tier-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-storage-tier-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-password-reset-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-password-reset-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-invoice-tax-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-invoice-tax-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-audit-export-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-audit-export-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-data-erase-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-data-erase-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "val3-deploy-freeze-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "val3-storage-tier-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "val3-password-reset-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-invoice-tax-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-audit-export-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-data-erase-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-deploy-freeze-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-storage-tier-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-password-reset-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-invoice-tax-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "val3-audit-export-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-data-erase-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-deploy-freeze-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-storage-tier-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-password-reset-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-invoice-tax-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "val3-audit-export-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "val3-data-erase-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "val3-deploy-freeze-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "val3-storage-tier-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "brainwires-jevwire",
+  "description": "Marketplace for the jev plugin: a fast calibrated classifier at Claude Code's harness boundaries.",
+  "owner": {
+    "name": "Brainwires"
+  },
+  "plugins": [
+    {
+      "name": "jev",
+      "description": "Puts a fast calibrated classifier at the harness boundaries: hands Claude a note about a risky tool call, denies the two block-grade cases once with a reason Claude can answer, flags tool results that read like prompt injection, and catches a turn that stops short of the work it was asked to do. Advisory to the agent, never a prompt to you, and fail-open.",
+      "version": "0.6.3",
+      "author": {
+        "name": "Brainwires"
+      },
+      "category": "security",
+      "keywords": [
+        "hooks",
+        "permissions",
+        "guardrails",
+        "prompt-injection"
+      ],
+      "source": "./plugin"
+    }
+  ]
+}

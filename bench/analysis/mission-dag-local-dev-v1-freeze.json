@@ -1,0 +1,61 @@
+{
+  "schema": "jev-mission-dag-local-paired-development-freeze/1",
+  "status": "frozen-awaiting-live-inference-authorization",
+  "split": "development-only",
+  "baseline": {
+    "family": "existing-global-mission-closure",
+    "policyVersion": "mission-closure/1",
+    "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+    "requestsPerCase": 1,
+    "terminalGateQualification": "not bound in this freeze; semantic-only baseline comparison"
+  },
+  "candidate": {
+    "family": "criterion-isolated-dag-local-semantic/v1",
+    "profile": "mission-dag-local-criterion/v1",
+    "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+    "requestsPerCase": "one per declared criterion",
+    "terminalAuthority": "always false"
+  },
+  "dataset": {
+    "source": "bench/datasets/mission-dag-local-dev-v1",
+    "caseCount": 12,
+    "criterionCount": 24,
+    "criteriaPerCase": [
+      2
+    ],
+    "caseSha256": "2115b3b46d00d3ad1da025078af96b6b356b9b0f89f0a8fe99df505fdbf65353",
+    "provenanceSha256": "86cf1e76e9117308706cb62754bcf907d01e46b7f97d8ad6e8d2fdb9e9cf4fa5",
+    "annotationSha256": "8417832a3cc1784edea51c6bbb3b1ef90f9e47a8cf84a7e8942d3ef58ad1875a",
+    "reviewerASha256": "971bab7de9752b2985be754d0b79701cdaca948ace0483d06261abdf4c06c051",
+    "reviewerBSha256": "a5e9813ac96c46fdeb72aa1446397bcf1916ac03c106a19eaf2725b9e623a66c",
+    "provisionalLabelsExcluded": true,
+    "adjudicationSha256": "d91db45f0f1c388e3593242789eebfe4eaa77b5fa4a0891e496de443f3ab6735",
+    "reviewerAPacketSha256": "49dd15d8c6d19e704c2e949b76f41339ea76a00d82b5f18273f4c86eeb42f15e",
+    "reviewerBPacketSha256": "9ad7f82c46f56be01ccfd0b8ad33d7f406439f19219543ea1d7f5bfdaabd41b5"
+  },
+  "provider": {
+    "name": "openrouter",
+    "requestedModel": "typesafe/jev-1.14-20261014",
+    "requiredReturnedModel": "typesafe/jev-1.14-20261014",
+    "exactVersionMatch": true
+  },
+  "execution": {
+    "baselineRequests": 12,
+    "candidateRequests": 24,
+    "totalRequestCeiling": 36,
+    "concurrency": 1,
+    "retries": 0,
+    "hardCostCeilingUsd": 0.01,
+    "estimatedCostUsd": 0.00307692,
+    "estimateBasis": "36 multiplied by the highest retained per-request cost of $0.00008547; not a guarantee"
+  },
+  "qualification": {
+    "productionThreshold": 0.9,
+    "thresholdChanged": false,
+    "newQuestionCalibration": "required; no inherited qualification",
+    "objectiveCoverage": "two independent blind reviewers pending",
+    "criterionGroundTruth": "two independent blind reviewers pending",
+    "liveInferenceAuthorized": false,
+    "liveDagTransitionValidation": "not included"
+  }
+}

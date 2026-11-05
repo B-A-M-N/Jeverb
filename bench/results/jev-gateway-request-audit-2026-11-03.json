@@ -1,0 +1,160 @@
+{
+  "analyzedAt": "2026-11-03T22:10:39.278213+00:00",
+  "correlationLimit": "Muse decision rows contain no timestamp, request ID, trace ID, or provider identity fields; date-level counts cannot prove one-to-one request correlation.",
+  "dailyStatusOutcomeCounts": [
+    {
+      "dayUtc": "2026-10-30",
+      "downstreamOutcome": "disconnected",
+      "downstreamStatus": "0",
+      "failureCategory": "quota_exhausted",
+      "finalGatewayOutcome": "client_disconnected",
+      "httpStatus": "403",
+      "provider": "jev",
+      "records": 32,
+      "upstreamOutcome": "",
+      "upstreamStatus": "403"
+    },
+    {
+      "dayUtc": "2026-10-30",
+      "downstreamOutcome": "",
+      "downstreamStatus": "403",
+      "failureCategory": "quota_exhausted",
+      "finalGatewayOutcome": "client_error",
+      "httpStatus": "403",
+      "provider": "jev",
+      "records": 3527,
+      "upstreamOutcome": "",
+      "upstreamStatus": "403"
+    },
+    {
+      "dayUtc": "2026-10-30",
+      "downstreamOutcome": "disconnected",
+      "downstreamStatus": "403",
+      "failureCategory": "quota_exhausted",
+      "finalGatewayOutcome": "client_error",
+      "httpStatus": "403",
+      "provider": "jev",
+      "records": 2,
+      "upstreamOutcome": "",
+      "upstreamStatus": "403"
+    },
+    {
+      "dayUtc": "2026-10-30",
+      "downstreamOutcome": "disconnected",
+      "downstreamStatus": "0",
+      "failureCategory": "gateway_error",
+      "finalGatewayOutcome": "client_disconnected",
+      "httpStatus": "499",
+      "provider": "jev",
+      "records": 6,
+      "upstreamOutcome": "",
+      "upstreamStatus": "0"
+    },
+    {
+      "dayUtc": "2026-10-31",
+      "downstreamOutcome": "",
+      "downstreamStatus": "200",
+      "failureCategory": "transport",
+      "finalGatewayOutcome": "success",
+      "httpStatus": "200",
+      "provider": "jev",
+      "records": 1,
+      "upstreamOutcome": "",
+      "upstreamStatus": "200"
+    },
+    {
+      "dayUtc": "2026-10-31",
+      "downstreamOutcome": "disconnected",
+      "downstreamStatus": "0",
+      "failureCategory": "quota_exhausted",
+      "finalGatewayOutcome": "client_disconnected",
+      "httpStatus": "403",
+      "provider": "jev",
+      "records": 3,
+      "upstreamOutcome": "",
+      "upstreamStatus": "403"
+    },
+    {
+      "dayUtc": "2026-10-31",
+      "downstreamOutcome": "",
+      "downstreamStatus": "403",
+      "failureCategory": "quota_exhausted",
+      "finalGatewayOutcome": "client_error",
+      "httpStatus": "403",
+      "provider": "jev",
+      "records": 74,
+      "upstreamOutcome": "",
+      "upstreamStatus": "403"
+    },
+    {
+      "dayUtc": "2026-10-31",
+      "downstreamOutcome": "",
+      "downstreamStatus": "500",
+      "failureCategory": "gateway_identity",
+      "finalGatewayOutcome": "credential_unavailable",
+      "httpStatus": "500",
+      "provider": "jev",
+      "records": 13,
+      "upstreamOutcome": "",
+      "upstreamStatus": "0"
+    },
+    {
+      "dayUtc": "2026-11-01",
+      "downstreamOutcome": "",
+      "downstreamStatus": "200",
+      "failureCategory": "transport",
+      "finalGatewayOutcome": "success",
+      "httpStatus": "200",
+      "provider": "jev",
+      "records": 227,
+      "upstreamOutcome": "",
+      "upstreamStatus": "200"
+    },
+    {
+      "dayUtc": "2026-11-02",
+      "downstreamOutcome": "",
+      "downstreamStatus": "200",
+      "failureCategory": "transport",
+      "finalGatewayOutcome": "success",
+      "httpStatus": "200",
+      "provider": "openrouter_jev",
+      "records": 1113,
+      "upstreamOutcome": "",
+      "upstreamStatus": "200"
+    },
+    {
+      "dayUtc": "2026-11-03",
+      "downstreamOutcome": "",
+      "downstreamStatus": "200",
+      "failureCategory": "transport",
+      "finalGatewayOutcome": "success",
+      "httpStatus": "200",
+      "provider": "openrouter_jev",
+      "records": 10,
+      "upstreamOutcome": "",
+      "upstreamStatus": "200"
+    }
+  ],
+  "filter": {
+    "endpoint": "/jev/api/alpha/decisions",
+    "providerIds": [
+      "jev",
+      "openrouter_jev"
+    ],
+    "requestedModel": "typesafe/jev-1.14"
+  },
+  "matchingRecordsByProvider": {
+    "jev": 3885,
+    "openrouter_jev": 1123
+  },
+  "redaction": "No request/response bodies, headers, credential values, client identity, or request identifiers are retained.",
+  "schema": "jeverb-redacted-gateway-request-audit/1",
+  "source": {
+    "malformedLines": 1,
+    "modifiedAt": "2026-11-03T20:32:14.888170+00:00",
+    "name": "gateway-requests.jsonl",
+    "records": 127584,
+    "sha256": "9bc67c10601c0d83670d1b0696203172023fa0680a474dd67f6279225427ef0a",
+    "sizeBytes": 853659624
+  }
+}

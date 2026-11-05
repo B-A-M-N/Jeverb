@@ -1,0 +1,777 @@
+{
+  "schema": "jev-confidence-gate-audit/1",
+  "generatedAt": "2026-11-04T00:12:29.733Z",
+  "decision": "diagnostic-only; no threshold or policy changed",
+  "confidenceSemantics": {
+    "source": "TypeSafe Choice confidence formula",
+    "formula": "(pMax - 1/n) / (1 - 1/n)",
+    "fourChoiceInterpretation": "confidence >= 0.90 corresponds to pMax >= 0.925",
+    "implementation": "mission closure requires COMPLETE selected, confidence >= minConfidence, and P(COMPLETE) >= minConfidence; with canonical four-choice confidence and a selected COMPLETE argmax, the confidence gate is the stricter of those two numeric tests."
+  },
+  "sealedRetrospectiveOnly": {
+    "receipts": "bench/results/mission-completion-lockbox-v3.jevgateway-3stage-r1.receipts.jsonl",
+    "datasetHash": "0a3c2006ca6e4453ffa29d7ab0bbeb779e547d31256f8069a3548dfe5e9d0a97",
+    "persistedStageAccounting": {
+      "terminalIntegratedCompletions": 13,
+      "terminalIntegratedCompletionLabels": {
+        "COMPLETE": 13
+      },
+      "allThresholdHolds": 56,
+      "thresholdHoldReasonMatches": 56,
+      "thresholdHoldLabels": {
+        "COMPLETE": 49,
+        "INCOMPLETE": 3,
+        "INSUFFICIENT_EVIDENCE": 4
+      },
+      "positiveCaseOutcomes": {
+        "completed": 13,
+        "semantic_refusal": 2,
+        "threshold_hold": 49
+      },
+      "modelOnlyFalseCompleteVotesOnNonCompleteLabels": 59,
+      "meaning": "13/64 counts terminal integrated COMPLETE rows among COMPLETE-labeled cases. 49/64 is the COMPLETE-labeled subset of integrated threshold_hold rows. There are seven additional threshold_hold rows with non-COMPLETE labels. The separate model-only false-COMPLETE count is computed from modelChoice and is a different stage."
+    },
+    "allIntegratedThresholdHoldRows": 56,
+    "retainedLabels": {
+      "COMPLETE": 49,
+      "nonComplete": 7,
+      "nonCompleteByLabel": {
+        "INCOMPLETE": 3,
+        "INSUFFICIENT_EVIDENCE": 4
+      }
+    },
+    "interpretation": "Of 56 integrated threshold_hold rows, 49 have retained COMPLETE labels and 7 have retained non-COMPLETE labels (potential false completions prevented by the gate according to those labels). These are builder-authored labels, not independent truth. They were excluded from every threshold sweep. The two disputed 90-day retention cases were semantic refusals, not members of this held group.",
+    "integratedConfidence": {
+      "n": 49,
+      "min": 0.31,
+      "q1": 0.64,
+      "median": 0.8,
+      "mean": 0.7329,
+      "q3": 0.85,
+      "max": 0.89
+    },
+    "integratedPComplete": {
+      "n": 49,
+      "min": 0.48,
+      "q1": 0.73,
+      "median": 0.85,
+      "mean": 0.8,
+      "q3": 0.89,
+      "max": 0.92
+    },
+    "bothConfidenceAndPCompleteBelow0_90": 37,
+    "pCompleteAtLeast0_90ButConfidenceBelow0_90": 12,
+    "confidenceBins": [
+      {
+        "interval": "[0.0,0.5)",
+        "count": 6
+      },
+      {
+        "interval": "[0.5,0.6)",
+        "count": 2
+      },
+      {
+        "interval": "[0.6,0.7)",
+        "count": 11
+      },
+      {
+        "interval": "[0.7,0.8)",
+        "count": 4
+      },
+      {
+        "interval": "[0.8,0.9)",
+        "count": 26
+      },
+      {
+        "interval": "[0.9,1.0]",
+        "count": 0
+      }
+    ]
+  },
+  "developmentOnly": {
+    "dataset": "bench/datasets/mission-completion-dev-v3.jsonl",
+    "datasetHash": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+    "questionHash": "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63",
+    "cases": 32,
+    "positiveCases": 12,
+    "nonCompleteCases": 20,
+    "exactProductionRequestParity": {
+      "cases": 32,
+      "stateMatches": 32,
+      "questionMatches": 32
+    },
+    "runs": [
+      {
+        "provider": "jev-gateway",
+        "returnedModel": "typesafe/jev-1.14-20261014",
+        "receiptCount": 32,
+        "outcomeAccounting": {
+          "integratedOutcomes": {
+            "completed": 2,
+            "preflight_stop": 10,
+            "semantic_refusal": 8,
+            "threshold_hold": 12
+          },
+          "thresholdHoldCount": 12,
+          "thresholdHoldLabels": {
+            "COMPLETE": 10,
+            "INCOMPLETE": 2
+          },
+          "thresholdHoldReasonMatches": 12,
+          "terminalCompleteCount": 2,
+          "terminalCompleteLabels": {
+            "COMPLETE": 2
+          }
+        },
+        "confidenceFormulaAudit": {
+          "responses": 22,
+          "maxAbsoluteDifference": 0.0033,
+          "meanAbsoluteDifference": 0.00136,
+          "withinRoundingTolerance0_01": 22,
+          "formula": "(pMax - 1/n) / (1 - 1/n); four-choice mission closure uses n=4",
+          "roundingTolerance": 0.01
+        },
+        "thresholdSweeps": [
+          {
+            "gate": "confidenceOnly",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 5,
+                "positiveCases": 12,
+                "positiveLiveness": 0.4167,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          },
+          {
+            "gate": "completeProbabilityOnly",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 1,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0.05
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 10,
+                "positiveCases": 12,
+                "positiveLiveness": 0.8333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 5,
+                "positiveCases": 12,
+                "positiveLiveness": 0.4167,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          },
+          {
+            "gate": "both",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 5,
+                "positiveCases": 12,
+                "positiveLiveness": 0.4167,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "provider": "openrouter",
+        "requestedModel": "typesafe/jev-latest",
+        "returnedModel": "typesafe/jev-1.14-20261014",
+        "receiptCount": 32,
+        "outcomeAccounting": {
+          "integratedOutcomes": {
+            "completed": 2,
+            "preflight_stop": 10,
+            "semantic_refusal": 8,
+            "threshold_hold": 12
+          },
+          "thresholdHoldCount": 12,
+          "thresholdHoldLabels": {
+            "COMPLETE": 10,
+            "INCOMPLETE": 2
+          },
+          "thresholdHoldReasonMatches": 12,
+          "terminalCompleteCount": 2,
+          "terminalCompleteLabels": {
+            "COMPLETE": 2
+          }
+        },
+        "modelOnlyFalseCompleteVotesOnNonCompleteLabels": 9,
+        "confidenceFormulaAudit": {
+          "responses": 22,
+          "maxAbsoluteDifference": 0.0033,
+          "meanAbsoluteDifference": 0.00182,
+          "withinRoundingTolerance0_01": 22,
+          "formula": "(pMax - 1/n) / (1 - 1/n); four-choice mission closure uses n=4",
+          "roundingTolerance": 0.01
+        },
+        "thresholdSweeps": [
+          {
+            "gate": "confidenceOnly",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 1,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0.05
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 3,
+                "positiveCases": 12,
+                "positiveLiveness": 0.25,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          },
+          {
+            "gate": "completeProbabilityOnly",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 1,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0.05
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 1,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0.05
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 3,
+                "positiveCases": 12,
+                "positiveLiveness": 0.25,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          },
+          {
+            "gate": "both",
+            "results": [
+              {
+                "threshold": 0.5,
+                "trueLabelCompletions": 12,
+                "positiveCases": 12,
+                "positiveLiveness": 1,
+                "falseLabelCompletions": 1,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0.05
+              },
+              {
+                "threshold": 0.6,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.7,
+                "trueLabelCompletions": 8,
+                "positiveCases": 12,
+                "positiveLiveness": 0.6667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.75,
+                "trueLabelCompletions": 6,
+                "positiveCases": 12,
+                "positiveLiveness": 0.5,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.8,
+                "trueLabelCompletions": 4,
+                "positiveCases": 12,
+                "positiveLiveness": 0.3333,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.85,
+                "trueLabelCompletions": 3,
+                "positiveCases": 12,
+                "positiveLiveness": 0.25,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.9,
+                "trueLabelCompletions": 2,
+                "positiveCases": 12,
+                "positiveLiveness": 0.1667,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.925,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 0.95,
+                "trueLabelCompletions": 1,
+                "positiveCases": 12,
+                "positiveLiveness": 0.0833,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              },
+              {
+                "threshold": 1,
+                "trueLabelCompletions": 0,
+                "positiveCases": 12,
+                "positiveLiveness": 0,
+                "falseLabelCompletions": 0,
+                "nonCompleteCases": 20,
+                "falseCompleteRate": 0
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "positiveIntegratedConfidence": {
+      "n": 12,
+      "min": 0.53,
+      "q1": 0.57,
+      "median": 0.72,
+      "mean": 0.7333,
+      "q3": 0.83,
+      "max": 0.95
+    },
+    "positiveIntegratedPComplete": {
+      "n": 12,
+      "min": 0.65,
+      "q1": 0.68,
+      "median": 0.79,
+      "mean": 0.8,
+      "q3": 0.87,
+      "max": 0.96
+    },
+    "interpretation": "Threshold sweeps are descriptive on 12 positive and 20 non-COMPLETE builder-labeled development cases, clustered into a small number of objective families. They are not threshold-selection evidence or qualification."
+  },
+  "causeAssessment": {
+    "confidenceField": "correctly interpreted as TypeSafe distribution concentration, distinct from P(COMPLETE)",
+    "providerParity": "The retained jev-gateway and native OpenRouter Jev Choice receipts match the documented four-option formula to <=0.01 rounding tolerance.",
+    "thresholdGate": "No threshold implementation defect explains the 49 holds: the 0.90 confidence requirement is met only when the four-way distribution is concentrated enough (pMax >=0.925). The additional P(COMPLETE)>=0.90 check is not stricter than that when COMPLETE is the selected maximum.",
+    "evidenceConstruction": "The development-only offline comparison found the model-only state/questions byte-equivalent after lockbox-to-production evidence mapping. No construction mismatch is evidenced. Evidence remains synthetic, summary-level text plus references; independent raters must decide whether the labels and evidence support COMPLETE.",
+    "questionFormulation": "One unchanged four-option question hash is used in both backends and both lockbox stages. No transport/parser/model-version mismatch is evidenced in the retained runs.",
+    "correctableCause": "No demonstrated defect in the 49 cases' confidence parsing, threshold arithmetic, state construction, or question binding. Do not weaken the threshold. The observed cause is low four-way confidence on builder-labeled completions; whether that reflects model conservatism, ambiguous/thin evidence, or label defects needs independent adjudication and fresh validation."
+  },
+  "limitations": [
+    "The 49 sealed cases are reported descriptively only; no threshold sweep uses them.",
+    "All retained labels are builder-authored and not independently adjudicated.",
+    "The development data has only 12 positive and 20 non-COMPLETE cases across clustered objective families.",
+    "Confidence is not empirical correctness probability; TypeSafe defines it as a statistic of the option distribution."
+  ]
+}

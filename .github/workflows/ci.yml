@@ -1,0 +1,108 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run type-check
+
+      - run: npm run test:run
+
+      - run: npm run build
+
+  # Offline policy corpus: the deterministic suites that must hold with no
+  # key and no network — the same floor the hook precheck asserts live.
+  policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm run review:config-check
+
+      - name: qualification harness unit tests
+        run: python3 -m unittest discover -s harness -p 'test_*.py'
+
+      - run: npm run test:policy
+
+      # Sandbox integration tests need a functional Bubblewrap backend.
+      # ubuntu-latest does not ship one: install it, then prove the
+      # production confinement probe passes before the suites run. A
+      # missing backend must fail here with a clear diagnosis — never as
+      # a silent skip or a confusing sandbox-test failure later.
+      - name: sandbox backend (bubblewrap) is present and confining
+        run: |
+          command -v bwrap >/dev/null || sudo apt-get install -y bubblewrap
+          bwrap --version
+          npm run sandbox:probe
+
+      - run: npm run build
+
+      # Exercise the built native Muse PreToolUse shim through its configured
+      # Jev adapter and durable receipt path; the stub is loopback-only.
+      - name: Muse hook to Jev adapter smoke
+        run: npm run smoke:muse-hook-stub
+
+      # The committed bundle is what installs: rebuild, then fail on any
+      # drift. (This job defines no matrix, so no matrix condition here —
+      # a condition on a nonexistent matrix silently skips the check.)
+      - name: committed plugin bundle is up to date
+        run: git diff --exit-code plugin/dist
+
+      # Packaged plugin integrity: the manifest, bundles, review config,
+      # and notices that a local-directory install carries must all be
+      # present and self-consistent.
+      - name: packaged plugin integrity
+        run: npm run plugin:integrity-check
+
+      # The daemon's control plane is the one part of the plugin whose bugs only
+      # appear under contention: two sessions starting at once must produce one
+      # daemon, and the O_EXCL lock is what makes that true. Running the whole
+      # end-to-end file twice at the same time is the cheapest way to notice a
+      # lock that was released too early or taken too late. Linux only — this
+      # is about the lock, not about the platform — and after the build so both
+      # runs use the same bundle.
+      - name: daemon end-to-end, twice concurrently
+        run: |
+          npx vitest run tests/hooks/daemon-e2e.test.ts &
+          first=$!
+          npx vitest run tests/hooks/daemon-e2e.test.ts &
+          second=$!
+          wait $first
+          status_first=$?
+          wait $second
+          status_second=$?
+          echo "first=$status_first second=$status_second"
+          test "$status_first" -eq 0 && test "$status_second" -eq 0
+
+      # Nothing may be left holding the daemon's real port. Every test picks an
+      # ephemeral one, and this is what proves it.
+      - name: no daemon left on the default port
+        run: |
+          if curl -fsS --max-time 2 http://127.0.0.1:10522/v1/health >/dev/null 2>&1; then
+            echo "a process is answering on 10522 after the test run" >&2
+            exit 1
+          fi
+          echo "10522 is clear"

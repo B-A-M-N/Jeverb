@@ -1,0 +1,49 @@
+{
+  "schema": "jev-semantic-fulfillment-candidate-freeze/1",
+  "frozenAt": "2026-11-03",
+  "status": "frozen-candidate-unqualified",
+  "productionActivation": false,
+  "evidenceProfile": "mission-closure/v2-graph-evidence",
+  "questionProfile": "mission-semantic-fulfillment/v1",
+  "questionHash": "920be2ae185920cb787e44e5caa1b28fc499e6f9bb929d427e1b990efe53720e",
+  "policy": {
+    "policyVersion": "mission-semantic-fulfillment/v1",
+    "confidenceStatistic": "(pMax - 1/3) / (1 - 1/3); concentration only, not correctness probability",
+    "minConfidence": 0.9,
+    "requestedProvider": "openrouter",
+    "requestedModel": "typesafe/jev-latest",
+    "expectedReturnedModel": "typesafe/jev-1.14-20261014",
+    "adapterVersion": "0.6.3",
+    "semanticDispositionMap": {
+      "FULFILLED": "COMPLETE",
+      "NOT_FULFILLED": "INCOMPLETE",
+      "UNCERTAIN": "INSUFFICIENT_EVIDENCE"
+    },
+    "productionReleaseFloor": {
+      "minLiveness": 0.95,
+      "minPositives": 60,
+      "minNegatives": 149,
+      "maxFalseTerminalCompletions": 0
+    },
+    "implementationHashes": {
+      "src/mission/closure.ts": "a087a589d6b64a5806ea6c5f107c9cc64041c6e88ac7eec831bd72aa87de10fb",
+      "src/jev/lockbox.ts": "68a2cd86af1f0b3ba9a1d6dd9153c86d7e1609305ac5a6a0086c4e6db34e4703",
+      "src/mission/session-source.ts": "b8afbaef3d11d2aa1047fc99b4d67a6a9c7c81f4e03b0274903bb2557c100faa",
+      "src/mission/runtime.ts": "93fce682e844e2cc22b3b10708689f9a6cb105e105324c87cf8d671b5e80a1d6",
+      "src/mission/verifiers.ts": "393c8e4b256492f01399ac43d42af63ddcc14063496fa50228bb9519fbf6c8b9",
+      "src/mission/graph-binding.ts": "4e188bde85adc317de5cdaae379870567126ee8e5f2f7cef2363125c69c65459"
+    }
+  },
+  "developmentEvidence": {
+    "source": "tests/mission/host-verification-pipeline.test.ts",
+    "status": "deterministic host-pipeline regression fixture; not a labeled model evaluation split",
+    "retainedDatasetHash": null
+  },
+  "qualificationIdentity": "a400b510828724310e2fa8cea75c7a35f8778940528e3a1760740361c3bfb4d4",
+  "policyHash": "42befcf76d0802541cc523471b34254a4460bf56a458fe3f82fb1a7ed1ad2650",
+  "limitations": [
+    "No live Jev responses have been collected for this question.",
+    "The legacy development receipts use text/reference evidence and cannot qualify the v2 evidence profile.",
+    "Production still uses the existing four-choice question and 0.90 gate."
+  ]
+}

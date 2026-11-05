@@ -1,0 +1,1424 @@
+{
+  "schema": "jev-mission-dag-local-paired-results/1",
+  "provider": "openrouter",
+  "requestedModel": "typesafe/jev-latest",
+  "returnedModel": "typesafe/jev-1.14-20261014",
+  "requests": 36,
+  "concurrency": 1,
+  "retries": 0,
+  "costUsd": 0.002067618,
+  "hardCostCeilingUsd": 0.01,
+  "semanticMetrics": {
+    "cases": 12,
+    "baseline": {
+      "correct": 11,
+      "falseComplete": 1,
+      "positiveRecognized": 6,
+      "abstained": 0
+    },
+    "candidate": {
+      "correct": 12,
+      "falseFulfilled": 0,
+      "positiveRecognized": 6,
+      "abstained": 0,
+      "criterionCorrect": 23,
+      "criterionTotal": 24
+    }
+  },
+  "enforcementMetrics": {
+    "candidateConfidenceGateDispositionCounts": {
+      "FULFILLED": 2,
+      "NOT_FULFILLED": 6,
+      "UNCERTAIN": 4
+    },
+    "candidateTerminalAuthorizations": 0,
+    "baselineTerminalGateEvaluated": false,
+    "reason": "semantic metrics use raw valid model choices before the unchanged 0.90 gate; gate dispositions are reported separately, and candidate terminalComplete is hard-coded false; baseline qualification is not bound in this freeze"
+  },
+  "terminalAuthorization": false,
+  "cases": [
+    {
+      "caseId": "p01-config-policy",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.98,
+              "INCOMPLETE": 0.01,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.97
+          }
+        },
+        "usage": {
+          "input_tokens": 1990,
+          "output_tokens": 57,
+          "cost_usd": 0.00008358
+        },
+        "latencyMs": 302
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "570037c4a01a18a95ccdcddcbab97f99e33d7af49a4740b2661477bb095e3e69",
+          "candidateDigest": "8afb0cb83b416b8082666e6fdc182f48aac32380f37a9e2ee169c6182e8cd993",
+          "contextHash": "4a1da3a840d2906127e91fc4f9314411e6ea65406d757aa5700e3798ec4d0fd3",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "89da50cebcdcdf67fd35d448c4cd6dd0ccab1a12667a0725eba49b5769902f44",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.98,
+          "probabilities": {
+            "FULFILLED": 0.99,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.01
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 187,
+          "inputTokens": 1025,
+          "outputTokens": 50,
+          "costUsd": 0.00004305
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "570037c4a01a18a95ccdcddcbab97f99e33d7af49a4740b2661477bb095e3e69",
+          "candidateDigest": "8afb0cb83b416b8082666e6fdc182f48aac32380f37a9e2ee169c6182e8cd993",
+          "contextHash": "b55a472fa7ac3edcdc270e6bd887c60f55134bdac5d692c3acb5242f666004bf",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "d1633d7b91041fe049f76de13ea5d9d2911b10a8579d404fc165fed96d41948c",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.97,
+          "probabilities": {
+            "FULFILLED": 0.98,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.02
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 211,
+          "inputTokens": 1045,
+          "outputTokens": 50,
+          "costUsd": 0.00004389
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "p02-auth-scope",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.97,
+              "INCOMPLETE": 0.02,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.96
+          }
+        },
+        "usage": {
+          "input_tokens": 2002,
+          "output_tokens": 57,
+          "cost_usd": 0.000084084
+        },
+        "latencyMs": 569
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "a7b54815f9cd9e127d2ebb53b54486bb2d41a8e42d9a3cc75cdb5607bf5da734",
+          "candidateDigest": "4762d9330022d6f2ba425f94e1cc042916b25e242799f002918d0a5221d1f1ff",
+          "contextHash": "a81ea1a10d98e856cc15d7e2864ed8f02c2c007d72a6614a7f50bfa12df3a0eb",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "7d66016f03f739a5e98897aabbf733a57d21bcf7adf617066cc51a30715391d0",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.96,
+          "probabilities": {
+            "FULFILLED": 0.97,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.03
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 230,
+          "inputTokens": 1047,
+          "outputTokens": 50,
+          "costUsd": 0.000043974
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "a7b54815f9cd9e127d2ebb53b54486bb2d41a8e42d9a3cc75cdb5607bf5da734",
+          "candidateDigest": "4762d9330022d6f2ba425f94e1cc042916b25e242799f002918d0a5221d1f1ff",
+          "contextHash": "61cdc08d43f2326566e1c914cea2575d3a100ad8267062f781a0b7188ddc8069",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "613a39b056c9d6bb3396fc4b609ac27148c3c9250e61da9b97ff77cdc009ee50",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.97,
+          "probabilities": {
+            "FULFILLED": 0.98,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.02
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 225,
+          "inputTokens": 1052,
+          "outputTokens": 50,
+          "costUsd": 0.000044184
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "p03-backup",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.98,
+              "INCOMPLETE": 0.01,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.97
+          }
+        },
+        "usage": {
+          "input_tokens": 1998,
+          "output_tokens": 57,
+          "cost_usd": 0.000083916
+        },
+        "latencyMs": 194
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "ffddb3461243d56ea63de6227093e20b63bd1bf55a9a10125b23ae2a7c4d35d4",
+          "candidateDigest": "62f044a73e4a64422441d2480b8ded559d3a802b0e7c5c0572de1c201a257581",
+          "contextHash": "dbe7a92cb1599183a5bc7b71c9857d7bf8493d7b44986b2df38309d0738a7e3f",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "a2d58df21a369afd839d5a26858088f7ac04ecc84d88fd8a857a963d5af89bae",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.94,
+          "probabilities": {
+            "FULFILLED": 0.96,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.04
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 165,
+          "inputTokens": 1046,
+          "outputTokens": 50,
+          "costUsd": 0.000043932
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "ffddb3461243d56ea63de6227093e20b63bd1bf55a9a10125b23ae2a7c4d35d4",
+          "candidateDigest": "62f044a73e4a64422441d2480b8ded559d3a802b0e7c5c0572de1c201a257581",
+          "contextHash": "d806b731387e35fee6fcb9f7687e3d66a9b3aef0b3588744f33b49be2dc5747a",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "9c8754283bebb433d6389b908926508ad0e37bab0a1cff4dd01d87b332635313",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.89,
+          "probabilities": {
+            "FULFILLED": 0.93,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.07
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 194,
+          "inputTokens": 1051,
+          "outputTokens": 50,
+          "costUsd": 0.000044142
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "UNCERTAIN",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "p04-search-index",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.97,
+              "INCOMPLETE": 0.02,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.96
+          }
+        },
+        "usage": {
+          "input_tokens": 1988,
+          "output_tokens": 57,
+          "cost_usd": 0.000083496
+        },
+        "latencyMs": 176
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "3fb1df3711b5709326d4d04391bfe45ca105e85745ceeab9e6dd3f4710fd31ac",
+          "candidateDigest": "d9bbc7cf924be8d06440a979ea603b9b23cc87908bce4dda61e5030e907b6e8e",
+          "contextHash": "51b04f405081da56a595e2005b0c18b0a9f67743910af60ef04af702ce85df60",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "237bfa236362d92bf763085248b6bd4ece1d3bd331710a74d88ab3c285de26ce",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.88,
+          "probabilities": {
+            "FULFILLED": 0.92,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.08
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 199,
+          "inputTokens": 1031,
+          "outputTokens": 50,
+          "costUsd": 0.000043302
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "3fb1df3711b5709326d4d04391bfe45ca105e85745ceeab9e6dd3f4710fd31ac",
+          "candidateDigest": "d9bbc7cf924be8d06440a979ea603b9b23cc87908bce4dda61e5030e907b6e8e",
+          "contextHash": "feacd6a5f32d634f15d0121f3d73107ef544a104c1a738b87ed8c58ad349bbf5",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "e069ed040caa70c28fe72da90efcf193ee4d31736e1356d113a94d55efc9413f",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.85,
+          "probabilities": {
+            "FULFILLED": 0.9,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.09
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 223,
+          "inputTokens": 1043,
+          "outputTokens": 50,
+          "costUsd": 0.000043806
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "UNCERTAIN",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "p05-notification",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.83,
+              "INCOMPLETE": 0.13,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.04
+            },
+            "confidence": 0.77
+          }
+        },
+        "usage": {
+          "input_tokens": 1986,
+          "output_tokens": 57,
+          "cost_usd": 0.000083412
+        },
+        "latencyMs": 216
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "bcfcf8d970a7285c10f9a7d167d97705402fdf4558fa60a1f2e2aaec199351c6",
+          "candidateDigest": "28933e600b22ad0a41a32ebbc4ef996765c1f1c795fbde5bc79a7f65a4de8889",
+          "contextHash": "705341ebc80a54e795590140350bf8011f67c33f9e824d870f7e112a8bd87475",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "6c1c4cd7c0bb25edc9da1a55a0d0f7e9226840696b78ee087411b0145bb38a5c",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.83,
+          "probabilities": {
+            "FULFILLED": 0.89,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.11
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 250,
+          "inputTokens": 1039,
+          "outputTokens": 50,
+          "costUsd": 0.000043638
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "bcfcf8d970a7285c10f9a7d167d97705402fdf4558fa60a1f2e2aaec199351c6",
+          "candidateDigest": "28933e600b22ad0a41a32ebbc4ef996765c1f1c795fbde5bc79a7f65a4de8889",
+          "contextHash": "897750c8650f7cf8daab96f18dc55ac7f6f00e0c0c5a2caa2330675428035469",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "5cdd727a37e71418115fb70b01656d90e3928511bcb533f06c1708cb569802f3",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.82,
+          "probabilities": {
+            "FULFILLED": 0.88,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.11
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 232,
+          "inputTokens": 1052,
+          "outputTokens": 50,
+          "costUsd": 0.000044184
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "UNCERTAIN",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "p06-api-migration",
+      "expectedOverall": "FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.96,
+              "INCOMPLETE": 0.03,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.95
+          }
+        },
+        "usage": {
+          "input_tokens": 2041,
+          "output_tokens": 57,
+          "cost_usd": 0.000085722
+        },
+        "latencyMs": 156
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "54f6453fc76d77dbb67e2a48cc92e561495814fa92b490a79d87f19128975d13",
+          "candidateDigest": "f80ce2b415c9eaa49858eaed15969d7f43ce556db1601f7ac552d5fab0027941",
+          "contextHash": "45d1c137a022b8c88351f78a1bf0eb69b33da4678b28dde70c2e2918f059d3d5",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "47f2d1e8e8fb1182a18e6998dbb60f30c0096c232f9eabad5bceb19a7a1d0db6",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.72,
+          "probabilities": {
+            "FULFILLED": 0.81,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.18
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 184,
+          "inputTokens": 1066,
+          "outputTokens": 50,
+          "costUsd": 0.000044772
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "54f6453fc76d77dbb67e2a48cc92e561495814fa92b490a79d87f19128975d13",
+          "candidateDigest": "f80ce2b415c9eaa49858eaed15969d7f43ce556db1601f7ac552d5fab0027941",
+          "contextHash": "a246b25b6ca5ed1516e19d2a21d3491d9d1da8bdff2872ad05e9f5e9391153eb",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "959573de96022b83924799a15a562d0cbdd1404db5abff08a0737f030c0e6bd4",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.72,
+          "probabilities": {
+            "FULFILLED": 0.81,
+            "NOT_FULFILLED": 0.16,
+            "UNCERTAIN": 0.03
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 224,
+          "inputTokens": 1043,
+          "outputTokens": 50,
+          "costUsd": 0.000043806
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "FULFILLED",
+        "disposition": "UNCERTAIN",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "covered"
+      }
+    },
+    {
+      "caseId": "n01-backup-regions",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "NOT_FULFILLED",
+        "rawChoice": "INCOMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "INCOMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.08,
+              "INCOMPLETE": 0.91,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.88
+          }
+        },
+        "usage": {
+          "input_tokens": 2007,
+          "output_tokens": 58,
+          "cost_usd": 0.000084294
+        },
+        "latencyMs": 161
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "58f18b9b246282428873a681c116f97fe8d630cf281960997e87db7f1bac8e51",
+          "candidateDigest": "d6eda56af844002de2808426cf22a6d29be613044a45e59b1b5be2bbe1dae901",
+          "contextHash": "86bf8a83133c6890bb79634956e703af64c91da0ebf048e04f4f7d7ddc1f2f95",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "15edcc5be51a4595c657bc1e3de42406fc59aa2bcde8ec4646578e84267559bb",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.64,
+          "probabilities": {
+            "FULFILLED": 0.76,
+            "NOT_FULFILLED": 0.14,
+            "UNCERTAIN": 0.1
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 153,
+          "inputTokens": 1041,
+          "outputTokens": 50,
+          "costUsd": 0.000043722
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "58f18b9b246282428873a681c116f97fe8d630cf281960997e87db7f1bac8e51",
+          "candidateDigest": "d6eda56af844002de2808426cf22a6d29be613044a45e59b1b5be2bbe1dae901",
+          "contextHash": "2d753df81fc46779d336e38cc68bb70b94df10f7b6e03ffc26f52730bc19173f",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "4ec50810938a568f82a323e1637d86b93efc4ef86e952cfd66d5d2ba3d75bba1",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.83,
+          "probabilities": {
+            "FULFILLED": 0.89,
+            "NOT_FULFILLED": 0.02,
+            "UNCERTAIN": 0.09
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 147,
+          "inputTokens": 1049,
+          "outputTokens": 50,
+          "costUsd": 0.000044058
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    },
+    {
+      "caseId": "n02-api-partial",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "NOT_FULFILLED",
+        "rawChoice": "INCOMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "INCOMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.19,
+              "INCOMPLETE": 0.8,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.73
+          }
+        },
+        "usage": {
+          "input_tokens": 2007,
+          "output_tokens": 58,
+          "cost_usd": 0.000084294
+        },
+        "latencyMs": 199
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "289037fe7b4883b01889894e500338088452e6952ccac719b43ba1a48b267d5a",
+          "candidateDigest": "04ea6133dfcdbdb99c36af4810ce080fd24805e44f71d84276df8688ae5423b3",
+          "contextHash": "e01c529a4906ec96dac61f8437c7378e3cf7b70399b04484a93d0c91ee01ff25",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "2358c5d2e36c387f62376e1b17a43456f828265e7f20631957080eea307d531a",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.82,
+          "probabilities": {
+            "FULFILLED": 0.88,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.11
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 153,
+          "inputTokens": 1053,
+          "outputTokens": 50,
+          "costUsd": 0.000044226
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "289037fe7b4883b01889894e500338088452e6952ccac719b43ba1a48b267d5a",
+          "candidateDigest": "04ea6133dfcdbdb99c36af4810ce080fd24805e44f71d84276df8688ae5423b3",
+          "contextHash": "1d2487c3c7ae6b0b39ba91c1e3c5026098a7e2ee1e3db102f148fd4ef2c14963",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "1f3fa56295057749970e98a025364c3777f6bc509d482b3fb890febeeb22a686",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.6,
+          "probabilities": {
+            "FULFILLED": 0.73,
+            "NOT_FULFILLED": 0.14,
+            "UNCERTAIN": 0.13
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 181,
+          "inputTokens": 1058,
+          "outputTokens": 50,
+          "costUsd": 0.000044436
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    },
+    {
+      "caseId": "n03-redaction-conflict",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "FULFILLED",
+        "rawChoice": "COMPLETE",
+        "correct": false,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "COMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.86,
+              "INCOMPLETE": 0.1,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.04
+            },
+            "confidence": 0.81
+          }
+        },
+        "usage": {
+          "input_tokens": 2027,
+          "output_tokens": 57,
+          "cost_usd": 0.000085134
+        },
+        "latencyMs": 200
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "0c4a4660f1b33d956ae09d4f3fee031dec2b0b69ac66c8dcafb1f58579e51fea",
+          "candidateDigest": "8d6e89c41ccf64bf36993c873537eec5bc2006976e8f67d71e7e6a5a5fd95f2d",
+          "contextHash": "6c8ded427b110d0502634a83638a46007882971ef5f3843869e22fa8f5c85400",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "2be44fad560a6c5829723244651460e603ad356bbdcdf0f3e1284a9bc404c7e4",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.88,
+          "probabilities": {
+            "FULFILLED": 0.92,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.07
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 181,
+          "inputTokens": 1048,
+          "outputTokens": 50,
+          "costUsd": 0.000044016
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "0c4a4660f1b33d956ae09d4f3fee031dec2b0b69ac66c8dcafb1f58579e51fea",
+          "candidateDigest": "8d6e89c41ccf64bf36993c873537eec5bc2006976e8f67d71e7e6a5a5fd95f2d",
+          "contextHash": "b42e0716adda1037789c703434b6a45fcfec99c78eb5d029ae49a47224a01ec2",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "fc8ddf8a7fda9ebf8e0c028026ec551b3e49f1151b66c40df62303ebac5b6e2d",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.79,
+          "probabilities": {
+            "FULFILLED": 0.86,
+            "NOT_FULFILLED": 0.03,
+            "UNCERTAIN": 0.11
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 206,
+          "inputTokens": 1051,
+          "outputTokens": 50,
+          "costUsd": 0.000044142
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    },
+    {
+      "caseId": "n04-retry-test-coverage",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "NOT_FULFILLED",
+        "rawChoice": "INCOMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "INCOMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.1,
+              "INCOMPLETE": 0.88,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.02
+            },
+            "confidence": 0.84
+          }
+        },
+        "usage": {
+          "input_tokens": 2011,
+          "output_tokens": 58,
+          "cost_usd": 0.000084462
+        },
+        "latencyMs": 161
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "87b04fd661bba9cdd5f634974d12337eecf2158e94a81dbe8e9dbfbd0449de4e",
+          "candidateDigest": "5db9e217a244d9827f3b03e965f332bd1a9e9fb3812aa11570855c1d346eb53a",
+          "contextHash": "bcf1ce2cc5eae2cadc77b1132cb111480379662af17a88427a3e3e28c697ba55",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "2609cd69ac0ac0babe53dbd03d99834820d50a5f89924412893740b2e4db3819",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.72,
+          "probabilities": {
+            "FULFILLED": 0.81,
+            "NOT_FULFILLED": 0.05,
+            "UNCERTAIN": 0.14
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 249,
+          "inputTokens": 1043,
+          "outputTokens": 50,
+          "costUsd": 0.000043806
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "87b04fd661bba9cdd5f634974d12337eecf2158e94a81dbe8e9dbfbd0449de4e",
+          "candidateDigest": "5db9e217a244d9827f3b03e965f332bd1a9e9fb3812aa11570855c1d346eb53a",
+          "contextHash": "69a271759f87a62912402929d8221304cce60449ce510d0f109c78278903072d",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "246cbd519ffa30087b60ac60f1c310356d0fc01d449f6f5310e5f8cff617947e",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.91,
+          "probabilities": {
+            "FULFILLED": 0.94,
+            "NOT_FULFILLED": 0.02,
+            "UNCERTAIN": 0.04
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 159,
+          "inputTokens": 1050,
+          "outputTokens": 50,
+          "costUsd": 0.0000441
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    },
+    {
+      "caseId": "n05-dashboard-scope",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "NOT_FULFILLED",
+        "rawChoice": "INCOMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "INCOMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.11,
+              "INCOMPLETE": 0.88,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.01
+            },
+            "confidence": 0.84
+          }
+        },
+        "usage": {
+          "input_tokens": 2015,
+          "output_tokens": 58,
+          "cost_usd": 0.00008463
+        },
+        "latencyMs": 164
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "41e9d87e996a296632ada30cbd8a4c16bb8f294e35352452dc80aace01ab3ef8",
+          "candidateDigest": "93bfbbcf3fb8755a628974beb0a8ec9e3e408784fd52cb7999d8cd01e7a4135a",
+          "contextHash": "3e5082c5adb77049aba0fa839d4f109015a18d0d39b3100a976b22285adc1c97",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "0044bf7d2c4b80a7e64ed781981a0a28ff158e62e638f7a67448d4f69b1cc55f",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.94,
+          "probabilities": {
+            "FULFILLED": 0.96,
+            "NOT_FULFILLED": 0,
+            "UNCERTAIN": 0.04
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 139,
+          "inputTokens": 1051,
+          "outputTokens": 50,
+          "costUsd": 0.000044142
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "41e9d87e996a296632ada30cbd8a4c16bb8f294e35352452dc80aace01ab3ef8",
+          "candidateDigest": "93bfbbcf3fb8755a628974beb0a8ec9e3e408784fd52cb7999d8cd01e7a4135a",
+          "contextHash": "df512642bab92aa613896cece7b6d2cc36d36c76753bbdffb4450411c4759ca8",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "7b0fd9012bd32027bff132fbc1115f8d6a3dc224fe5366f42f7a651703a461ab",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.89,
+          "probabilities": {
+            "FULFILLED": 0.93,
+            "NOT_FULFILLED": 0.01,
+            "UNCERTAIN": 0.06
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 175,
+          "inputTokens": 1040,
+          "outputTokens": 50,
+          "costUsd": 0.00004368
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    },
+    {
+      "caseId": "n06-search-partial",
+      "expectedOverall": "NOT_FULFILLED",
+      "baseline": {
+        "semanticChoice": "NOT_FULFILLED",
+        "rawChoice": "INCOMPLETE",
+        "correct": true,
+        "model": "typesafe/jev-1.14-20261014",
+        "provider": "openrouter",
+        "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+        "answers": {
+          "closure": {
+            "type": "choice",
+            "choice": "INCOMPLETE",
+            "probabilities": {
+              "COMPLETE": 0.33,
+              "INCOMPLETE": 0.64,
+              "BLOCKED": 0,
+              "INSUFFICIENT_EVIDENCE": 0.03
+            },
+            "confidence": 0.52
+          }
+        },
+        "usage": {
+          "input_tokens": 2032,
+          "output_tokens": 58,
+          "cost_usd": 0.000085344
+        },
+        "latencyMs": 184
+      },
+      "criterionJudgments": [
+        {
+          "criterionId": "criterion-01",
+          "missionRevision": "1f7bffe7e3ea0694feddb6a613c9c20b0d3bb35ce2778ac090da4a3013a9c63d",
+          "candidateDigest": "85a5b1037d3d94b64c6ac1ff90a479bd9b11b7b60f5f6034f58762727d23779e",
+          "contextHash": "e0e55683566c09dfe20b49fb66aae5d597ec4174bb663dba97cbab06a80ba8a2",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "eaaa2e23d0956666112032fb55338b7793ff7500c45fcc7f9700103953bcad37",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.28,
+          "probabilities": {
+            "FULFILLED": 0.52,
+            "NOT_FULFILLED": 0.15,
+            "UNCERTAIN": 0.33
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 190,
+          "inputTokens": 1054,
+          "outputTokens": 50,
+          "costUsd": 0.000044268
+        },
+        {
+          "criterionId": "criterion-02",
+          "missionRevision": "1f7bffe7e3ea0694feddb6a613c9c20b0d3bb35ce2778ac090da4a3013a9c63d",
+          "candidateDigest": "85a5b1037d3d94b64c6ac1ff90a479bd9b11b7b60f5f6034f58762727d23779e",
+          "contextHash": "263d7b893c22b41fc94ae7462afb61c40146a034f7d0c10df466409d65debd38",
+          "graphNodeIds": [
+            {
+              "runId": "run-1",
+              "nodeId": "produce-evidence",
+              "attemptId": "produce-evidence/1",
+              "status": "succeeded",
+              "bindingState": "bound",
+              "provenance": "host:journal-projection/v2"
+            }
+          ],
+          "verifierProvenance": {
+            "verifierId": "file-state",
+            "receiptCorrelationId": "df680befc108fbb83bc54ead97e3197ee857396ee3760d4683c1c8e0ddbc1978",
+            "adapterVersion": "mission-verifiers/1"
+          },
+          "choice": "FULFILLED",
+          "confidence": 0.4,
+          "probabilities": {
+            "FULFILLED": 0.6,
+            "NOT_FULFILLED": 0.05,
+            "UNCERTAIN": 0.35
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "d696868a58033d3cb652ecf5f065ae8053e43a5dc0a639d8113cfd6d071f1316",
+          "latencyMs": 217,
+          "inputTokens": 1047,
+          "outputTokens": 50,
+          "costUsd": 0.000043974
+        }
+      ],
+      "candidateAggregate": {
+        "semanticDisposition": "NOT_FULFILLED",
+        "disposition": "NOT_FULFILLED",
+        "missingCriterionIds": [],
+        "unqualifiedCriterionIds": [
+          "criterion-01",
+          "criterion-02"
+        ],
+        "terminalComplete": false,
+        "correct": true,
+        "semanticDispositionCorrect": true,
+        "independentlyReviewedObjectiveCoverage": "omitted"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "jeverb-corrective-loop-source-identity/1",
+  "repository": "/home/bamn/Jeverb",
+  "branch": "rc-3",
+  "head": "e2fe2a14b21b026db18c2e63187d156ac3968725",
+  "worktreeWasDirty": true,
+  "note": "Relevant tested source file hashes bind the dirty checkout; no commit was made to Jeverb.",
+  "files": {
+    "scripts/jev-coverage-gap-demo.ts": "0812729f3598876bf019f0a815bb77191382bd80963a5d40ea1792d584de4046",
+    "src/graph/executor.ts": "1e6199d43cf1747af4b756c45846583943f590f94a1436d9a853b47d45e94b66",
+    "src/graph/journal.ts": "9676473db85140530ac17970c7ac60b4faf5c777dd821b6ac5abde53716e1124",
+    "src/mission/closure.ts": "e0c54f1cf4f6a3523c2e50790eb0ee4d566fbc59b68503906e216010c022d1a3",
+    "src/mission/runtime.ts": "86f4de2353d1873503dd6b096963add47853a84583db6244783f8f8a01c5ee7e",
+    "src/mission/session-source.ts": "22da1e03c417d4e99f2a3cda6e1340510b19236470f6964ebbb99518fa1a8db4",
+    "src/mission/verifiers.ts": "393c8e4b256492f01399ac43d42af63ddcc14063496fa50228bb9519fbf6c8b9",
+    "src/tools/execute-graph-runner.ts": "f9382702dc179511106b1e8fb8ad8c5d6d429ba75322782080f4693b023e83b1",
+    "src/jev/gateway.ts": "66146511f13d9bc6e3ecf5a9940e5f3a11e7ae25ac48cd350d0db6c5f2d66049",
+    "src/jev/client.ts": "c866fd6b580ea04a9433befebb324bf24ea707e6ce52924a44e5dd178cd1aece",
+    "src/config.ts": "5910a6da9547fc479cff575dcb532fe95a8cee9ab98737381a189a92a0b41ac2",
+    "plugin/dist/mcp.mjs": "f646865a29c7a2a0c8c2286d8c507767c2f1d34de1fec33a92c24d3e540e256d",
+    "plugin/dist/hook.mjs": "945209c9c0c5c784e622b97e2dea62207efc1b78cf099ce8fdc2e0469d710f43"
+  },
+  "installedPluginPackageHash": "sha256:c9942f7e743bda0aeb9589ea846ae9462094592d1b546a18bcc5728141a66991"
+}

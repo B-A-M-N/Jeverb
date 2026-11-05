@@ -1,0 +1,60 @@
+{
+  "schema": "jev-corrected-model-validation-plan/1",
+  "status": "prepared-not-authorized",
+  "purpose": "Diagnostic development replay only after independent annotation identifies a concrete wording/evidence correction. This does not qualify the currently measured model or graph routing.",
+  "currentBaseline": {
+    "provider": "openrouter",
+    "endpoint": "https://openrouter.ai/api/alpha/decisions",
+    "requestedModel": "typesafe/jev-latest",
+    "observedModel": "typesafe/jev-1.14-20261014",
+    "adapterVersion": "0.6.3",
+    "policyVersion": "mission-closure/1",
+    "minConfidence": 0.9,
+    "dataset": "bench/datasets/mission-completion-dev-v3.jsonl",
+    "datasetSha256": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+    "questionHash": "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63",
+    "requestsConsumed": 55,
+    "reportedCostUsd": 0.001676682,
+    "result": "2/12 positive integrated completions; no measured choice/outcome improvement over gateway baseline; qualification rejected"
+  },
+  "offlineGateBeforeAnyReplay": [
+    "Two independent raters complete the blind packet without seeing labels, model receipts, each other\u2019s work, or the private key; retain signed independence attestations.",
+    "Adjudicate the 90-day log-retention cases as minimum-retention vs exact-retention; do not infer or rewrite their labels before adjudication.",
+    "If labels change, issue a new dataset revision and qualification identity. If question text, evidence contract, or rubric changes, issue a new policy/question version (mission-closure/2 or later) and dataset revision. Recompute hashes and retain v3 bytes unchanged.",
+    "A corrected validation split must be independently labeled, grouped by scenario/domain before splitting, and unexposed to this returned model. Existing v3 validation/final cases are not fresh validation."
+  ],
+  "developmentReplay": {
+    "split": "corrected development only; the existing 32 cases may be used for diagnosis, never as fresh validation",
+    "provider": "OpenRouter native Decisions API",
+    "requestedModel": "typesafe/jev-latest",
+    "requiredObservedModel": "typesafe/jev-1.14-20261014; abort on any other returned model",
+    "adapterVersion": "0.6.3",
+    "retries": 0,
+    "requestCeiling": 55,
+    "ceilingDerivation": "1 identity probe + 32 model-only calls + 22 integrated calls for the frozen current preflight shape; verify the new dataset\u2019s computed maxLogicalRequests before approval and use that exact value if different.",
+    "costEstimateUsd": 0.001676682,
+    "costEstimateBasis": "previous exact 55-call dev run; revised question/evidence may change token usage. The hard bound is the request count; do not represent this estimate as a provider-enforced dollar cap.",
+    "abortConditions": [
+      "identity/provider/model/question/dataset binding mismatch",
+      "any provider, parse, invalid-judgment, timeout, or usage-accounting error",
+      "first false integrated COMPLETE on a non-COMPLETE case",
+      "computed maxLogicalRequests exceeds the approved ceiling"
+    ],
+    "releaseFloorsUnchanged": {
+      "positiveLiveness": 0.95,
+      "minConfidence": 0.9,
+      "falseTerminalComplete": 0
+    }
+  },
+  "freshValidationQualification": {
+    "not_ready_because": [
+      "No corrected question/evidence contract has been established by independent annotation.",
+      "The existing validation and final cases have already been model-exposed and are not fresh.",
+      "No independently labeled fresh validation split is currently present."
+    ],
+    "minimumIndependentSample": "60 COMPLETE and 149 non-COMPLETE cases, grouped by objective/scenario family before split; preserve the existing 95% positive-liveness, 0.90 confidence, and zero-false-COMPLETE floors.",
+    "requestCeilingFormula": "1 identity probe + at most 2 calls per scored case (one model-only and one integrated); for the minimum 209-case sample the absolute ceiling is 419 requests, zero retries. Recompute from the frozen data/preflight before asking for approval.",
+    "sealedFinal": "Do not tune on it; run only after validation passes and with separate explicit one-time authorization."
+  },
+  "authorization": "No OpenRouter request is authorized or made by this plan."
+}

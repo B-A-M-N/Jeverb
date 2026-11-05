@@ -1,0 +1,32 @@
+{
+  "schema": "jev-mission-closure-case-cause-audit/1",
+  "sources": {
+    "bench/results/mission-completion-lockbox-v3.jevgateway-3stage-r1.receipts.jsonl": "a0363a26d89d6335cd117e1418e11225337e4560215299029ebbe3c62d9bde74",
+    "bench/datasets/mission-completion-lockbox-v3.jsonl": "0a3c2006ca6e4453ffa29d7ab0bbeb779e547d31256f8069a3548dfe5e9d0a97",
+    "bench/datasets/mission-completion-lockbox-v3.labels.json": "c16fd44c2a80638ec89c883027fcc79375677dae7a79a396a3b44ea5007d0c0b"
+  },
+  "receiptRows": 217,
+  "positiveCases": 64,
+  "positiveLivenessFailures": 51,
+  "failureCounts": {
+    "thresholdHold": 49,
+    "semanticRefusal": 2
+  },
+  "thresholdHoldDetail": {
+    "allConfidenceBelow0_90": 49,
+    "bothConfidenceAndPCompleteBelow0_90": 37,
+    "confidenceBelowOnly": 12
+  },
+  "semanticCases": [
+    "f3-log-retention-full-complete-v0",
+    "f3-log-retention-full-complete-v2"
+  ],
+  "semanticCaseFinding": "Both refusals are log-retention cases; the source says 90 days while the outcome says the oldest retrievable log is 91 days old. The artifact omits whether 90 days is a minimum or exact retention, so these are disagreements against builder labels, not confirmed model errors.",
+  "allPositivePreflightReady": true,
+  "limitations": [
+    "Typed Jev receipts retain choices, probabilities, confidence and generic integration reason, not free-text model rationale.",
+    "All source labels were builder-authored and lack independent adjudication.",
+    "This audit classifies the observed gate/judgment behavior; it does not assert the correctness of disputed ground truth."
+  ],
+  "caseAudit": "bench/analysis/mission-completion-lockbox-v3-r1-case-cause-audit.csv"
+}

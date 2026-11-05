@@ -1,0 +1,157 @@
+{
+  "schema": "jeverb-operational-convergence-snapshot/v1",
+  "observed_at_utc": "2026-11-04T18:54:55.377790+00:00",
+  "repository": {
+    "root": "/home/bamn/Jeverb",
+    "branch": "rc-3",
+    "head": "e2fe2a14b21b026db18c2e63187d156ac3968725",
+    "preexisting_dirty_work_preserved": true
+  },
+  "artifacts": {
+    "src/mission/runtime.ts": "86f4de2353d1873503dd6b096963add47853a84583db6244783f8f8a01c5ee7e",
+    "tests/mission/host-verification-pipeline.test.ts": "ae1607de1f809c3d1ff5cd5ba8a5314c5d1781e431841f8fb19a43b39a968a45",
+    "dist/mission/runtime.js": "0b9cde8c8a93752c81f206a9f7c2a28da3e0f46194829bb2fd908e0a13efe1df",
+    "installed_plugin_package_sha256": "ae13d31b505a015e1b0cb5a68c25f324370bf9822f390f3ba8a76b7449719131",
+    "installed_plugin_manifest_sha256": "96dfab7f73bba23fd35fd4fdfc38bfc771ab3c8ccabfa02740ae7b9c9629d8d3"
+  },
+  "installed_host": {
+    "control_service": "active",
+    "protected_switch": "ON",
+    "plugin_loaded": true,
+    "musefi": {
+      "valid": true,
+      "runtime_capabilities": 18,
+      "effective_capabilities": 2,
+      "diagnostics": []
+    },
+    "openmuse": {
+      "valid": true,
+      "runtime_capabilities": 18,
+      "effective_capabilities": 2,
+      "diagnostics": []
+    },
+    "shared_registry_inspections": "two simultaneous read-only inspections produced a transient lock refusal; serial OpenMuse and MuseFI inspections both returned valid with 18 runtime capabilities, 2 effective capabilities, and no diagnostics",
+    "control_state_generation": "3b68511f6ef34937acc3d337c6a8038c"
+  },
+  "verification": {
+    "type_check": "passed",
+    "build": "passed",
+    "plugin_integrity": "passed",
+    "muse_plugin_validate": "passed",
+    "sandbox_probe": "passed",
+    "focused_tests": {
+      "files": 4,
+      "passed": 52,
+      "failed": 0
+    },
+    "control_service_tests": {
+      "passed": 50,
+      "failed": 0
+    },
+    "full_vitest": {
+      "passed": 3080,
+      "failed": 28,
+      "files_failed": 9,
+      "failed_files": [
+        "tests/bench/semantic-lockbox.test.ts",
+        "tests/conformance/lifecycle-conformance.test.ts",
+        "tests/jev/lockbox.test.ts",
+        "tests/jev/qualification-3stage.test.ts",
+        "tests/hooks/config-manifest.test.ts",
+        "tests/hooks/main.test.ts",
+        "tests/hooks/store.test.ts",
+        "tests/scripts/jev-demo.test.ts",
+        "tests/scripts/jev-qualify-lockbox.test.ts"
+      ]
+    },
+    "control_restoration": "full test run left protected state OFF; restored to ON through supported control CLI and PolicyKit"
+  },
+  "canary": {
+    "status": "blocked-before-graph-tool-call",
+    "harness_model": "stealth/crouton-alpha (OpenMuse agent harness only)",
+    "jeverb_decision_model_configured": "typesafe/jev-latest via local Jev gateway",
+    "gateway_catalog_probe": {
+      "route": "http://127.0.0.1:18769/openrouter/v1/models",
+      "status": 200,
+      "model_present": true
+    },
+    "inference_attempts": {
+      "observed_http_statuses": [
+        502,
+        503,
+        503,
+        502,
+        503,
+        503,
+        502,
+        503
+      ],
+      "tool_calls": 0
+    },
+    "jev_judgment_made": false,
+    "probe_repair_verification_reconciliation": "not run",
+    "disposable_task_checks": {
+      "baseline": "passed; active membership allowed; revocation not exercised",
+      "targeted_revocation_probe": "failed as intended; cached revoked membership was incorrectly allowed",
+      "graph_execution": "not performed; no Muse tool call reached Jeverb"
+    },
+    "approved_proof_plan": "none; status query returned no plan for existing mission",
+    "inference_authorization": "user authorized up to 10 harness attempts; no further inference after discovering active Jev credential compromise",
+    "authorized_retry_run": {
+      "session": "14b2f5dc-5c29-47a6-9ee1-869bef46bd2a",
+      "model": "stealth/crouton-alpha (harness only)",
+      "endpoint": "http://127.0.0.1:18769/openrouter/v1",
+      "attempts": 7,
+      "statuses": [
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "stopped_after_repeated_identical_failure": true,
+      "tool_events": 0,
+      "exit_code": 130
+    },
+    "total_harness_transport_failures": {
+      "requests": 15,
+      "statuses": [
+        502,
+        503,
+        503,
+        502,
+        503,
+        503,
+        502,
+        503,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500,
+        500
+      ],
+      "tool_events": 0
+    }
+  },
+  "security_followup": {
+    "exposed_credential_location": "stale OpenRouter backup auth file; credential matches active Locus systemd credential id jev-api-key",
+    "active_credential_effect": "the compromised credential is used by Jeverb Jev routing",
+    "rotation_status": "URGENT: revoke and replace before any Jev inference; not performed because no OpenRouter-authenticated browser/account management context is available",
+    "required_credential_update": "install a newly rotated OpenRouter key into /home/bamn/.config/locus/credentials/jev-api-key; separately correct openrouter-api-key from a rotated key before OpenMuse inference; never paste either key into chat"
+  },
+  "qualification": "not production-qualified; installed-host canary remains incomplete",
+  "gateway_diagnosis": {
+    "model_catalog_get_status": 200,
+    "configured_free_model_present": true,
+    "active_openrouter_credential_matches_operator_suffix_rule": false,
+    "active_jev_credential_matches_operator_suffix_rule": true,
+    "stale_backup_credential_equals_active_jev_credential": true,
+    "active_openrouter_credential_equals_active_jev_credential": false,
+    "inference_failure": "OpenRouter upstream credential bound to the openrouter route is the wrong credential; seven Muse requests returned HTTP 500. The gateway journal had no per-request response body, so the 500 mapping detail is not independently confirmed.",
+    "conclusion": "confirmed local gateway credential binding defect; active Jev credential is compromised because it matches the exposed stale-backup credential"
+  }
+}

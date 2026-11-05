@@ -1,0 +1,3 @@
+var m=3,c=2e3,g=40,l=2;function a(e,u){let r=u.trim();if(r==="")return[...e];if(e[e.length-1]===r)return[...e];let n=[...e,r],o=i=>i.length<40,t=n.filter(o).length,s=n.length-t;return n.filter(i=>o(i)?t>2?(t-=1,!1):!0:s>3?(s-=1,!1):!0)}function d(e,u,r=`
+---
+`){let n=[],o=0;for(let t=e.length-1;t>=0;t-=1){let s=e[t],i=s.length+(n.length>0?r.length:0);if(o+i>u){n.length===0&&n.unshift(s.slice(0,u));break}n.unshift(s),o+=i}return n.join(r)}function _(e){return{model:e.model,latency_ms:e.latency_ms,input_tokens:e.usage.input_tokens,...e.memo===!0?{memo:!0}:{}}}export{m as a,c as b,g as c,l as d,a as e,d as f,_ as g};

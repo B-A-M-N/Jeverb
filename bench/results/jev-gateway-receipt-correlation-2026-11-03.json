@@ -1,0 +1,114 @@
+{
+  "schema": "jeverb-gateway-receipt-correlation/1",
+  "analyzedAt": "2026-11-03T22:22:51.659Z",
+  "gatewaySource": {
+    "name": "gateway-requests.jsonl",
+    "bytes": 853659624,
+    "sha256": "9bc67c10601c0d83670d1b0696203172023fa0680a474dd67f6279225427ef0a",
+    "records": 127584,
+    "malformedLines": 1
+  },
+  "receiptSources": {
+    "mission-completion-lockbox-v3-jevgateway-3stage-r1": {
+      "sha256": "a0363a26d89d6335cd117e1418e11225337e4560215299029ebbe3c62d9bde74",
+      "bytes": 275956,
+      "rows": 217,
+      "malformedRows": 0
+    },
+    "mission-completion-dev-v3-jevgateway-3stage-r1": {
+      "sha256": "e7a9eeba3a4b467975cfd48d6d16d76c71df99ea8db3f38d20e41e887fb7c7e8",
+      "bytes": 41029,
+      "rows": 32,
+      "malformedRows": 0
+    }
+  },
+  "correlationBasis": "receipt modelRequestId/integratedRequestId equals Locus incoming_request_id captured from X-Request-ID",
+  "correlation": {
+    "expectedRequests": {
+      "mission-completion-lockbox-v3-jevgateway-3stage-r1": {
+        "model_only": 217,
+        "integrated": 141
+      },
+      "mission-completion-dev-v3-jevgateway-3stage-r1": {
+        "model_only": 32,
+        "integrated": 22
+      }
+    },
+    "matchedRequests": {
+      "mission-completion-lockbox-v3-jevgateway-3stage-r1": {
+        "model_only": 217,
+        "integrated": 141
+      },
+      "mission-completion-dev-v3-jevgateway-3stage-r1": {
+        "model_only": 32,
+        "integrated": 22
+      }
+    },
+    "unmatchedRequests": {
+      "mission-completion-lockbox-v3-jevgateway-3stage-r1": {
+        "model_only": 0,
+        "integrated": 0
+      },
+      "mission-completion-dev-v3-jevgateway-3stage-r1": {
+        "model_only": 0,
+        "integrated": 0
+      }
+    },
+    "duplicateIncomingIds": 0,
+    "matchedGatewayOutcomes": [
+      {
+        "run": "mission-completion-dev-v3-jevgateway-3stage-r1",
+        "stage": "integrated",
+        "dayUtc": "2026-11-02",
+        "provider": "openrouter_jev",
+        "endpoint": "/jev/api/alpha/decisions",
+        "model": "typesafe/jev-1.14",
+        "httpStatus": 200,
+        "upstreamStatus": 200,
+        "downstreamStatus": 200,
+        "finalOutcome": "success",
+        "requests": 22
+      },
+      {
+        "run": "mission-completion-dev-v3-jevgateway-3stage-r1",
+        "stage": "model_only",
+        "dayUtc": "2026-11-02",
+        "provider": "openrouter_jev",
+        "endpoint": "/jev/api/alpha/decisions",
+        "model": "typesafe/jev-1.14",
+        "httpStatus": 200,
+        "upstreamStatus": 200,
+        "downstreamStatus": 200,
+        "finalOutcome": "success",
+        "requests": 32
+      },
+      {
+        "run": "mission-completion-lockbox-v3-jevgateway-3stage-r1",
+        "stage": "integrated",
+        "dayUtc": "2026-11-02",
+        "provider": "openrouter_jev",
+        "endpoint": "/jev/api/alpha/decisions",
+        "model": "typesafe/jev-1.14",
+        "httpStatus": 200,
+        "upstreamStatus": 200,
+        "downstreamStatus": 200,
+        "finalOutcome": "success",
+        "requests": 141
+      },
+      {
+        "run": "mission-completion-lockbox-v3-jevgateway-3stage-r1",
+        "stage": "model_only",
+        "dayUtc": "2026-11-02",
+        "provider": "openrouter_jev",
+        "endpoint": "/jev/api/alpha/decisions",
+        "model": "typesafe/jev-1.14",
+        "httpStatus": 200,
+        "upstreamStatus": 200,
+        "downstreamStatus": 200,
+        "finalOutcome": "success",
+        "requests": 217
+      }
+    ]
+  },
+  "redaction": "No request IDs, case IDs, request/response payloads, headers, credentials, or client identity are emitted."
+}

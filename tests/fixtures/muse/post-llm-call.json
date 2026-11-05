@@ -1,0 +1,1 @@
+{"event":"PostLLMCall","stdin":{"session_id":"jeverb-qualification-post-llm","hook_event_name":"PostLLMCall","provider":"fixture","request_id":"request-1","response_id":"response-1","status":"success","message_count":1}}

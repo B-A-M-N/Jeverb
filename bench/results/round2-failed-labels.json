@@ -1,0 +1,26 @@
+{
+  "provenance": "round-2 OpenRouter runs (Oct 2026): 3 failed completion cases and 1 failed 2-question adversarial case from the stored assessment; labels are the authored ground-truth labels for those same case ids (identical ids and labels in mission-completion-v1/adversarial-review-v1 datasets), not model output",
+  "cases": {
+    "attestation-wrong-mission-revision": {
+      "questions": {
+        "closure": { "type": "choice", "choice": "INCOMPLETE" }
+      }
+    },
+    "build-plus-attestation-no-test": {
+      "questions": {
+        "closure": { "type": "choice", "choice": "INSUFFICIENT_EVIDENCE" }
+      }
+    },
+    "typecheck-only": {
+      "questions": {
+        "closure": { "type": "choice", "choice": "INSUFFICIENT_EVIDENCE" }
+      }
+    },
+    "contradiction-claim-vs-test": {
+      "questions": {
+        "gap": { "type": "choice", "choice": "SUPPORTED_GAP" },
+        "gap_feature": { "type": "choice", "choice": "GAP" }
+      }
+    }
+  }
+}

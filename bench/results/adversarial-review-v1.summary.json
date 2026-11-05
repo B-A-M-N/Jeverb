@@ -1,0 +1,331 @@
+{
+  "dataset": "bench/datasets/adversarial-review-v1.jsonl",
+  "datasetRevision": "6d422280119b912cc4bcd86c50b35152b302a743b67648973f9a3b28746e73e6",
+  "configuredModel": "openrouter:typesafe/jev-router",
+  "benchmarkVersion": "jev-calibration/2",
+  "observedModels": [
+    "typesafe/jev-router"
+  ],
+  "observedProviders": [
+    "openrouter"
+  ],
+  "questionSetHashes": [
+    "2fd867835126e168f8c87326b98b7fba01ee909cacb276cca58da2784984daaf",
+    "592445be9c5b38439f87a6b5732eed482f82bb8ab46d8b450473307f6803c0dc",
+    "b737236154512802f33cf870c5d73c9dd1469aee80b24412a5121e59ee5cad89",
+    "b8ee5e3b5b61d904689ef2577b972a4535ef832b048d7ebbdbd3de4d27665cb8",
+    "cedd85fff0cd7a9edb5f1695129858bc04245e349392272b8effb39dffe820d4"
+  ],
+  "calibrationRevision": "d456a38808ca867361e158b6eaa614ecefe71197ad4b199d1049105babe43361",
+  "cases": 24,
+  "successfulCases": 23,
+  "failedCases": 1,
+  "expectedAnswers": 61,
+  "missingAnswers": 0,
+  "answerable": 59,
+  "inRange": 36,
+  "accuracy": 0.5901639344262295,
+  "noulSamples": 0,
+  "noulCalibration": {
+    "count": 0,
+    "brier": null,
+    "logLoss": null,
+    "ece": null,
+    "bins": []
+  },
+  "sweep": [
+    {
+      "threshold": 0.1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.2,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.3,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.7,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.8,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.9,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    }
+  ],
+  "resultsFile": "bench/results/adversarial-review-v1.receipts.jsonl",
+  "invalidJudgments": 2,
+  "answeredAccuracy": 0.6101694915254238,
+  "caseSuccessRate": 0.9583333333333334,
+  "caseExactMatchRate": 0.4583333333333333,
+  "systemDecisionAccuracy": 0.5416666666666666,
+  "systemDecisionQuestion": "gap",
+  "confusion": {
+    "gap": {
+      "classes": [
+        "NO_GAP_FOUND",
+        "SUPPORTED_GAP",
+        "UNKNOWN"
+      ],
+      "matrix": {
+        "NO_GAP_FOUND": {
+          "NO_GAP_FOUND": 1,
+          "SUPPORTED_GAP": 0,
+          "UNKNOWN": 2,
+          "__invalid__": 0
+        },
+        "SUPPORTED_GAP": {
+          "NO_GAP_FOUND": 0,
+          "SUPPORTED_GAP": 10,
+          "UNKNOWN": 5,
+          "__invalid__": 1
+        },
+        "UNKNOWN": {
+          "NO_GAP_FOUND": 1,
+          "SUPPORTED_GAP": 2,
+          "UNKNOWN": 2,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "NO_GAP_FOUND": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "support": 3
+        },
+        "SUPPORTED_GAP": {
+          "precision": 0.8333333333333334,
+          "recall": 0.625,
+          "support": 16
+        },
+        "UNKNOWN": {
+          "precision": 0.2222222222222222,
+          "recall": 0.4,
+          "support": 5
+        }
+      }
+    },
+    "gap_feature": {
+      "classes": [
+        "GAP",
+        "NO_GAP",
+        "UNKNOWN"
+      ],
+      "matrix": {
+        "GAP": {
+          "GAP": 5,
+          "NO_GAP": 0,
+          "UNKNOWN": 5,
+          "__invalid__": 1
+        },
+        "NO_GAP": {
+          "GAP": 0,
+          "NO_GAP": 5,
+          "UNKNOWN": 3,
+          "__invalid__": 0
+        },
+        "UNKNOWN": {
+          "GAP": 2,
+          "NO_GAP": 1,
+          "UNKNOWN": 2,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "GAP": {
+          "precision": 0.7142857142857143,
+          "recall": 0.45454545454545453,
+          "support": 11
+        },
+        "NO_GAP": {
+          "precision": 0.8333333333333334,
+          "recall": 0.625,
+          "support": 8
+        },
+        "UNKNOWN": {
+          "precision": 0.2,
+          "recall": 0.4,
+          "support": 5
+        }
+      }
+    },
+    "gap_docs": {
+      "classes": [
+        "GAP",
+        "NO_GAP",
+        "UNKNOWN"
+      ],
+      "matrix": {
+        "GAP": {
+          "GAP": 3,
+          "NO_GAP": 0,
+          "UNKNOWN": 0,
+          "__invalid__": 0
+        },
+        "NO_GAP": {
+          "GAP": 0,
+          "NO_GAP": 2,
+          "UNKNOWN": 2,
+          "__invalid__": 0
+        },
+        "UNKNOWN": {
+          "GAP": 0,
+          "NO_GAP": 0,
+          "UNKNOWN": 2,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "GAP": {
+          "precision": 1,
+          "recall": 1,
+          "support": 3
+        },
+        "NO_GAP": {
+          "precision": 1,
+          "recall": 0.5,
+          "support": 4
+        },
+        "UNKNOWN": {
+          "precision": 0.5,
+          "recall": 1,
+          "support": 2
+        }
+      }
+    },
+    "gap_perf": {
+      "classes": [
+        "GAP",
+        "NO_GAP"
+      ],
+      "matrix": {
+        "GAP": {
+          "GAP": 2,
+          "NO_GAP": 0,
+          "__invalid__": 0
+        },
+        "NO_GAP": {
+          "GAP": 0,
+          "NO_GAP": 1,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "GAP": {
+          "precision": 1,
+          "recall": 1,
+          "support": 2
+        },
+        "NO_GAP": {
+          "precision": 1,
+          "recall": 1,
+          "support": 1
+        }
+      }
+    },
+    "gap_sec": {
+      "classes": [
+        "GAP"
+      ],
+      "matrix": {
+        "GAP": {
+          "GAP": 1,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "GAP": {
+          "precision": 1,
+          "recall": 1,
+          "support": 1
+        }
+      }
+    }
+  },
+  "failuresByCode": {
+    "JevValidationError": 2
+  },
+  "accountingVersion": "inclusive/1",
+  "accountingProvenance": "recomputed from stored receipts without new model calls; failed-case labels recovered per round-2 OpenRouter runs (Oct 2026): 3 failed completion cases and 1 failed 2-question adversarial case from the stored assessment; labels are the authored ground-truth labels for those same case ids (identical ids and labels in mission-completion-v1/adversarial-review-v1 datasets), not model output"
+}

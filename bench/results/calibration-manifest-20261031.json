@@ -1,0 +1,54 @@
+{
+  "manifestVersion": "jev-calibration-manifest/1",
+  "created": "2026-10-31",
+  "authorityConferred": false,
+  "authorityNote": "This manifest records measured evidence only. It does NOT set calibrated:true anywhere and confers no completion authority. Release gates below are unmet; thresholds unchanged.",
+  "model": { "configured": "openrouter:typesafe/jev-router", "observed": "typesafe/jev-router", "provider": "openrouter" },
+  "sliceDefinition": "heldout- prefix rows of each canonical dataset; genuinely unseen (0 heldout ids in dev receipts)",
+  "families": {
+    "mission-completion": {
+      "dataset": "bench/datasets/mission-completion-v1.jsonl",
+      "dev": { "cases": 39, "inclusiveAccuracy": 0.7436, "invalidJudgments": 3, "completePrecision": 1.0, "completeRecall": 0.8333, "falseComplete": 0, "receipts": "bench/results/mission-completion-v1.receipts.jsonl" },
+      "heldout": { "cases": 11, "accuracy": 0.6364, "falseComplete": 0, "completePrecision": 1.0, "completeRecall": 1.0, "receipts": "bench/results/heldout-mission-completion.receipts.jsonl" },
+      "safetyProperty": "0 false COMPLETE across dev non COMPLETE cases plus heldout non COMPLETE cases (42 total); all heldout errors confuse INCOMPLETE with INSUFFICIENT_EVIDENCE, the safe direction"
+    },
+    "corrective-action": {
+      "dataset": "bench/datasets/corrective-action-v1.jsonl",
+      "dev": { "cases": 39, "answers": 111, "inclusiveAccuracy": 0.9009, "donePrecision": 0.6667, "receipts": "bench/results/corrective-action-v1.receipts.jsonl" },
+      "heldout": { "cases": 11, "systemDecisionAccuracy": 0.9091, "donePrecision": 1.0, "doneRecall": 1.0, "receipts": "bench/results/heldout-corrective-action.receipts.jsonl" },
+      "note": "Heldout shows no false done; dev showed 2 false done (continue/retry truth predicted done). Controller never COMPLETEs on model hint alone, so residual risk is a wrong correction, not a false completion."
+    },
+    "stop-intervention": {
+      "dataset": "bench/datasets/stop-intervention-v1.jsonl",
+      "dev": { "cases": 39, "answers": 156, "inclusiveAccuracy": 0.8077, "receipts": "bench/results/stop-intervention-v1.receipts.jsonl" },
+      "heldout": { "cases": 11, "accuracy": 0.8045, "receipts": "bench/results/heldout-stop-intervention.receipts.jsonl" },
+      "note": "Model-question accuracy only; end-to-end false-block rate on labeled routine cases not yet reduced to a measured rate. Gate unmet."
+    },
+    "adversarial-review": {
+      "dataset": "bench/datasets/adversarial-review-v1.jsonl",
+      "dev": { "cases": 24, "answers": 61, "inclusiveAccuracy": 0.5902, "invalidJudgments": 2, "receipts": "bench/results/adversarial-v1.receipts.jsonl" },
+      "heldout": { "cases": 26, "systemDecisionAccuracy": 0.7308, "supportedGapPrecision": 0.85, "receipts": "bench/results/heldout-adversarial-review.receipts.jsonl" },
+      "policy": "Accuracy remains insufficient to grant Jev B veto/approval authority. Production default stays single-judge (Jev A) with deterministic consistency rules (GAP never overridden by NO_GAP_FOUND; UNKNOWN never treated as NO_GAP)."
+    }
+  },
+  "releaseGateComparison": {
+    "falseTerminalCompletion": { "target": "0 in qualification negatives", "measured": "0 in 42 dev+heldout non COMPLETE completion cases; 0 wrong candidate completions in 48 lockbox replays", "met": true, "scope": "labeled fixtures only, not live-agent proof" },
+    "supportedCorrectiveActions": { "target": ">=0.95", "measured": "heldout 0.909", "met": false },
+    "stopFalseBlockRate": { "target": "<=0.02", "measured": "not reduced to a rate; question accuracy 0.80", "met": false },
+    "identicalEvidenceRepairLoops": { "target": "0", "measured": "0 by construction in loop tests (stall+dedupe); no live-agent loop trial", "met": "untested live" },
+    "wrongRevisionVerificationAcceptance": { "target": "0", "measured": "0 in loop-faults and lockbox regressions", "met": true, "scope": "fixtures only" }
+  },
+  "invalidOutputHandling": "Sparse evidence model failures (JevValidationError) fall back to deterministic preflight, which can never be COMPLETE. Locked by tests/mission/closure.test.ts model throw regression and tests/decision/loop-faults.test.ts.",
+  "datasetRevisions": {
+    "mission-completion-v1.jsonl": "656b9f8848491e09279663f2d14cf690babcdeb452b89ed71f460d88f0dd9d47",
+    "corrective-action-v1.jsonl": "e77d17260ff8bbe5c475ca2f6b24e6dc41d31b0c4e8675b7a515c6d13d7f40d8",
+    "stop-intervention-v1.jsonl": "b1ad2df08c2024ad1786b1bbdea26eb94e816d663e03c97ead02bfba49daf090",
+    "adversarial-review-v1.jsonl": "c9217f059b7bbf91941da808bd68221189f64d78275b4ab74da34b5df9e6d9c7"
+  },
+  "questionHashes": {
+    "closure": "6714d6c0af29",
+    "next-step": "ea56fe4f7239",
+    "stop": "8cfd4b5aaf47",
+    "adversarial": ["2fd867835126", "592445be9c5b", "b73723615451", "cedd85fff0cd", "015c79337fa4", "15ea0ef6d0fa", "473495e7111f"]
+  }
+}

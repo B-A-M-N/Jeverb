@@ -1,0 +1,203 @@
+{
+  "dataset": "/tmp/heldout-mission-completion.jsonl",
+  "datasetRevision": "9cd83951895903d9008cffb7f4b4358b8703faa3c0a9e54f88a4ed4fd9d5cd60",
+  "configuredModel": "openrouter:typesafe/jev-router",
+  "benchmarkVersion": "jev-calibration/2",
+  "observedModels": [
+    "typesafe/jev-router"
+  ],
+  "observedProviders": [
+    "openrouter"
+  ],
+  "questionSetHashes": [
+    "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63"
+  ],
+  "calibrationRevision": "7231ca3fb333beea0f41bdbaf195e60ddfbb9c26387cfb6396a7d46582d23c1f",
+  "cases": 11,
+  "successfulCases": 11,
+  "failedCases": 0,
+  "expectedAnswers": 11,
+  "missingAnswers": 0,
+  "modelMismatches": 11,
+  "answerable": 11,
+  "inRange": 7,
+  "invalidJudgments": 0,
+  "accuracy": 0.6363636363636364,
+  "answeredAccuracy": 0.6363636363636364,
+  "caseSuccessRate": 1,
+  "caseExactMatchRate": 0.6363636363636364,
+  "systemDecisionAccuracy": 0.6363636363636364,
+  "systemDecisionQuestion": "closure",
+  "confusion": {
+    "closure": {
+      "classes": [
+        "BLOCKED",
+        "COMPLETE",
+        "INCOMPLETE",
+        "INSUFFICIENT_EVIDENCE"
+      ],
+      "matrix": {
+        "BLOCKED": {
+          "BLOCKED": 2,
+          "COMPLETE": 0,
+          "INCOMPLETE": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "__invalid__": 0
+        },
+        "COMPLETE": {
+          "BLOCKED": 0,
+          "COMPLETE": 2,
+          "INCOMPLETE": 0,
+          "INSUFFICIENT_EVIDENCE": 0,
+          "__invalid__": 0
+        },
+        "INCOMPLETE": {
+          "BLOCKED": 0,
+          "COMPLETE": 0,
+          "INCOMPLETE": 1,
+          "INSUFFICIENT_EVIDENCE": 1,
+          "__invalid__": 0
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "BLOCKED": 0,
+          "COMPLETE": 0,
+          "INCOMPLETE": 3,
+          "INSUFFICIENT_EVIDENCE": 2,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "BLOCKED": {
+          "precision": 1,
+          "recall": 1,
+          "support": 2
+        },
+        "COMPLETE": {
+          "precision": 1,
+          "recall": 1,
+          "support": 2
+        },
+        "INCOMPLETE": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "support": 2
+        },
+        "INSUFFICIENT_EVIDENCE": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "support": 5
+        }
+      }
+    }
+  },
+  "failuresByCode": {},
+  "noulSamples": 0,
+  "noulCalibration": {
+    "count": 0,
+    "brier": null,
+    "logLoss": null,
+    "ece": null,
+    "bins": []
+  },
+  "sweep": [
+    {
+      "threshold": 0.1,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.2,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.3,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.4,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.5,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.6,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.7,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.8,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    },
+    {
+      "threshold": 0.9,
+      "tp": 0,
+      "fp": 0,
+      "tn": 0,
+      "fn": 0,
+      "tpr": null,
+      "fpr": null,
+      "precision": null,
+      "recall": null
+    }
+  ]
+}

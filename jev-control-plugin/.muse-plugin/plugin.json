@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "name": "jev",
+  "displayName": "Jev control",
+  "version": "0.1.0",
+  "description": "Muse command aliases for the install-wide Jeverb operational switch.",
+  "compat": { "manifestDir": ".muse-plugin", "source": "native" },
+  "capabilities": {
+    "commands": [
+      { "id": "off", "path": "commands/off.md" },
+      { "id": "on", "path": "commands/on.md" }
+    ],
+    "hooks": [],
+    "mcpServers": [],
+    "reminders": [],
+    "skills": []
+  }
+}

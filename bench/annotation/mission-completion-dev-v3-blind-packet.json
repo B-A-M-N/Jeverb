@@ -1,0 +1,1440 @@
+{
+  "schema": "jev-blind-annotation/1",
+  "sourceHash": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+  "cases": [
+    {
+      "annotationId": "afc6a1d2-8e02-45e5-a974-da9f52a3f642",
+      "state": {
+        "objective": "Serve API v2 alongside v1 during migration and sunset v1 with six months notice",
+        "acceptanceCriteria": [
+          {
+            "id": "coexist",
+            "statement": "v1 and v2 serve side by side",
+            "outcome": "both versions answered the contract suite in staging"
+          },
+          {
+            "id": "sunset",
+            "statement": "v1 sunset carries six months notice",
+            "outcome": "sunset header names a date six months out",
+            "evidenceRef": "verification:dev3run-17"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:17"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-17"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "b1333e6c-ee53-4aa1-9be9-c1e9d72b9e9a",
+      "state": {
+        "objective": "Export transaction history as CSV with headers and stream rows for large accounts",
+        "acceptanceCriteria": [
+          {
+            "id": "headers",
+            "statement": "Exports include the documented headers",
+            "outcome": "header row matches the data dictionary exactly",
+            "evidenceRef": "verification:dev3run-21"
+          },
+          {
+            "id": "stream",
+            "statement": "Large exports stream instead of buffering",
+            "outcome": "million-row export held flat memory in the soak run",
+            "evidenceRef": "verification:dev3run-21"
+          }
+        ],
+        "tests": {
+          "passed": false,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:21"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-21"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "30c50385-3faf-40fa-b200-5651154da968",
+      "state": {
+        "objective": "Export transaction history as CSV with headers and stream rows for large accounts",
+        "acceptanceCriteria": [
+          {
+            "id": "headers",
+            "statement": "Exports include the documented headers",
+            "outcome": "header row matches the data dictionary exactly",
+            "evidenceRef": "verification:dev3run-6"
+          },
+          {
+            "id": "stream",
+            "statement": "Large exports stream instead of buffering",
+            "outcome": "million-row export held flat memory in the soak run",
+            "evidenceRef": "verification:dev3run-6"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:6"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-6"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "f9919606-24f2-4afe-9c6b-bde22ea66844",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "outcome": "retry delays measured at 1s, 10s, 100s",
+            "evidenceRef": "verification:dev3run-2"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "signatures verified on all attempts including retries",
+            "evidenceRef": "verification:dev3run-2"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:2"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-2"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "0fa52d7e-9aca-4c69-946e-a02bd92c1d7e",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "outcome": "load test passed on last quarter's build; this quarter's build not yet measured",
+            "evidenceRef": "verification:dev3run-30"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "wildcard-plus-credentials combos rejected in the sweep",
+            "evidenceRef": "verification:dev3run-30"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:30"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-30"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "dd7e09d1-1461-4f2a-87fc-bc37f11c89be",
+      "state": {
+        "objective": "Export transaction history as CSV with headers and stream rows for large accounts",
+        "acceptanceCriteria": [
+          {
+            "id": "headers",
+            "statement": "Exports include the documented headers",
+            "outcome": "dictionary diff green for all account types",
+            "evidenceRef": "verification:dev3run-7"
+          },
+          {
+            "id": "stream",
+            "statement": "Large exports stream instead of buffering",
+            "outcome": "memory profile flat across the million-row export",
+            "evidenceRef": "verification:dev3run-7"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:7"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-7"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "b8fce7fe-da31-46f6-95aa-09c3ccfb8dcb",
+      "state": {
+        "objective": "Support SSO login for workspace members and fall back to password for guests",
+        "acceptanceCriteria": [
+          {
+            "id": "sso",
+            "statement": "Members can log in with SSO",
+            "outcome": "provider matrix passed in staging",
+            "evidenceRef": "verification:dev3run-9"
+          },
+          {
+            "id": "fallback",
+            "statement": "Guests fall back to password login",
+            "outcome": "fallback asserted for every guest role",
+            "evidenceRef": "verification:dev3run-9"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:9"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-9"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "1a8d0bc5-d2b7-41b4-90ff-e3fcbb946eed",
+      "state": {
+        "objective": "Export transaction history as CSV with headers and stream rows for large accounts",
+        "acceptanceCriteria": [
+          {
+            "id": "headers",
+            "statement": "Exports include the documented headers",
+            "outcome": "header row matches the data dictionary exactly",
+            "evidenceRef": "verification:dev3run-15"
+          },
+          {
+            "id": "stream",
+            "statement": "Large exports stream instead of buffering",
+            "outcome": "million-row export held flat memory in the soak run",
+            "evidenceRef": "verification:dev3run-15"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:15"
+        },
+        "operations": {
+          "pending": 2,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-15"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "e55a68e7-d1a0-4671-a4dd-1cef11b38ac3",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "outcome": "preflight allows exactly the partner origin",
+            "evidenceRef": "verification:dev3run-12"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "wildcard-plus-credentials combos rejected in the sweep",
+            "evidenceRef": "verification:dev3run-12"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:12"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [
+          {
+            "id": "vendor-key",
+            "unresolved": true
+          }
+        ],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-12"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "d2bd7a40-8aa1-4f84-988d-9b8bd220d942",
+      "state": {
+        "objective": "Cap concurrent sessions at three per user and evict the oldest on overflow",
+        "acceptanceCriteria": [
+          {
+            "id": "cap",
+            "statement": "Concurrent sessions are capped at three",
+            "outcome": "fourth login evicted exactly one session in the test",
+            "evidenceRef": "verification:dev3run-26"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:26"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-26"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "6ebf51ef-cb98-423f-a8ec-97788b1a1d53",
+      "state": {
+        "objective": "Serve API v2 alongside v1 during migration and sunset v1 with six months notice",
+        "acceptanceCriteria": [
+          {
+            "id": "coexist",
+            "statement": "v1 and v2 serve side by side",
+            "outcome": "both versions answered the contract suite in staging",
+            "evidenceRef": "verification:dev3run-10"
+          },
+          {
+            "id": "sunset",
+            "statement": "v1 sunset carries six months notice",
+            "outcome": "sunset header names a date six months out",
+            "evidenceRef": "verification:dev3run-10"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:10"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-10"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "0d59fcf3-e831-4738-99cf-40a25d89a59f",
+      "state": {
+        "objective": "Support SSO login for workspace members and fall back to password for guests",
+        "acceptanceCriteria": [
+          {
+            "id": "sso",
+            "statement": "Members can log in with SSO",
+            "outcome": "SSO round-trip green for all three identity providers",
+            "evidenceRef": "verification:dev3run-8"
+          },
+          {
+            "id": "fallback",
+            "statement": "Guests fall back to password login",
+            "outcome": "guest password path exercised end to end",
+            "evidenceRef": "verification:dev3run-8"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:8"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-8"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "847b6f48-5d1c-4897-843f-060ed83f2c53",
+      "state": {
+        "objective": "Serve API v2 alongside v1 during migration and sunset v1 with six months notice",
+        "acceptanceCriteria": [
+          {
+            "id": "coexist",
+            "statement": "v1 and v2 serve side by side",
+            "outcome": "side by side for reads; v2 writes return 501",
+            "evidenceRef": "verification:dev3run-23"
+          },
+          {
+            "id": "sunset",
+            "statement": "v1 sunset carries six months notice",
+            "outcome": "sunset header names a date six months out",
+            "evidenceRef": "verification:dev3run-23"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:23"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-23"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "82dae5a9-ce79-437f-8218-cf124397df36",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "evidenceRef": "verification:dev3run-18"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "wildcard-plus-credentials combos rejected in the sweep",
+            "evidenceRef": "verification:dev3run-18"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:18"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-18"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "9b9458d5-cfb4-46b8-9eba-575380e7d6a2",
+      "state": {
+        "objective": "Cap concurrent sessions at three per user and evict the oldest on overflow",
+        "acceptanceCriteria": [
+          {
+            "id": "cap",
+            "statement": "Concurrent sessions are capped at three",
+            "outcome": "fourth login evicted exactly one session in the test",
+            "evidenceRef": "verification:dev3run-4"
+          },
+          {
+            "id": "evict",
+            "statement": "The oldest session is evicted on overflow",
+            "outcome": "eviction order oldest-first confirmed in logs",
+            "evidenceRef": "verification:dev3run-4"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:4"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-4"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "ed396349-9346-4f3d-91f5-7fc9babe8a11",
+      "state": {
+        "objective": "Support SSO login for workspace members and fall back to password for guests",
+        "acceptanceCriteria": [
+          {
+            "id": "sso",
+            "statement": "Members can log in with SSO",
+            "outcome": "SSO round-trip green for all three identity providers"
+          },
+          {
+            "id": "fallback",
+            "statement": "Guests fall back to password login",
+            "outcome": "guest password path exercised end to end",
+            "evidenceRef": "verification:dev3run-16"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:16"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-16"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "20586b02-5d11-4b77-bdd6-a19e8d2ab5d4",
+      "state": {
+        "objective": "Export transaction history as CSV with headers and stream rows for large accounts",
+        "acceptanceCriteria": [
+          {
+            "id": "headers",
+            "statement": "Exports include the documented headers",
+            "outcome": "header row matches the data dictionary exactly",
+            "evidenceRef": "verification:dev3run-27"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:27"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-27"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "0a7afb0c-c039-4a18-a0c7-6856813a6b94",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "outcome": "preflight allows exactly the partner origin",
+            "evidenceRef": "verification:dev3run-0"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "wildcard-plus-credentials combos rejected in the sweep",
+            "evidenceRef": "verification:dev3run-0"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:0"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-0"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "9bdb2e2d-0e68-4c22-988d-6261d6d3219e",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "outcome": "not implemented; deferred to next quarter",
+            "evidenceRef": "verification:dev3run-24"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "wildcard-plus-credentials combos rejected in the sweep",
+            "evidenceRef": "verification:dev3run-24"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:24"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-24"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "c7d3b5d8-190b-4672-81da-94def78fa6a3",
+      "state": {
+        "objective": "Cap concurrent sessions at three per user and evict the oldest on overflow",
+        "acceptanceCriteria": [
+          {
+            "id": "cap",
+            "statement": "Concurrent sessions are capped at three",
+            "outcome": "fourth login evicted exactly one session in the test",
+            "evidenceRef": "verification:dev3run-20"
+          },
+          {
+            "id": "evict",
+            "statement": "The oldest session is evicted on overflow",
+            "outcome": "eviction order oldest-first confirmed in logs",
+            "evidenceRef": "verification:dev3run-20"
+          }
+        ],
+        "tests": {
+          "passed": false,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:20"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-20"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "65903b4d-db51-4225-b883-5a1e8f8607a4",
+      "state": {
+        "objective": "Support SSO login for workspace members and fall back to password for guests",
+        "acceptanceCriteria": [
+          {
+            "id": "sso",
+            "statement": "Members can log in with SSO",
+            "outcome": "SSO works with two providers; the third errors on groups",
+            "evidenceRef": "verification:dev3run-22"
+          },
+          {
+            "id": "fallback",
+            "statement": "Guests fall back to password login",
+            "outcome": "guest password path exercised end to end",
+            "evidenceRef": "verification:dev3run-22"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:22"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-22"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "739798b5-8d59-4064-a73d-6bbe26ac11dd",
+      "state": {
+        "objective": "Support SSO login for workspace members and fall back to password for guests",
+        "acceptanceCriteria": [
+          {
+            "id": "sso",
+            "statement": "Members can log in with SSO",
+            "outcome": "mostly implemented; a few edge cases may remain open",
+            "evidenceRef": "verification:dev3run-28"
+          },
+          {
+            "id": "fallback",
+            "statement": "Guests fall back to password login",
+            "outcome": "guest password path exercised end to end",
+            "evidenceRef": "verification:dev3run-28"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:28"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-28"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "284807c2-a57d-4ab4-843d-cace80d2b874",
+      "state": {
+        "objective": "Cap concurrent sessions at three per user and evict the oldest on overflow",
+        "acceptanceCriteria": [
+          {
+            "id": "cap",
+            "statement": "Concurrent sessions are capped at three",
+            "outcome": "cap asserted for password, SSO, and token logins",
+            "evidenceRef": "verification:dev3run-5"
+          },
+          {
+            "id": "evict",
+            "statement": "The oldest session is evicted on overflow",
+            "outcome": "order verified across ten forced overflows",
+            "evidenceRef": "verification:dev3run-5"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:5"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-5"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "da21cb54-12fc-4ee9-af28-5ac14bc8477c",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "evidenceRef": "verification:dev3run-19"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "signatures verified on all attempts including retries",
+            "evidenceRef": "verification:dev3run-19"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:19"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-19"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "a8402b0d-7c29-4e51-a534-0473c0e782b4",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "outcome": "not implemented; deferred to next quarter",
+            "evidenceRef": "verification:dev3run-25"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "signatures verified on all attempts including retries",
+            "evidenceRef": "verification:dev3run-25"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:25"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-25"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "a1b244d4-6072-430b-83d3-b9bc874b768c",
+      "state": {
+        "objective": "Serve API v2 alongside v1 during migration and sunset v1 with six months notice",
+        "acceptanceCriteria": [
+          {
+            "id": "coexist",
+            "statement": "v1 and v2 serve side by side",
+            "outcome": "contract suite green against both versions",
+            "evidenceRef": "verification:dev3run-11"
+          },
+          {
+            "id": "sunset",
+            "statement": "v1 sunset carries six months notice",
+            "outcome": "deprecation notice reviewed by developer relations",
+            "evidenceRef": "verification:dev3run-11"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:11"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-11"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "55dfb5ca-09bf-48ae-aa45-5b44797e34db",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "outcome": "backoff schedule asserted in the partner sandbox",
+            "evidenceRef": "verification:dev3run-3"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "partner verified signatures across a retry storm",
+            "evidenceRef": "verification:dev3run-3"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:3"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-3"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "2da2d9c1-0b8c-4aa9-9ba3-0f8d12b5164d",
+      "state": {
+        "objective": "Cap concurrent sessions at three per user and evict the oldest on overflow",
+        "acceptanceCriteria": [
+          {
+            "id": "cap",
+            "statement": "Concurrent sessions are capped at three",
+            "outcome": "fourth login evicted exactly one session in the test",
+            "evidenceRef": "verification:dev3run-14"
+          },
+          {
+            "id": "evict",
+            "statement": "The oldest session is evicted on overflow",
+            "outcome": "eviction order oldest-first confirmed in logs",
+            "evidenceRef": "verification:dev3run-14"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:14"
+        },
+        "operations": {
+          "pending": 2,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-14"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "060c7eea-9615-4058-aa81-ea122fd57286",
+      "state": {
+        "objective": "Serve API v2 alongside v1 during migration and sunset v1 with six months notice",
+        "acceptanceCriteria": [
+          {
+            "id": "coexist",
+            "statement": "v1 and v2 serve side by side",
+            "outcome": "mostly implemented; a few edge cases may remain open",
+            "evidenceRef": "verification:dev3run-29"
+          },
+          {
+            "id": "sunset",
+            "statement": "v1 sunset carries six months notice",
+            "outcome": "sunset header names a date six months out",
+            "evidenceRef": "verification:dev3run-29"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:29"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-29"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "e0bc945a-b387-4e51-9358-22cb4c02a9b0",
+      "state": {
+        "objective": "Restrict cross-origin access to the partner dashboard origin and reject credentialed wildcard use",
+        "acceptanceCriteria": [
+          {
+            "id": "restrict",
+            "statement": "Only the partner origin is allowed",
+            "outcome": "origin sweep shows one allowed origin",
+            "evidenceRef": "verification:dev3run-1"
+          },
+          {
+            "id": "nowildcard",
+            "statement": "Credentialed wildcard responses are rejected",
+            "outcome": "middleware test rejects every wildcard credential combo",
+            "evidenceRef": "verification:dev3run-1"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:1"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-1"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "ba7958f5-a6d4-49f0-8855-61e995b188c5",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "outcome": "retry delays measured at 1s, 10s, 100s",
+            "evidenceRef": "verification:dev3run-13"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "signatures verified on all attempts including retries",
+            "evidenceRef": "verification:dev3run-13"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:13"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [
+          {
+            "id": "vendor-key",
+            "unresolved": true
+          }
+        ],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-13"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    },
+    {
+      "annotationId": "0c00a2e4-a747-4fcd-8e07-8c8a7bacc392",
+      "state": {
+        "objective": "Retry failed partner webhooks with backoff and sign each attempt",
+        "acceptanceCriteria": [
+          {
+            "id": "backoff",
+            "statement": "Failures retry with backoff",
+            "outcome": "load test passed on last quarter's build; this quarter's build not yet measured",
+            "evidenceRef": "verification:dev3run-31"
+          },
+          {
+            "id": "sign",
+            "statement": "Each attempt carries a valid signature",
+            "outcome": "signatures verified on all attempts including retries",
+            "evidenceRef": "verification:dev3run-31"
+          }
+        ],
+        "tests": {
+          "passed": true,
+          "independent": true,
+          "evidenceRef": "verifier:dev3v:31"
+        },
+        "operations": {
+          "pending": 0,
+          "uncertain": 0
+        },
+        "blockers": [],
+        "graphRuns": [],
+        "missionRevision": "mission-dev3",
+        "evidenceRevision": "evidence-dev3-31"
+      },
+      "questions": {
+        "closure": {
+          "type": "choice",
+          "instructions": "Given the original objective and only the supplied verified outcomes, choose whether the objective is semantically fulfilled. Do not infer missing work or evidence. COMPLETE means every part of the original objective is met. INCOMPLETE means work remains. BLOCKED means an external dependency prevents completion. INSUFFICIENT_EVIDENCE means the evidence cannot support a reliable judgment.",
+          "criteria": {
+            "COMPLETE": "The verified outcomes together fulfill the user's original objective; no requested capability or deliverable is omitted.",
+            "INCOMPLETE": "The objective is understood, but at least one requested outcome remains unfinished or is not met.",
+            "BLOCKED": "A necessary external dependency or unresolved blocker prevents further completion.",
+            "INSUFFICIENT_EVIDENCE": "The evidence is missing, stale, contradictory, or too indirect to decide."
+          }
+        }
+      }
+    }
+  ]
+}

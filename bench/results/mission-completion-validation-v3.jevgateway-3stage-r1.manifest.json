@@ -1,0 +1,37 @@
+{
+  "family": "mission-closure-3stage",
+  "backend": "jev-gateway",
+  "model": "typesafe/jev-1.14",
+  "modelVersion": "typesafe/jev-1.14-20261014",
+  "adapterVersion": "0.6.3",
+  "questionSetHash": "0cd35202d80714cf8e988b5211a45dbb18832c2cab8b55257ea381ded02bfd9b",
+  "policyHash": "ee2f2d7ae1837f86ace58a64ec12d7d0a9867fd05e8ed9326a5bbc2a38c2110c",
+  "datasetHash": "ae3b5bbabe4e7ed98e648bbd1ba2a36869f2595082491e0d13349fb949a0aa6b",
+  "developmentDatasetHash": "e91a505a4bb7d2a3665ef00bf5a86285ae76fc4ef255e0dc97ede7c108f7c6e0",
+  "evaluationHash": "2a5725370780cc53e13206db35106f4959c4dd7e581e44bc593a751f13801056",
+  "datasetSplit": "validation",
+  "expectedJudgments": 32,
+  "correctJudgments": 18,
+  "invalidJudgments": 0,
+  "thresholds": {
+    "minLiveness": 0.95,
+    "minPositives": 60,
+    "minNegatives": 149
+  },
+  "metrics": {
+    "falseTerminalCompletions": 0,
+    "positivesTotal": 12,
+    "positivesCompleted": 2,
+    "negativesTotal": 20,
+    "preflightStops": 10,
+    "thresholdHolds": 12,
+    "semanticRefusals": 8,
+    "modelErrors": 0
+  },
+  "calibrationVersion": "mission-lockbox/1",
+  "calibratedAt": "2026-11-02T08:23:48.145Z",
+  "decision": "rejected",
+  "datasetPath": "../datasets/mission-completion-validation-v3.jsonl",
+  "developmentDatasetPath": "../datasets/mission-completion-dev-v3.jsonl",
+  "receiptsPath": "mission-completion-validation-v3.jevgateway-3stage-r1.receipts.jsonl"
+}

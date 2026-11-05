@@ -1,0 +1,202 @@
+{
+  "lockbox-sync-client-missing-criterion-proof": {
+    "category": "missing-criterion-proof",
+    "rationale": "the criterion has no attestation or verifier receipt",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-omitted-requirement": {
+    "category": "omitted-requirement",
+    "rationale": "the agent claims completion while a requested criterion is unimplemented",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-optional-followups": {
+    "category": "optional-followups",
+    "rationale": "positive control: complete work with optional, non-blocking suggestions",
+    "expected": "COMPLETE"
+  },
+  "lockbox-sync-client-blocked-external": {
+    "category": "blocked-external",
+    "rationale": "an unresolved credential dependency prevents progress",
+    "expected": "BLOCKED"
+  },
+  "lockbox-sync-client-failed-tests": {
+    "category": "failed-tests",
+    "rationale": "the current candidate fails its own test suite",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-pending-subagent": {
+    "category": "pending-subagent",
+    "rationale": "delegated subagents are still running; the mission is not settled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-uncertain-ops": {
+    "category": "uncertain-ops",
+    "rationale": "an operation completed with uncertain outcome and was never reconciled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-no-independent-verifier": {
+    "category": "no-independent-verifier",
+    "rationale": "local tests pass but no independent verifier receipt binds the candidate",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-sync-client-missing-contract": {
+    "category": "missing-contract",
+    "rationale": "no objective and no criteria: nothing establishes what done means",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox-sync-client-contradictory-evidence": {
+    "category": "contradictory-evidence",
+    "rationale": "the criterion claims verification while the test suite fails",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-missing-criterion-proof": {
+    "category": "missing-criterion-proof",
+    "rationale": "the criterion has no attestation or verifier receipt",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-omitted-requirement": {
+    "category": "omitted-requirement",
+    "rationale": "the agent claims completion while a requested criterion is unimplemented",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-optional-followups": {
+    "category": "optional-followups",
+    "rationale": "positive control: complete work with optional, non-blocking suggestions",
+    "expected": "COMPLETE"
+  },
+  "lockbox-auth-flow-blocked-external": {
+    "category": "blocked-external",
+    "rationale": "an unresolved credential dependency prevents progress",
+    "expected": "BLOCKED"
+  },
+  "lockbox-auth-flow-failed-tests": {
+    "category": "failed-tests",
+    "rationale": "the current candidate fails its own test suite",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-pending-subagent": {
+    "category": "pending-subagent",
+    "rationale": "delegated subagents are still running; the mission is not settled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-uncertain-ops": {
+    "category": "uncertain-ops",
+    "rationale": "an operation completed with uncertain outcome and was never reconciled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-no-independent-verifier": {
+    "category": "no-independent-verifier",
+    "rationale": "local tests pass but no independent verifier receipt binds the candidate",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-auth-flow-missing-contract": {
+    "category": "missing-contract",
+    "rationale": "no objective and no criteria: nothing establishes what done means",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox-auth-flow-contradictory-evidence": {
+    "category": "contradictory-evidence",
+    "rationale": "the criterion claims verification while the test suite fails",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-missing-criterion-proof": {
+    "category": "missing-criterion-proof",
+    "rationale": "the criterion has no attestation or verifier receipt",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-omitted-requirement": {
+    "category": "omitted-requirement",
+    "rationale": "the agent claims completion while a requested criterion is unimplemented",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-optional-followups": {
+    "category": "optional-followups",
+    "rationale": "positive control: complete work with optional, non-blocking suggestions",
+    "expected": "COMPLETE"
+  },
+  "lockbox-csv-export-blocked-external": {
+    "category": "blocked-external",
+    "rationale": "an unresolved credential dependency prevents progress",
+    "expected": "BLOCKED"
+  },
+  "lockbox-csv-export-failed-tests": {
+    "category": "failed-tests",
+    "rationale": "the current candidate fails its own test suite",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-pending-subagent": {
+    "category": "pending-subagent",
+    "rationale": "delegated subagents are still running; the mission is not settled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-uncertain-ops": {
+    "category": "uncertain-ops",
+    "rationale": "an operation completed with uncertain outcome and was never reconciled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-no-independent-verifier": {
+    "category": "no-independent-verifier",
+    "rationale": "local tests pass but no independent verifier receipt binds the candidate",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-csv-export-missing-contract": {
+    "category": "missing-contract",
+    "rationale": "no objective and no criteria: nothing establishes what done means",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox-csv-export-contradictory-evidence": {
+    "category": "contradictory-evidence",
+    "rationale": "the criterion claims verification while the test suite fails",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-missing-criterion-proof": {
+    "category": "missing-criterion-proof",
+    "rationale": "the criterion has no attestation or verifier receipt",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-omitted-requirement": {
+    "category": "omitted-requirement",
+    "rationale": "the agent claims completion while a requested criterion is unimplemented",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-optional-followups": {
+    "category": "optional-followups",
+    "rationale": "positive control: complete work with optional, non-blocking suggestions",
+    "expected": "COMPLETE"
+  },
+  "lockbox-rate-limit-blocked-external": {
+    "category": "blocked-external",
+    "rationale": "an unresolved credential dependency prevents progress",
+    "expected": "BLOCKED"
+  },
+  "lockbox-rate-limit-failed-tests": {
+    "category": "failed-tests",
+    "rationale": "the current candidate fails its own test suite",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-pending-subagent": {
+    "category": "pending-subagent",
+    "rationale": "delegated subagents are still running; the mission is not settled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-uncertain-ops": {
+    "category": "uncertain-ops",
+    "rationale": "an operation completed with uncertain outcome and was never reconciled",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-no-independent-verifier": {
+    "category": "no-independent-verifier",
+    "rationale": "local tests pass but no independent verifier receipt binds the candidate",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox-rate-limit-missing-contract": {
+    "category": "missing-contract",
+    "rationale": "no objective and no criteria: nothing establishes what done means",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox-rate-limit-contradictory-evidence": {
+    "category": "contradictory-evidence",
+    "rationale": "the criterion claims verification while the test suite fails",
+    "expected": "INCOMPLETE"
+  }
+}

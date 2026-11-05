@@ -1,0 +1,194 @@
+{
+  "dev3-cors-policy-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-cors-policy-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-webhook-retry-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-webhook-retry-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-session-quota-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-session-quota-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-export-csv-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-export-csv-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-sso-login-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-sso-login-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-api-version-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-api-version-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-cors-policy-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "dev3-webhook-retry-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "dev3-session-quota-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-export-csv-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-sso-login-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-api-version-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-cors-policy-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-webhook-retry-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-session-quota-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-export-csv-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "dev3-sso-login-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-api-version-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-cors-policy-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-webhook-retry-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-session-quota-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-export-csv-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "dev3-sso-login-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "dev3-api-version-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "dev3-cors-policy-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "dev3-webhook-retry-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  }
+}

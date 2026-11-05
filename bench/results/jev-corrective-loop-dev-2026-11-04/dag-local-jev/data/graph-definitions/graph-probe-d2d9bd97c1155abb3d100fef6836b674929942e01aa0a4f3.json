@@ -1,0 +1,1 @@
+{"version":1,"parallel":false,"nodes":[{"id":"criterion-probe","kind":"shell","command":"node revoked-probe.cjs","maxAttempts":1,"idempotent":false}]}

@@ -1,0 +1,1 @@
+{"fail_closed":["deterministic hard-deny","malformed protected policy","live-secret pattern","unpersistable mandatory audit"],"fail_neutral":["unavailable probabilistic review in CI"],"fail_open":["probabilistic-only","unprotected action","availability failure","no detector fired"],"version":1}

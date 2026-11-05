@@ -1,0 +1,230 @@
+{
+  "schema": "jev-semantic-paired-development-results/2",
+  "evaluatedAt": "2026-11-04T01:02:19.231Z",
+  "provider": "openrouter",
+  "requestedModel": "typesafe/jev-latest",
+  "expectedReturnedModel": "typesafe/jev-1.14-20261014",
+  "candidateQualificationIdentity": "6754f7314c68a6250d988b910cbb98270d96596d78fbaebba0f00949b2696083",
+  "candidateQuestionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+  "baselineQuestionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+  "minConfidence": 0.9,
+  "concentrationStatistic": "TypeSafe Choice confidence, not correctness probability",
+  "stopReason": "completed",
+  "summary": {
+    "totalCases": 12,
+    "totalRequests": 24,
+    "concurrency": 1,
+    "retries": 0,
+    "baseline": {
+      "falseCompleteOnNegatives": 0,
+      "correctNegativeDecisions": 0,
+      "positiveLiveness": "0/6",
+      "terminalPositiveAuthorizations": 0,
+      "falseTerminalAuthorizations": 0,
+      "concentration": {
+        "count": 0,
+        "mean": null,
+        "min": null,
+        "max": null
+      }
+    },
+    "candidate": {
+      "falseFulfilledOnNegatives": 0,
+      "correctNegativeDecisions": 0,
+      "positiveLiveness": "0/6",
+      "candidatesMeetingUnchanged090ConfidenceConcentrationGate": 0,
+      "candidatesMeetingUnchanged090FulfilledOutcomeProbabilityGate": 0,
+      "candidatesMeetingBothUnchanged090GateConditions": 0,
+      "concentration": {
+        "count": 0,
+        "mean": null,
+        "min": null,
+        "max": null
+      },
+      "terminalAuthorization": "none; candidate question is not wired to production authority"
+    }
+  },
+  "reportedCostUsd": 0,
+  "cases": [
+    {
+      "id": "p01-config-policy",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "p02-auth-scope",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "p03-backup",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "p04-search-index",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "p05-notification",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "p06-api-migration",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n01-backup-regions",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "NOT_FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n02-api-partial",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "NOT_FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n03-redaction-conflict",
+      "expected": "UNCERTAIN",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "UNCERTAIN",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n04-retry-test-coverage",
+      "expected": "UNCERTAIN",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "UNCERTAIN",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n05-dashboard-scope",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "NOT_FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    },
+    {
+      "id": "n06-search-partial",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "model-error",
+        "inferenceRequests": 2,
+        "baselineFailure": "transport: JevConnectionError",
+        "candidate": {
+          "status": "unavailable",
+          "expected": "NOT_FULFILLED",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "error": "transport: JevConnectionError"
+        }
+      }
+    }
+  ]
+}

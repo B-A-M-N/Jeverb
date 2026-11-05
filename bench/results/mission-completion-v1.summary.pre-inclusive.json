@@ -1,0 +1,134 @@
+{
+ "dataset": "bench/datasets/mission-completion-v1.jsonl",
+ "datasetRevision": "6ea0bff478efa055d10bf9fb266a1207b9ba7cf9ac0730de263e2e371bd237db",
+ "configuredModel": "openrouter:typesafe/jev-router",
+ "benchmarkVersion": "jev-calibration/2",
+ "observedModels": [
+  "typesafe/jev-router"
+ ],
+ "observedProviders": [
+  "openrouter"
+ ],
+ "questionSetHashes": [
+  "6714d6c0af29dd7eea06eb4b658a686035d96b25b5b03ead11c503507699df63"
+ ],
+ "calibrationRevision": "19cb6ad40e756909287e15e5c5a14354b994f6e3f4818ffb59ca8908b412812d",
+ "cases": 39,
+ "successfulCases": 36,
+ "failedCases": 3,
+ "expectedAnswers": 39,
+ "missingAnswers": 0,
+ "answerable": 36,
+ "inRange": 29,
+ "accuracy": 0.8055555555555556,
+ "noulSamples": 0,
+ "noulCalibration": {
+  "count": 0,
+  "brier": null,
+  "logLoss": null,
+  "ece": null,
+  "bins": []
+ },
+ "sweep": [
+  {
+   "threshold": 0.1,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.2,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.3,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.4,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.5,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.6,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.7,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.8,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.9,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  }
+ ],
+ "resultsFile": "bench/results/mission-completion-v1.receipts.jsonl"
+}

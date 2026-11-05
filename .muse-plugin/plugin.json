@@ -1,0 +1,172 @@
+{
+  "capabilities": {
+    "commands": [],
+    "hooks": [
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/SessionStart.mjs"
+        ],
+        "event": "SessionStart",
+        "id": "jev-session-start",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/UserPromptSubmit.mjs"
+        ],
+        "event": "UserPromptSubmit",
+        "id": "jev-user-prompt",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/PreToolUse.mjs"
+        ],
+        "event": "PreToolUse",
+        "id": "jev-pre-tool",
+        "statusMessage": "Jeverb preflight",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/PermissionRequest.mjs"
+        ],
+        "event": "PermissionRequest",
+        "id": "jev-permission-request",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/PostToolUse.mjs"
+        ],
+        "event": "PostToolUse",
+        "id": "jev-post-tool",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/PostToolUseFailure.mjs"
+        ],
+        "event": "PostToolUseFailure",
+        "id": "jev-tool-failure",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/PostToolBatch.mjs"
+        ],
+        "event": "PostToolBatch",
+        "id": "jev-tool-batch",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/SubagentStart.mjs"
+        ],
+        "event": "SubagentStart",
+        "id": "jev-subagent-start",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/SubagentStop.mjs"
+        ],
+        "event": "SubagentStop",
+        "id": "jev-subagent-stop",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/Stop.mjs"
+        ],
+        "event": "Stop",
+        "id": "jev-stop",
+        "timeoutMs": 5000
+      },
+      {
+        "command": [
+          "node",
+          "plugin/dist/muse/SessionEnd.mjs"
+        ],
+        "event": "SessionEnd",
+        "id": "jev-session-end",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/PreLLMCall.mjs"],
+        "event": "PreLLMCall",
+        "id": "jev-pre-llm-call",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/PostLLMCall.mjs"],
+        "event": "PostLLMCall",
+        "id": "jev-post-llm-call",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/PreCompact.mjs"],
+        "event": "PreCompact",
+        "id": "jev-pre-compact",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/PostCompact.mjs"],
+        "event": "PostCompact",
+        "id": "jev-post-compact",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/StopFailure.mjs"],
+        "event": "StopFailure",
+        "id": "jev-stop-failure",
+        "timeoutMs": 3000
+      },
+      {
+        "command": ["node", "plugin/dist/muse/Notification.mjs"],
+        "event": "Notification",
+        "id": "jev-notification",
+        "timeoutMs": 3000
+      }
+    ],
+    "mcpServers": [
+      {
+        "id": "jeverb",
+        "command": [
+          "node",
+          "plugin/dist/mcp.mjs"
+        ]
+      }
+    ],
+    "reminders": [],
+    "skills": [
+      {
+        "id": "jev-decide",
+        "path": "skills/jev-decide/SKILL.md"
+      },
+      {
+        "id": "jev-run-graph",
+        "path": "skills/jev-run-graph/SKILL.md"
+      }
+    ]
+  },
+  "compat": {
+    "manifestDir": ".muse-plugin",
+    "source": "native"
+  },
+  "description": "Jeverb decision, review and enforcement layer for Muse Code (TypeSafe Jev 1.14).",
+  "displayName": "Jeverb",
+  "name": "jeverb",
+  "schemaVersion": 1,
+  "version": "0.1.0"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "jev-semantic-fulfillment-development-manifest/2",
+  "split": "development",
+  "generatedAt": "2027-01-15T08:00:00.000Z",
+  "caseCount": 12,
+  "positiveCount": 6,
+  "hardNegativeCount": 6,
+  "baselinePolicyVersion": "mission-closure/1",
+  "candidatePolicyVersion": "mission-semantic-fulfillment/v2",
+  "baselineQuestionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+  "candidateQuestionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+  "requestStateRule": "model input is built from the stored MissionClosureEvidence; case ids and labels are not included in the request state",
+  "preflightEligibleCases": [
+    "p01-config-policy",
+    "p02-auth-scope",
+    "p03-backup",
+    "p04-search-index",
+    "p05-notification",
+    "p06-api-migration",
+    "n01-backup-regions",
+    "n02-api-partial",
+    "n03-redaction-conflict",
+    "n04-retry-test-coverage",
+    "n05-dashboard-scope",
+    "n06-search-partial"
+  ],
+  "hostVerifierReceiptCount": 24,
+  "hostVerifierKinds": [
+    "file-state"
+  ],
+  "files": {
+    "casesSha256": "7fc200d4b26ec147185acbeab6be7c4b5cf4de608cf1732e97caf0d4a0ca259f",
+    "labelsSha256": "b678de628f667e8f1de353623fbc17dd6d96ca7bca70dd74ffb8acd306200c3f",
+    "provenanceSha256": "04af70644ac35774ddf1871b3c28fac532a5bf38ea997a104577688e38fdde31"
+  }
+}

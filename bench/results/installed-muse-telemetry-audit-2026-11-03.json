@@ -1,0 +1,100 @@
+{
+  "schema": "jeverb-installed-telemetry-audit/1",
+  "analyzedAt": "2026-11-03T21:45:30.139Z",
+  "sources": {
+    "decisions": {
+      "sha256": "848230cf52e990f0c5863ee73b7d903c90c51d8bf48a899e2717dbfc7eac53d7",
+      "records": 5722,
+      "malformedLines": 0,
+      "nonObjectLines": 0
+    },
+    "evidence": {
+      "sha256": "b5309c51c942074ea1b0585c2a91ab4f9352642eb0fd3ee8bc2a1a4efda2ba25",
+      "records": 122776,
+      "malformedLines": 0,
+      "nonObjectLines": 0
+    }
+  },
+  "decisions": {
+    "eventCounts": {
+      "PreToolUse": 3610,
+      "Stop": 32,
+      "UserPromptSubmit": 174,
+      "verification": 1906
+    },
+    "decisionCounts": {
+      "build-passed": 173,
+      "error": 3642,
+      "lint-passed": 160,
+      "low-confidence": 1,
+      "prompt": 172,
+      "question": 1,
+      "test-passed": 1532,
+      "typecheck-passed": 41
+    },
+    "eventDecisionCounts": {
+      "PreToolUse/error": 3610,
+      "Stop/error": 32,
+      "UserPromptSubmit/low-confidence": 1,
+      "UserPromptSubmit/prompt": 172,
+      "UserPromptSubmit/question": 1,
+      "verification/build-passed": 173,
+      "verification/lint-passed": 160,
+      "verification/test-passed": 1532,
+      "verification/typecheck-passed": 41
+    },
+    "errorsByEvent": {
+      "PreToolUse": 3610,
+      "Stop": 32
+    },
+    "errorClassCounts": {
+      "abort": 40,
+      "json_parse": 11,
+      "typed_decision_unexpected_status": 3591
+    },
+    "recordedHttpStatusCounts": {},
+    "identityFieldRows": {
+      "backend": 0,
+      "model": 2,
+      "provider": 0
+    },
+    "observedBackendLabels": {},
+    "observedModelLabels": {
+      "stub-muse-hook": 2
+    },
+    "observedProviderLabels": {},
+    "graphOrJevToolNames": {}
+  },
+  "evidence": {
+    "eventCounts": {
+      "Notification": 13,
+      "PermissionRequest": 18,
+      "PostCompact": 38,
+      "PostLLMCall": 24230,
+      "PostToolBatch": 25785,
+      "PostToolUse": 2,
+      "PreCompact": 133,
+      "PreLLMCall": 24280,
+      "PreToolUse": 25407,
+      "SessionStart": 27,
+      "Stop": 11,
+      "StopFailure": 16,
+      "SubagentStart": 11502,
+      "SubagentStop": 11266,
+      "UserPromptSubmit": 48
+    },
+    "enforcementCounts": {
+      "advise": 36949,
+      "continue_work": 11277,
+      "deny": 53,
+      "error": 10,
+      "observed": 74487
+    },
+    "judgmentOutcomeCounts": {
+      "DETERMINISTIC_DENY": 20,
+      "JUDGMENT_ATTEMPTED": 3610,
+      "MODEL_NOT_CONFIGURED": 284,
+      "SKIPPED_IN_PROJECT": 1
+    }
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "schema": "jev-semantic-paired-development-results/2",
+  "evaluatedAt": "2026-11-04T01:28:07.559Z",
+  "provider": "openrouter",
+  "requestedModel": "typesafe/jev-latest",
+  "expectedReturnedModel": "typesafe/jev-1.14-20261014",
+  "candidateQualificationIdentity": "6754f7314c68a6250d988b910cbb98270d96596d78fbaebba0f00949b2696083",
+  "candidateQuestionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+  "baselineQuestionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+  "minConfidence": 0.9,
+  "concentrationStatistic": "TypeSafe Choice confidence, not correctness probability",
+  "stopReason": "completed",
+  "summary": {
+    "totalCases": 12,
+    "totalRequests": 24,
+    "concurrency": 1,
+    "retries": 0,
+    "baseline": {
+      "falseCompleteOnNegatives": 1,
+      "correctNegativeDecisions": 4,
+      "positiveLiveness": "6/6",
+      "terminalPositiveAuthorizations": 4,
+      "falseTerminalAuthorizations": 0,
+      "concentration": {
+        "count": 12,
+        "mean": 0.8525,
+        "min": 0.49,
+        "max": 0.97
+      }
+    },
+    "candidate": {
+      "falseFulfilledOnNegatives": 0,
+      "correctNegativeDecisions": 4,
+      "positiveLiveness": "6/6",
+      "candidatesMeetingUnchanged090ConfidenceConcentrationGate": 0,
+      "candidatesMeetingUnchanged090FulfilledOutcomeProbabilityGate": 2,
+      "candidatesMeetingBothUnchanged090GateConditions": 0,
+      "concentration": {
+        "count": 12,
+        "mean": 0.7949999999999999,
+        "min": 0.19,
+        "max": 1
+      },
+      "terminalAuthorization": "none; candidate question is not wired to production authority"
+    }
+  },
+  "reportedCostUsd": 0.00201096,
+  "cases": [
+    {
+      "id": "p01-config-policy",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.97,
+          "probabilities": {
+            "COMPLETE": 0.98,
+            "INCOMPLETE": 0.01,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755682-mwCFzTzeqCzvUxLA6nsB",
+          "latencyMs": 216,
+          "usage": {
+            "input_tokens": 1990,
+            "output_tokens": 57,
+            "cost_usd": 0.00008358
+          },
+          "terminalGateAccepted": true,
+          "terminalDecision": "COMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.85,
+          "probabilities": {
+            "FULFILLED": 0.9,
+            "NOT_FULFILLED": 0.07,
+            "UNCERTAIN": 0.03
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 231,
+          "requestId": "gen-dec-1793755682-VWW9sbDLuTVevZAZYtQX",
+          "usage": {
+            "input_tokens": 1961,
+            "output_tokens": 48,
+            "cost_usd": 0.000082362
+          }
+        }
+      }
+    },
+    {
+      "id": "p02-auth-scope",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.89,
+          "probabilities": {
+            "COMPLETE": 0.92,
+            "INCOMPLETE": 0.06,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.02
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755682-xv91crgQVbeYn9lPFvRT",
+          "latencyMs": 434,
+          "usage": {
+            "input_tokens": 2006,
+            "output_tokens": 57,
+            "cost_usd": 0.000084252
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INSUFFICIENT_EVIDENCE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.83,
+          "probabilities": {
+            "FULFILLED": 0.89,
+            "NOT_FULFILLED": 0.02,
+            "UNCERTAIN": 0.09
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 584,
+          "requestId": "gen-dec-1793755683-OTqLSgKeXHX2AWKl1ohB",
+          "usage": {
+            "input_tokens": 1977,
+            "output_tokens": 48,
+            "cost_usd": 0.000083034
+          }
+        }
+      }
+    },
+    {
+      "id": "p03-backup",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.97,
+          "probabilities": {
+            "COMPLETE": 0.98,
+            "INCOMPLETE": 0.01,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755683-8R6GgtS4BOJCuMbrlOr7",
+          "latencyMs": 178,
+          "usage": {
+            "input_tokens": 1996,
+            "output_tokens": 57,
+            "cost_usd": 0.000083832
+          },
+          "terminalGateAccepted": true,
+          "terminalDecision": "COMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.86,
+          "probabilities": {
+            "FULFILLED": 0.91,
+            "NOT_FULFILLED": 0.04,
+            "UNCERTAIN": 0.05
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 259,
+          "requestId": "gen-dec-1793755683-k10YOWuNiwivIwWhdsGO",
+          "usage": {
+            "input_tokens": 1967,
+            "output_tokens": 48,
+            "cost_usd": 0.000082614
+          }
+        }
+      }
+    },
+    {
+      "id": "p04-search-index",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.95,
+          "probabilities": {
+            "COMPLETE": 0.96,
+            "INCOMPLETE": 0.03,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755684-BprWmKxyB2OXFyv9o4Ky",
+          "latencyMs": 234,
+          "usage": {
+            "input_tokens": 1987,
+            "output_tokens": 57,
+            "cost_usd": 0.000083454
+          },
+          "terminalGateAccepted": true,
+          "terminalDecision": "COMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.79,
+          "probabilities": {
+            "FULFILLED": 0.86,
+            "NOT_FULFILLED": 0.1,
+            "UNCERTAIN": 0.04
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 177,
+          "requestId": "gen-dec-1793755684-TKZWcmhPsvUDQATwXNkp",
+          "usage": {
+            "input_tokens": 1958,
+            "output_tokens": 48,
+            "cost_usd": 0.000082236
+          }
+        }
+      }
+    },
+    {
+      "id": "p05-notification",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.75,
+          "probabilities": {
+            "COMPLETE": 0.81,
+            "INCOMPLETE": 0.16,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.03
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755684-P0YPO8PuIcy9ooNWY72l",
+          "latencyMs": 304,
+          "usage": {
+            "input_tokens": 1989,
+            "output_tokens": 57,
+            "cost_usd": 0.000083538
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INSUFFICIENT_EVIDENCE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.34,
+          "probabilities": {
+            "FULFILLED": 0.56,
+            "NOT_FULFILLED": 0.32,
+            "UNCERTAIN": 0.12
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 240,
+          "requestId": "gen-dec-1793755684-2peRgSHmN9xgodpG1blq",
+          "usage": {
+            "input_tokens": 1960,
+            "output_tokens": 48,
+            "cost_usd": 0.00008232
+          }
+        }
+      }
+    },
+    {
+      "id": "p06-api-migration",
+      "expected": "FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.93,
+          "probabilities": {
+            "COMPLETE": 0.95,
+            "INCOMPLETE": 0.03,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.02
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755685-O9mBfOGY4PFa8nu0KUCb",
+          "latencyMs": 247,
+          "usage": {
+            "input_tokens": 2034,
+            "output_tokens": 57,
+            "cost_usd": 0.000085428
+          },
+          "terminalGateAccepted": true,
+          "terminalDecision": "COMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "FULFILLED",
+          "choice": "FULFILLED",
+          "correct": true,
+          "confidence": 0.76,
+          "probabilities": {
+            "FULFILLED": 0.84,
+            "NOT_FULFILLED": 0.07,
+            "UNCERTAIN": 0.09
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 214,
+          "requestId": "gen-dec-1793755685-AciSbiBboczCizaRHagu",
+          "usage": {
+            "input_tokens": 2005,
+            "output_tokens": 48,
+            "cost_usd": 0.00008421
+          }
+        }
+      }
+    },
+    {
+      "id": "n01-backup-regions",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "INCOMPLETE",
+          "confidence": 0.88,
+          "probabilities": {
+            "COMPLETE": 0.08,
+            "INCOMPLETE": 0.91,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "NOT_FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755685-dSRUbeHLfcRKZcoi4Apj",
+          "latencyMs": 209,
+          "usage": {
+            "input_tokens": 2011,
+            "output_tokens": 58,
+            "cost_usd": 0.000084462
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INCOMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "NOT_FULFILLED",
+          "choice": "NOT_FULFILLED",
+          "correct": true,
+          "confidence": 1,
+          "probabilities": {
+            "FULFILLED": 0,
+            "NOT_FULFILLED": 1,
+            "UNCERTAIN": 0
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 154,
+          "requestId": "gen-dec-1793755685-m7YjapRGT7YfeqKUNw9b",
+          "usage": {
+            "input_tokens": 1982,
+            "output_tokens": 50,
+            "cost_usd": 0.000083244
+          }
+        }
+      }
+    },
+    {
+      "id": "n02-api-partial",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "INCOMPLETE",
+          "confidence": 0.8,
+          "probabilities": {
+            "COMPLETE": 0.14,
+            "INCOMPLETE": 0.85,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "NOT_FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755685-X5duFzDB9ry1j2n54ZYW",
+          "latencyMs": 170,
+          "usage": {
+            "input_tokens": 2009,
+            "output_tokens": 58,
+            "cost_usd": 0.000084378
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INCOMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "NOT_FULFILLED",
+          "choice": "NOT_FULFILLED",
+          "correct": true,
+          "confidence": 0.96,
+          "probabilities": {
+            "FULFILLED": 0.01,
+            "NOT_FULFILLED": 0.97,
+            "UNCERTAIN": 0.02
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 171,
+          "requestId": "gen-dec-1793755686-4jkapr62YjVC4IwEKZnI",
+          "usage": {
+            "input_tokens": 1980,
+            "output_tokens": 50,
+            "cost_usd": 0.00008316
+          }
+        }
+      }
+    },
+    {
+      "id": "n03-redaction-conflict",
+      "expected": "UNCERTAIN",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "COMPLETE",
+          "confidence": 0.79,
+          "probabilities": {
+            "COMPLETE": 0.84,
+            "INCOMPLETE": 0.11,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.05
+          },
+          "semanticChoice": "FULFILLED",
+          "semanticCorrect": false,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755686-32M2OsR5CaLH88LvjgYU",
+          "latencyMs": 172,
+          "usage": {
+            "input_tokens": 2026,
+            "output_tokens": 57,
+            "cost_usd": 0.000085092
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INSUFFICIENT_EVIDENCE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "UNCERTAIN",
+          "choice": "NOT_FULFILLED",
+          "correct": false,
+          "confidence": 0.19,
+          "probabilities": {
+            "FULFILLED": 0.39,
+            "NOT_FULFILLED": 0.46,
+            "UNCERTAIN": 0.15
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 155,
+          "requestId": "gen-dec-1793755686-CKtyKMklEvsBdhajZfU2",
+          "usage": {
+            "input_tokens": 1997,
+            "output_tokens": 50,
+            "cost_usd": 0.000083874
+          }
+        }
+      }
+    },
+    {
+      "id": "n04-retry-test-coverage",
+      "expected": "UNCERTAIN",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "INCOMPLETE",
+          "confidence": 0.89,
+          "probabilities": {
+            "COMPLETE": 0.06,
+            "INCOMPLETE": 0.92,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.02
+          },
+          "semanticChoice": "NOT_FULFILLED",
+          "semanticCorrect": false,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755686-LTGUQWkh8hH8azMNIupV",
+          "latencyMs": 163,
+          "usage": {
+            "input_tokens": 2017,
+            "output_tokens": 58,
+            "cost_usd": 0.000084714
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INCOMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "UNCERTAIN",
+          "choice": "NOT_FULFILLED",
+          "correct": false,
+          "confidence": 1,
+          "probabilities": {
+            "FULFILLED": 0,
+            "NOT_FULFILLED": 1,
+            "UNCERTAIN": 0
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 149,
+          "requestId": "gen-dec-1793755686-f3FdhIPI0JuWcDDXbJXD",
+          "usage": {
+            "input_tokens": 1988,
+            "output_tokens": 50,
+            "cost_usd": 0.000083496
+          }
+        }
+      }
+    },
+    {
+      "id": "n05-dashboard-scope",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "INCOMPLETE",
+          "confidence": 0.92,
+          "probabilities": {
+            "COMPLETE": 0.05,
+            "INCOMPLETE": 0.94,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.01
+          },
+          "semanticChoice": "NOT_FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755686-nRibqiVfrqtjI3VfH27l",
+          "latencyMs": 183,
+          "usage": {
+            "input_tokens": 2014,
+            "output_tokens": 58,
+            "cost_usd": 0.000084588
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INCOMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "NOT_FULFILLED",
+          "choice": "NOT_FULFILLED",
+          "correct": true,
+          "confidence": 1,
+          "probabilities": {
+            "FULFILLED": 0,
+            "NOT_FULFILLED": 1,
+            "UNCERTAIN": 0
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 190,
+          "requestId": "gen-dec-1793755687-1cQ9ggqa2RhaEBais0vl",
+          "usage": {
+            "input_tokens": 1985,
+            "output_tokens": 50,
+            "cost_usd": 0.00008337
+          }
+        }
+      }
+    },
+    {
+      "id": "n06-search-partial",
+      "expected": "NOT_FULFILLED",
+      "pair": {
+        "status": "scored",
+        "inferenceRequests": 2,
+        "baseline": {
+          "choice": "INCOMPLETE",
+          "confidence": 0.49,
+          "probabilities": {
+            "COMPLETE": 0.36,
+            "INCOMPLETE": 0.62,
+            "BLOCKED": 0,
+            "INSUFFICIENT_EVIDENCE": 0.02
+          },
+          "semanticChoice": "NOT_FULFILLED",
+          "semanticCorrect": true,
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "8cb43dbacd37f2b82860a8f7b9e0e3387d97e303b14a0168db27507cf147fb0e",
+          "requestId": "gen-dec-1793755687-66j17qkFiDlaMSIYevwi",
+          "latencyMs": 206,
+          "usage": {
+            "input_tokens": 2035,
+            "output_tokens": 58,
+            "cost_usd": 0.00008547
+          },
+          "terminalGateAccepted": false,
+          "terminalDecision": "INCOMPLETE"
+        },
+        "candidate": {
+          "status": "answered",
+          "expected": "NOT_FULFILLED",
+          "choice": "NOT_FULFILLED",
+          "correct": true,
+          "confidence": 0.96,
+          "probabilities": {
+            "FULFILLED": 0.02,
+            "NOT_FULFILLED": 0.97,
+            "UNCERTAIN": 0.01
+          },
+          "provider": "openrouter",
+          "model": "typesafe/jev-1.14-20261014",
+          "questionHash": "67d4ddcf364d2174ec3cdac56b57a93d357bc848a19583cbdaa86c8a4e790fca",
+          "latencyMs": 175,
+          "requestId": "gen-dec-1793755687-hVBSLooWvzdilwnGsCvZ",
+          "usage": {
+            "input_tokens": 2006,
+            "output_tokens": 50,
+            "cost_usd": 0.000084252
+          }
+        }
+      }
+    }
+  ]
+}

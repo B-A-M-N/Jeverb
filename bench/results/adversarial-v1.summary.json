@@ -1,0 +1,135 @@
+{
+ "dataset": "bench/datasets/adversarial-review-v1.jsonl",
+ "datasetRevision": "df1bae5e0e189c515d73ba3c5294810e86a1900462170a0f801561eb6934162d",
+ "configuredModel": "openrouter:typesafe/jev-router",
+ "benchmarkVersion": "jev-calibration/2",
+ "observedModels": [
+  "typesafe/jev-router"
+ ],
+ "observedProviders": [
+  "openrouter"
+ ],
+ "questionSetHashes": [
+  "592445be9c5b38439f87a6b5732eed482f82bb8ab46d8b450473307f6803c0dc",
+  "cedd85fff0cd7a9edb5f1695129858bc04245e349392272b8effb39dffe820d4"
+ ],
+ "calibrationRevision": "1f1efc28d1ba041101173fc99f2db8ac65b1da4e8045b8f97aecbb43f703a831",
+ "cases": 10,
+ "successfulCases": 8,
+ "failedCases": 2,
+ "expectedAnswers": 23,
+ "missingAnswers": 0,
+ "answerable": 18,
+ "inRange": 9,
+ "accuracy": 0.5,
+ "noulSamples": 0,
+ "noulCalibration": {
+  "count": 0,
+  "brier": null,
+  "logLoss": null,
+  "ece": null,
+  "bins": []
+ },
+ "sweep": [
+  {
+   "threshold": 0.1,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.2,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.3,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.4,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.5,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.6,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.7,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.8,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  },
+  {
+   "threshold": 0.9,
+   "tp": 0,
+   "fp": 0,
+   "tn": 0,
+   "fn": 0,
+   "tpr": null,
+   "fpr": null,
+   "precision": null,
+   "recall": null
+  }
+ ],
+ "resultsFile": "bench/results/adversarial-v1.receipts.jsonl"
+}

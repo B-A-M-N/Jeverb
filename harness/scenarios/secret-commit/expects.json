@@ -1,0 +1,1 @@
+{"min_receipts": 1, "receipts": [{"enforcement": "deny", "event": "PreToolUse", "reason_contains": "credential"}]}

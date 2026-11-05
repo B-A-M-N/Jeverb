@@ -1,0 +1,19 @@
+{
+  "schema": "jeverb-isolated-gateway-transport/1",
+  "trustMode": "isolated development gateway; production gateway left untouched",
+  "candidatePort": 18770,
+  "candidateStateDirectory": "temporary, separate state",
+  "requestId": "f6c0cbdfae0940c5",
+  "endpoint": "/jev/api/alpha/decisions",
+  "client": "muse-code",
+  "providerId": "openrouter_jev",
+  "requestedAlias": "typesafe/jev-latest",
+  "resolvedModel": "typesafe/jev-latest",
+  "upstreamHttpStatus": 200,
+  "downstreamHttpStatus": 200,
+  "gatewayErrorCode": "",
+  "durationMs": 313.8503460213542,
+  "gatewayCostProvenance": "unavailable",
+  "actualGatewayInputTokens": null,
+  "actualGatewayOutputTokens": null
+}

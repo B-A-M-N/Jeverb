@@ -1,0 +1,29 @@
+{
+  "schema": "jev-mission-dag-local-attempt-failure/1",
+  "timestamp": "2026-11-04T02:55:03.108Z",
+  "status": "aborted-before-first-model-response",
+  "freezeSha256": "0503dc902aceb10871861365281af03e04977584f6d9d2b2d2886471d14a145b",
+  "caseSha256": "2115b3b46d00d3ad1da025078af96b6b356b9b0f89f0a8fe99df505fdbf65353",
+  "provider": "openrouter",
+  "requestedModel": "typesafe/jev-1.14-20261014",
+  "returnedModel": null,
+  "firstOperation": {
+    "arm": "global-baseline",
+    "caseId": "p01-config-policy"
+  },
+  "requests": {
+    "authorizedMaximum": 36,
+    "logicalAttempts": 1,
+    "providerResponses": 0,
+    "retries": 0,
+    "successfulModelResponses": 0
+  },
+  "transportDiagnostic": {
+    "kind": "dns",
+    "code": "DNS_ENOTFOUND"
+  },
+  "usage": null,
+  "costUsd": 0,
+  "terminalAuthorization": false,
+  "note": "The single baseline transport attempt failed during DNS resolution before an HTTP response. No inference response or provider usage was returned; the zero-retry runner stopped."
+}

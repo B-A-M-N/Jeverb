@@ -1,0 +1,195 @@
+{
+  "schema": "jeverb-dag-local-coverage-gap-demo/1",
+  "trustMode": "untrusted local development; no production closure or privileged authority",
+  "request": {
+    "count": 1,
+    "max": 1,
+    "requestedModel": "typesafe/jev-latest",
+    "returnedModel": "typesafe/jev-1.14-20261014",
+    "provider": "jev-gateway",
+    "questionHash": "a7ba61997e1c13a6e1c0d50049d2d6cc656070a9c787c03a1a2361f2000df4dc",
+    "choice": "UNCERTAIN",
+    "disposition": "UNCERTAIN",
+    "confidence": 0.18,
+    "probabilities": {
+      "FULFILLED": 0.34,
+      "NOT_FULFILLED": 0.21,
+      "UNCERTAIN": 0.45
+    },
+    "latencyMs": 339,
+    "inputTokens": 1926,
+    "outputTokens": 90,
+    "costUsd": 0.000080892,
+    "evidenceDigest": "bf66f765890bd2d5aa4311538352bb07b6f9bcdb3b7f350a8955308a70ae0b7d",
+    "graphRevision": "ccfb7161f6e468d309adfe62096f43eb8626afcd2f515e3e6ecbd362d1cf0ebb",
+    "contextHash": "827b2f5ec5fd00ef9a9872cd2a2a0ac4f1dc3bf5eb6ad5b5e814149ae2bbb69d"
+  },
+  "baseline": {
+    "jev": "disabled",
+    "sourceDigest": "192bbf5f7d3f9689944c7c405f3701dbcf0149600a4b07d71c925050623b638b",
+    "existingTests": "succeeded",
+    "observation": {
+      "owner": true,
+      "activeMember": true,
+      "guest": false
+    },
+    "hostVerifier": {
+      "criterionId": "criterion-01",
+      "status": "satisfied",
+      "verifierId": "test-execution",
+      "correlationId": "b027df18245114a1e6a9f526c976aebdcfbd842d0454eda14e0af5d80aefe837",
+      "detail": "host observation satisfied; verdict persisted and read back"
+    },
+    "result": "no revoked-membership probe; the omitted behavior remains undiscovered at this point"
+  },
+  "jevArm": {
+    "sourceDigest": "192bbf5f7d3f9689944c7c405f3701dbcf0149600a4b07d71c925050623b638b",
+    "existingTests": "succeeded",
+    "observation": {
+      "owner": true,
+      "activeMember": true,
+      "guest": false
+    },
+    "hostVerifier": {
+      "criterionId": "criterion-01",
+      "status": "satisfied",
+      "verifierId": "test-execution",
+      "correlationId": "61e8dc4eccaa13a686ff287481199022153a5e2b02e565185c287736c221464d",
+      "detail": "host observation satisfied; verdict persisted and read back"
+    },
+    "requirement": "Workspace owners and active members may access; revoked memberships and guests must be denied.",
+    "astEvidence": {
+      "version": "typescript-structure/1",
+      "criterionId": "criterion-01",
+      "proofObligationId": "po-def498b6bf4bfdcbdef64d2407cca4e0921a9b2d8df15fee35e93b975d53740a",
+      "missionRevision": "21c2ad6c59d55c48e79cbcc8bce927e8c79b6c35cd9fba2c314d7d23a8e401bc",
+      "candidateDigest": "15baf9a9e5019720fa845eeabcefbb9357d92a5b9bd42d3fabeac8fe3221c928",
+      "provenance": "host:typescript-compiler/v1",
+      "fileDigests": [
+        {
+          "path": "policy.ts",
+          "sha256": "192bbf5f7d3f9689944c7c405f3701dbcf0149600a4b07d71c925050623b638b"
+        }
+      ],
+      "symbols": [
+        {
+          "id": "sym-0407b0c8fd8726312db622ed",
+          "path": "policy.ts",
+          "name": "Membership",
+          "kind": "type",
+          "line": 1
+        },
+        {
+          "id": "sym-f7a7b13a6418e6469691ad95",
+          "path": "policy.ts",
+          "name": "canAccessWorkspace",
+          "kind": "function",
+          "line": 2
+        }
+      ],
+      "imports": [],
+      "calls": [],
+      "limitations": [
+        "static structure only; no behavior is verified",
+        "compiler resolution is limited to the host-declared file set"
+      ],
+      "evidenceDigest": "edf9a98aa21c792a8428ee9b63a47f8756396ddd3eb7fa8999527def059ed58f"
+    },
+    "runId": "1da2f504-67cd-418f-bc35-c1c8f394dbfe",
+    "attemptId": "existing-tests/1",
+    "judgment": {
+      "choice": "UNCERTAIN",
+      "disposition": "UNCERTAIN",
+      "receiptCorrelationId": "61e8dc4eccaa13a686ff287481199022153a5e2b02e565185c287736c221464d"
+    },
+    "probeRequestedByJev": true,
+    "probeSelection": {
+      "id": "revoked-membership",
+      "source": "jev",
+      "runId": "probe-d2d9bd97c1155abb3d100fef6836b674929942e01aa0a4f3"
+    },
+    "probe": {
+      "status": "failed",
+      "observation": {
+        "revokedMember": true
+      },
+      "receipt": {
+        "criterionId": "criterion-01",
+        "verifierId": "test-execution",
+        "missionRevision": "21c2ad6c59d55c48e79cbcc8bce927e8c79b6c35cd9fba2c314d7d23a8e401bc",
+        "candidateDigest": "919dd005eeb34435ab62cbe8196cf95765f48bee9b67242ee35e4d5d9819c039",
+        "result": "failed",
+        "receiptCorrelationId": "4b4d465382e4f88356c7771ae8dfc3cfe112dab25bce4b626661c36e301ece39",
+        "verifiedAt": 1793834842610,
+        "evidenceRef": "host-command:node revoked-probe.cjs",
+        "observedResult": "host-observed behavior (untrusted observation): {\"revokedMember\":true}",
+        "graphNodes": [
+          {
+            "runId": "probe-d2d9bd97c1155abb3d100fef6836b674929942e01aa0a4f3",
+            "nodeId": "criterion-probe",
+            "attemptId": "criterion-probe/1"
+          }
+        ],
+        "adapterVersion": "mission-verifiers/1"
+      }
+    },
+    "repair": {
+      "runId": "9fa6f7cf-7553-4460-88a8-a7c92e323df8",
+      "status": "succeeded"
+    },
+    "finalVerification": {
+      "runId": "1e06284d-3d36-4544-aa4a-1b9e9fb2699c",
+      "attemptId": "verify-full-policy/1",
+      "status": "succeeded",
+      "sourceDigest": "a22b9b8a38fefdda14b1c77f8690eb1b33e7fe65f9df5a987b1db4a4ed72c53e",
+      "observation": {
+        "owner": true,
+        "activeMember": true,
+        "guest": false,
+        "revokedMember": false
+      },
+      "receipt": {
+        "criterionId": "criterion-01",
+        "verifierId": "test-execution",
+        "missionRevision": "21c2ad6c59d55c48e79cbcc8bce927e8c79b6c35cd9fba2c314d7d23a8e401bc",
+        "candidateDigest": "71bea970c4d3f9975c11454c959eb3cc6c3241337a5361deae5fe112007db2ab",
+        "result": "satisfied",
+        "receiptCorrelationId": "2b613bd82c66c1283e87839f6c8621b54c116d93948ec0141b549ced4704bcb7",
+        "verifiedAt": 1793834842885,
+        "evidenceRef": "host-command:node full-tests.cjs",
+        "observedResult": "host-observed behavior (untrusted observation): {\"owner\":true,\"activeMember\":true,\"guest\":false,\"revokedMember\":false}",
+        "graphNodes": [
+          {
+            "runId": "1e06284d-3d36-4544-aa4a-1b9e9fb2699c",
+            "nodeId": "verify-full-policy",
+            "attemptId": "verify-full-policy/1"
+          }
+        ],
+        "adapterVersion": "mission-verifiers/1"
+      }
+    },
+    "finalEvidence": {
+      "candidateDigest": "71bea970c4d3f9975c11454c959eb3cc6c3241337a5361deae5fe112007db2ab",
+      "criterionVerified": false,
+      "verifierResult": "satisfied",
+      "graphEvidence": [
+        {
+          "criterionId": "criterion-01",
+          "runId": "1e06284d-3d36-4544-aa4a-1b9e9fb2699c",
+          "nodeId": "verify-full-policy",
+          "state": "bound",
+          "detail": "binding matches the persisted terminal node and every declared dependency succeeded",
+          "attemptId": "verify-full-policy/1",
+          "provenance": "host:journal-projection/v2",
+          "dependencies": []
+        }
+      ]
+    }
+  },
+  "comparison": {
+    "initialVerifierOutcomeEqual": true,
+    "discoveredDefect": true,
+    "JevContributed": true,
+    "productionTerminalAuthorized": false
+  }
+}

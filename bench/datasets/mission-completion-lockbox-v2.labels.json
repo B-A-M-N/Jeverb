@@ -1,0 +1,102 @@
+{
+  "lockbox2-cache-invalidate-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement; criterion 2 is fully done",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-cache-invalidate-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred; the text contradicts the statement",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-cache-invalidate-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all; only the first clause is attested",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-cache-invalidate-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable; no judge can tell whether the work is done",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox2-cache-invalidate-full-complete": {
+    "category": "full-complete",
+    "rationale": "positive control: both clauses attested with solid outcomes and receipts",
+    "expected": "COMPLETE"
+  },
+  "lockbox2-webhook-sign-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement; criterion 2 is fully done",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-webhook-sign-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred; the text contradicts the statement",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-webhook-sign-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all; only the first clause is attested",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-webhook-sign-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable; no judge can tell whether the work is done",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox2-webhook-sign-full-complete": {
+    "category": "full-complete",
+    "rationale": "positive control: both clauses attested with solid outcomes and receipts",
+    "expected": "COMPLETE"
+  },
+  "lockbox2-pdf-render-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement; criterion 2 is fully done",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-pdf-render-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred; the text contradicts the statement",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-pdf-render-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all; only the first clause is attested",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-pdf-render-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable; no judge can tell whether the work is done",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox2-pdf-render-full-complete": {
+    "category": "full-complete",
+    "rationale": "positive control: both clauses attested with solid outcomes and receipts",
+    "expected": "COMPLETE"
+  },
+  "lockbox2-session-timeout-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement; criterion 2 is fully done",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-session-timeout-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred; the text contradicts the statement",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-session-timeout-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all; only the first clause is attested",
+    "expected": "INCOMPLETE"
+  },
+  "lockbox2-session-timeout-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable; no judge can tell whether the work is done",
+    "expected": "INSUFFICIENT_EVIDENCE"
+  },
+  "lockbox2-session-timeout-full-complete": {
+    "category": "full-complete",
+    "rationale": "positive control: both clauses attested with solid outcomes and receipts",
+    "expected": "COMPLETE"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema": "jev-semantic-fulfillment-dev-labels/2",
+  "cases": {
+    "p01-config-policy": {
+      "expected": "FULFILLED",
+      "family": "configuration",
+      "rationale": "Both requested settings are present at their exact required values in host-read files."
+    },
+    "p02-auth-scope": {
+      "expected": "FULFILLED",
+      "family": "authorization",
+      "rationale": "The host-observed role matrix contains the requested read and write grants and excludes the unrequested admin grant."
+    },
+    "p03-backup": {
+      "expected": "FULFILLED",
+      "family": "backup-and-restore",
+      "rationale": "The backup schedule, encryption marker, and measured restore time satisfy every requested condition."
+    },
+    "p04-search-index": {
+      "expected": "FULFILLED",
+      "family": "search",
+      "rationale": "Freshness and exact-title ranking measurements cover both requirements in the objective."
+    },
+    "p05-notification": {
+      "expected": "FULFILLED",
+      "family": "notifications",
+      "rationale": "The host-observed delivery and retry records cover both notification delivery and retry behavior requested."
+    },
+    "p06-api-migration": {
+      "expected": "FULFILLED",
+      "family": "api-migration",
+      "rationale": "The host-observed route and sunset records jointly satisfy coexistence, writes, and migration notice."
+    },
+    "n01-backup-regions": {
+      "expected": "NOT_FULFILLED",
+      "family": "omitted-requirement",
+      "rationale": "The objective requires every region, while the only verified record covers the primary region; secondary regions are omitted."
+    },
+    "n02-api-partial": {
+      "expected": "NOT_FULFILLED",
+      "family": "partial-fulfillment",
+      "rationale": "The objective requires v2 read and write support, but the observed route report shows reads pass and writes are unavailable."
+    },
+    "n03-redaction-conflict": {
+      "expected": "UNCERTAIN",
+      "family": "contradictory-evidence",
+      "rationale": "Two current host-verified samples conflict about whether the same token was redacted, so the evidence cannot establish the requested property."
+    },
+    "n04-retry-test-coverage": {
+      "expected": "UNCERTAIN",
+      "family": "inadequate-verification",
+      "rationale": "The host verified only that a smoke test passed; its own report says the required retry path was not exercised."
+    },
+    "n05-dashboard-scope": {
+      "expected": "NOT_FULFILLED",
+      "family": "omitted-requirement",
+      "rationale": "The objective requires dashboard coverage and alerts in all regions, but the host-observed evidence covers only the primary region."
+    },
+    "n06-search-partial": {
+      "expected": "NOT_FULFILLED",
+      "family": "partial-fulfillment",
+      "rationale": "The objective requires all documents indexed within one minute and exact-title ranking; evidence covers only the first 100 documents."
+    }
+  }
+}

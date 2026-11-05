@@ -1,0 +1,1 @@
+{"event":"PostToolBatch","stdin":{"session_id":"jeverb-qualification-batch","hook_event_name":"PostToolBatch","tool_calls":[{"tool_name":"Edit","tool_use_id":"qualification-edit-1","tool_input":{"file_path":"src/example.ts"}}]}}

@@ -1,0 +1,111 @@
+{
+  "name": "jevwire",
+  "version": "0.6.3",
+  "type": "module",
+  "description": "MCP server and embeddable decision layer for TypeSafe AI's Jev System One model. This fork (Jeverb) adds a native Muse Code plugin track; see README for the dual-track identity.",
+  "license": "MIT",
+  "bin": {
+    "jevwire": "dist/index.js",
+    "jev-control": "dist/control.js"
+  },
+  "main": "dist/lib.js",
+  "types": "dist/lib.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/lib.d.ts",
+      "import": "./dist/lib.js",
+      "default": "./dist/lib.js"
+    }
+  },
+  "files": [
+    "dist",
+    "plugin",
+    "jev-control-plugin",
+    "control-service/jeverb_control_service.py",
+    "control-service/jeverb-control.service",
+    "control-service/org.jeverb.control.policy",
+    "control-service/verify_installed.py",
+    "scripts/install-control-service.sh",
+    "scripts/assemble_control_candidate.py",
+    ".muse-plugin",
+    ".claude-plugin",
+    "config",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brainwires/jevwire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Brainwires/jevwire/issues"
+  },
+  "homepage": "https://github.com/Brainwires/jevwire#readme",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "claude-code-plugin",
+    "hooks",
+    "guardrails",
+    "typesafe",
+    "jev",
+    "system-one",
+    "decision-model"
+  ],
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "npm run build:tsc && npm run build:plugin && npm run build:muse-packages",
+    "build:tsc": "tsc --project tsconfig.build.json",
+    "build:plugin": "tsx scripts/build-plugin.ts",
+    "build:muse-packages": "tsx scripts/build-muse-packages.ts",
+    "type-check": "tsgo --noEmit",
+    "test": "vitest",
+    "test:run": "vitest run && npm run test:control-service",
+    "test:control-service": "PYTHONDONTWRITEBYTECODE=1 python3 -B -m unittest discover -s control-service -p 'test_*.py' -v",
+    "test:policy": "vitest run tests/jeverb tests/tools tests/server.test.ts",
+    "review:config-check": "tsx scripts/review-config-check.ts",
+    "review:detectors": "tsx scripts/review-ci.ts --detectors-only",
+    "review:ci": "tsx scripts/review-ci.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "smoke:mcp-stub": "bash harness/mcp-stub-smoke.sh",
+    "smoke:muse-hook-stub": "bash harness/muse-hook-stub-smoke.sh",
+    "bump": "tsx scripts/bump.ts",
+    "capture": "tsx scripts/capture-fixture.ts",
+    "bench:rank": "tsx scripts/bench-rank.ts",
+    "bench:annotation": "tsx scripts/jev-annotation.ts",
+    "audit:installed-logs": "tsx scripts/jev-audit-installed-logs.ts",
+    "audit:gateway-correlation": "tsx scripts/jev-correlate-gateway-receipts.ts",
+    "bench:prompt-routing": "tsx scripts/jev-calibrate.ts bench/datasets/prompt-routing-v1.jsonl",
+    "bench:build-datasets": "tsx scripts/build-calibration-datasets.ts",
+    "bench:build-lockbox": "tsx scripts/build-lockbox-dataset.ts",
+    "prepare": "tsc --project tsconfig.build.json",
+    "sandbox:probe": "tsx scripts/sandbox-probe.ts",
+    "plugin:integrity-check": "tsx scripts/plugin-integrity-check.ts",
+    "demo": "tsx scripts/jev-demo.ts",
+    "demo:deterministic": "tsx scripts/jev-demo.ts --mode deterministic",
+    "demo:live-advisory": "tsx scripts/jev-demo.ts --mode live-advisory",
+    "demo:replay": "tsx scripts/jev-demo.ts --mode replay",
+    "bench:semantic-paired-dev": "node --import tsx scripts/jev-semantic-paired-dev.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "ajv": "^8.20.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@typescript/native-preview": "7.0.0-dev.20260707.2",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

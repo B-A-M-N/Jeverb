@@ -1,0 +1,22 @@
+{
+  "family": "mission-closure",
+  "backend": "openrouter",
+  "model": "typesafe/jev-router",
+  "modelVersion": "typesafe/jev-router",
+  "adapterVersion": "jev-test",
+  "questionSetHash": "0cd35202d80714cf8e988b5211a45dbb18832c2cab8b55257ea381ded02bfd9b",
+  "policyHash": "ee2f2d7ae1837f86ace58a64ec12d7d0a9867fd05e8ed9326a5bbc2a38c2110c",
+  "datasetHash": "9cd83951895903d9008cffb7f4b4358b8703faa3c0a9e54f88a4ed4fd9d5cd60",
+  "evaluationHash": "36960b14615f5bd53cf21fb492c7d4167092fc93d9fc07651b035df2bd3a9174",
+  "datasetSplit": "validation",
+  "expectedJudgments": 11,
+  "correctJudgments": 7,
+  "invalidJudgments": 0,
+  "thresholds": {
+    "minConfidence": 0.9
+  },
+  "calibratedAt": "2026-10-31T14:41:41.443Z",
+  "decision": "inconclusive",
+  "datasetPath": "bench/datasets/heldout-mission-completion.jsonl",
+  "receiptsPath": "bench/results/heldout-mission-completion.receipts.jsonl"
+}

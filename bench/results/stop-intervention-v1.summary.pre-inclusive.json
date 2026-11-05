@@ -1,0 +1,205 @@
+{
+ "dataset": "bench/datasets/stop-intervention-v1.jsonl",
+ "datasetRevision": "5a1d6b3ac49f15933c2d3038a619741225549772aab27ef19651451c756dfe45",
+ "configuredModel": "openrouter:typesafe/jev-router",
+ "benchmarkVersion": "jev-calibration/2",
+ "observedModels": [
+  "typesafe/jev-router"
+ ],
+ "observedProviders": [
+  "openrouter"
+ ],
+ "questionSetHashes": [
+  "2a5d1e47d69d3d476b0b62cc1e38d4be033972dccbf8b368165ec071fe198969"
+ ],
+ "calibrationRevision": "416bb2af613ee8353f455f7cc437b2a88e37e999db068756dcc7e9d28177b35b",
+ "cases": 39,
+ "successfulCases": 39,
+ "failedCases": 0,
+ "expectedAnswers": 156,
+ "missingAnswers": 0,
+ "answerable": 156,
+ "inRange": 126,
+ "accuracy": 0.8076923076923077,
+ "noulSamples": 156,
+ "noulCalibration": {
+  "count": 156,
+  "brier": 0.11209935897435895,
+  "logLoss": 0.3804152007171227,
+  "ece": 0.1004487179487179,
+  "bins": [
+   {
+    "lower": 0,
+    "upper": 0.1,
+    "count": 91,
+    "meanProbability": 0.02186813186813188,
+    "observedRate": 0.03296703296703297
+   },
+   {
+    "lower": 0.1,
+    "upper": 0.2,
+    "count": 10,
+    "meanProbability": 0.11699999999999999,
+    "observedRate": 0.1
+   },
+   {
+    "lower": 0.2,
+    "upper": 0.3,
+    "count": 4,
+    "meanProbability": 0.20500000000000002,
+    "observedRate": 0
+   },
+   {
+    "lower": 0.3,
+    "upper": 0.4,
+    "count": 3,
+    "meanProbability": 0.32,
+    "observedRate": 0.6666666666666666
+   },
+   {
+    "lower": 0.4,
+    "upper": 0.5,
+    "count": 2,
+    "meanProbability": 0.42500000000000004,
+    "observedRate": 0
+   },
+   {
+    "lower": 0.5,
+    "upper": 0.6,
+    "count": 1,
+    "meanProbability": 0.55,
+    "observedRate": 1
+   },
+   {
+    "lower": 0.6,
+    "upper": 0.7,
+    "count": 5,
+    "meanProbability": 0.6100000000000001,
+    "observedRate": 0.4
+   },
+   {
+    "lower": 0.7,
+    "upper": 0.8,
+    "count": 3,
+    "meanProbability": 0.7166666666666667,
+    "observedRate": 0.3333333333333333
+   },
+   {
+    "lower": 0.8,
+    "upper": 0.9,
+    "count": 4,
+    "meanProbability": 0.85,
+    "observedRate": 0.25
+   },
+   {
+    "lower": 0.9,
+    "upper": 1,
+    "count": 33,
+    "meanProbability": 0.9615151515151513,
+    "observedRate": 0.7575757575757576
+   }
+  ]
+ },
+ "sweep": [
+  {
+   "threshold": 0.1,
+   "tp": 33,
+   "fp": 32,
+   "tn": 88,
+   "fn": 3,
+   "tpr": 0.9166666666666666,
+   "fpr": 0.26666666666666666,
+   "precision": 0.5076923076923077,
+   "recall": 0.9166666666666666
+  },
+  {
+   "threshold": 0.2,
+   "tp": 32,
+   "fp": 23,
+   "tn": 97,
+   "fn": 4,
+   "tpr": 0.8888888888888888,
+   "fpr": 0.19166666666666668,
+   "precision": 0.5818181818181818,
+   "recall": 0.8888888888888888
+  },
+  {
+   "threshold": 0.3,
+   "tp": 32,
+   "fp": 19,
+   "tn": 101,
+   "fn": 4,
+   "tpr": 0.8888888888888888,
+   "fpr": 0.15833333333333333,
+   "precision": 0.6274509803921569,
+   "recall": 0.8888888888888888
+  },
+  {
+   "threshold": 0.4,
+   "tp": 30,
+   "fp": 18,
+   "tn": 102,
+   "fn": 6,
+   "tpr": 0.8333333333333334,
+   "fpr": 0.15,
+   "precision": 0.625,
+   "recall": 0.8333333333333334
+  },
+  {
+   "threshold": 0.5,
+   "tp": 30,
+   "fp": 16,
+   "tn": 104,
+   "fn": 6,
+   "tpr": 0.8333333333333334,
+   "fpr": 0.13333333333333333,
+   "precision": 0.6521739130434783,
+   "recall": 0.8333333333333334
+  },
+  {
+   "threshold": 0.6,
+   "tp": 29,
+   "fp": 16,
+   "tn": 104,
+   "fn": 7,
+   "tpr": 0.8055555555555556,
+   "fpr": 0.13333333333333333,
+   "precision": 0.6444444444444445,
+   "recall": 0.8055555555555556
+  },
+  {
+   "threshold": 0.7,
+   "tp": 27,
+   "fp": 13,
+   "tn": 107,
+   "fn": 9,
+   "tpr": 0.75,
+   "fpr": 0.10833333333333334,
+   "precision": 0.675,
+   "recall": 0.75
+  },
+  {
+   "threshold": 0.8,
+   "tp": 26,
+   "fp": 11,
+   "tn": 109,
+   "fn": 10,
+   "tpr": 0.7222222222222222,
+   "fpr": 0.09166666666666666,
+   "precision": 0.7027027027027027,
+   "recall": 0.7222222222222222
+  },
+  {
+   "threshold": 0.9,
+   "tp": 25,
+   "fp": 8,
+   "tn": 112,
+   "fn": 11,
+   "tpr": 0.6944444444444444,
+   "fpr": 0.06666666666666667,
+   "precision": 0.7575757575757576,
+   "recall": 0.6944444444444444
+  }
+ ],
+ "resultsFile": "bench/results/stop-intervention-v1.receipts.jsonl"
+}

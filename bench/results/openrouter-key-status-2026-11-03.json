@@ -1,0 +1,25 @@
+{
+  "schema": "jeverb-openrouter-key-status/1",
+  "queriedAt": "2026-11-03T22:29:11Z",
+  "method": {
+    "httpMethod": "GET",
+    "endpoint": "https://openrouter.ai/api/v1/key",
+    "httpStatus": 200,
+    "inferenceRequests": 0
+  },
+  "credentialCheck": {
+    "environmentName": "OPENROUTER_API_KEY",
+    "operatorSuffixRuleMatched": true,
+    "secretRetained": false
+  },
+  "quota": {
+    "spendingLimitUsd": 2,
+    "remainingUsd": 1.963042352,
+    "resetPeriod": "weekly",
+    "usageWeeklyUsd": 0.036957648,
+    "usageDailyUsd": 0.001944684,
+    "usageMonthlyUsd": 0.043203132,
+    "isFreeTier": false,
+    "expiresAt": "2027-01-16T03:19:00Z"
+  }
+}

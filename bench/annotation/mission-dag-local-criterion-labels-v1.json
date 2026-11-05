@@ -1,0 +1,233 @@
+{
+  "schema": "jev-dag-local-adjudicated-labels/1",
+  "reviewStatus": "AI-generated; not human-reviewed",
+  "sourceCaseSha256": "2115b3b46d00d3ad1da025078af96b6b356b9b0f89f0a8fe99df505fdbf65353",
+  "reviewerIds": [
+    "jev-dag-local-ai-reviewer-a-2026-11-03",
+    "jev-dag-local-ai-reviewer-b-2026-11-03"
+  ],
+  "adjudicatorId": "jev-dag-local-ai-adjudicator-2026-11-03",
+  "cases": {
+    "p01-config-policy": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "p02-auth-scope": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "p03-backup": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "p04-search-index": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "p05-notification": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "p06-api-migration": {
+      "objectiveCoverage": "covered",
+      "expectedOverall": "FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "n01-backup-regions": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "UNCERTAIN",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "adjudications": [
+        {
+          "criterionId": "criterion-01",
+          "adjudicatorId": "jev-dag-local-ai-adjudicator-2026-11-03"
+        }
+      ],
+      "evidenceSufficiency": {
+        "criterion-01": false,
+        "criterion-02": true
+      }
+    },
+    "n02-api-partial": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "n03-redaction-conflict": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "n04-retry-test-coverage": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "n05-dashboard-scope": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    },
+    "n06-search-partial": {
+      "objectiveCoverage": "omitted",
+      "expectedOverall": "NOT_FULFILLED",
+      "criteria": {
+        "criterion-01": "FULFILLED",
+        "criterion-02": "FULFILLED"
+      },
+      "reviewerIds": [
+        "jev-dag-local-ai-reviewer-a-2026-11-03",
+        "jev-dag-local-ai-reviewer-b-2026-11-03"
+      ],
+      "adjudicated": true,
+      "evidenceSufficiency": {
+        "criterion-01": true,
+        "criterion-02": true
+      }
+    }
+  },
+  "disagreements": [
+    {
+      "caseRef": "090939033e7d4670",
+      "criterionId": "criterion-01",
+      "reviewerA": "FULFILLED",
+      "reviewerB": "UNCERTAIN",
+      "adjudicator": "UNCERTAIN",
+      "rationale": "The criterion requires an encrypted nightly backup record. The trusted claimedOutcome says a host-observed record covers the primary region, but does not establish encryption. The verifier reports result: satisfied and observedResult: ‘all 1 paths match (tree f11d27bfbbdc2467875849406b663e5747384ea61f962fd6f901169e3314e5c2)’; that path match confirms file state but does not expose encryption. So the supplied evidence establishes a record exists, but does not establish that it is encrypted. The original objective also requires backups in every region. The claim explicitly says secondary regions are not represented, which leaves that broader regional scope uncovered. That affects objective coverage, but does not change this criterion-local decision: the criterion itself does not specify regional coverage."
+    }
+  ],
+  "adjudicationSha256": "d91db45f0f1c388e3593242789eebfe4eaa77b5fa4a0891e496de443f3ab6735"
+}

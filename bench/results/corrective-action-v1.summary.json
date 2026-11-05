@@ -1,0 +1,296 @@
+{
+  "dataset": "bench/datasets/corrective-action-v1.jsonl",
+  "datasetRevision": "a254762d06825a6f898f90f578f390bed2535b9a5afbe854b41959b1a2078c3e",
+  "configuredModel": "openrouter:typesafe/jev-router",
+  "benchmarkVersion": "jev-calibration/2",
+  "observedModels": [
+    "typesafe/jev-router"
+  ],
+  "observedProviders": [
+    "openrouter"
+  ],
+  "questionSetHashes": [
+    "748a22f4d1461d6cd50b052df0912a820848a31d474ea75e3d679c06b8fee06d",
+    "81283b32514f36179e89a908f09394f7846cf07a827e8d21feafcd0af54914b4",
+    "e5847613054f545c60730b61d69d176fd262b752376140d3380c5588e6119e1a"
+  ],
+  "calibrationRevision": "dfbe891778afd0e26f22da606d017945127aa25c6fce32f6ec1ef8f1724af97d",
+  "cases": 39,
+  "successfulCases": 39,
+  "failedCases": 0,
+  "expectedAnswers": 111,
+  "missingAnswers": 0,
+  "answerable": 111,
+  "inRange": 100,
+  "accuracy": 0.9009009009009009,
+  "noulSamples": 75,
+  "noulCalibration": {
+    "count": 75,
+    "brier": 0.04525516000000002,
+    "logLoss": 0.20595282142795396,
+    "ece": 0.06614666666666666,
+    "bins": [
+      {
+        "lower": 0,
+        "upper": 0.1,
+        "count": 56,
+        "meanProbability": 0.017017857142857147,
+        "observedRate": 0
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "count": 1,
+        "meanProbability": 0.12,
+        "observedRate": 0
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "count": 0,
+        "meanProbability": 0,
+        "observedRate": 0
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "count": 2,
+        "meanProbability": 0.35,
+        "observedRate": 0.5
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "count": 1,
+        "meanProbability": 0.42,
+        "observedRate": 1
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "count": 0,
+        "meanProbability": 0,
+        "observedRate": 0
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "count": 1,
+        "meanProbability": 0.6,
+        "observedRate": 0
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "count": 1,
+        "meanProbability": 0.7,
+        "observedRate": 1
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "count": 3,
+        "meanProbability": 0.8166666666666668,
+        "observedRate": 1
+      },
+      {
+        "lower": 0.9,
+        "upper": 1,
+        "count": 10,
+        "meanProbability": 0.9558,
+        "observedRate": 0.8
+      }
+    ]
+  },
+  "sweep": [
+    {
+      "threshold": 0.1,
+      "tp": 14,
+      "fp": 5,
+      "tn": 56,
+      "fn": 0,
+      "tpr": 1,
+      "fpr": 0.08196721311475409,
+      "precision": 0.7368421052631579,
+      "recall": 1
+    },
+    {
+      "threshold": 0.2,
+      "tp": 14,
+      "fp": 4,
+      "tn": 57,
+      "fn": 0,
+      "tpr": 1,
+      "fpr": 0.06557377049180328,
+      "precision": 0.7777777777777778,
+      "recall": 1
+    },
+    {
+      "threshold": 0.3,
+      "tp": 14,
+      "fp": 4,
+      "tn": 57,
+      "fn": 0,
+      "tpr": 1,
+      "fpr": 0.06557377049180328,
+      "precision": 0.7777777777777778,
+      "recall": 1
+    },
+    {
+      "threshold": 0.4,
+      "tp": 13,
+      "fp": 3,
+      "tn": 58,
+      "fn": 1,
+      "tpr": 0.9285714285714286,
+      "fpr": 0.04918032786885246,
+      "precision": 0.8125,
+      "recall": 0.9285714285714286
+    },
+    {
+      "threshold": 0.5,
+      "tp": 12,
+      "fp": 3,
+      "tn": 58,
+      "fn": 2,
+      "tpr": 0.8571428571428571,
+      "fpr": 0.04918032786885246,
+      "precision": 0.8,
+      "recall": 0.8571428571428571
+    },
+    {
+      "threshold": 0.6,
+      "tp": 12,
+      "fp": 3,
+      "tn": 58,
+      "fn": 2,
+      "tpr": 0.8571428571428571,
+      "fpr": 0.04918032786885246,
+      "precision": 0.8,
+      "recall": 0.8571428571428571
+    },
+    {
+      "threshold": 0.7,
+      "tp": 12,
+      "fp": 2,
+      "tn": 59,
+      "fn": 2,
+      "tpr": 0.8571428571428571,
+      "fpr": 0.03278688524590164,
+      "precision": 0.8571428571428571,
+      "recall": 0.8571428571428571
+    },
+    {
+      "threshold": 0.8,
+      "tp": 11,
+      "fp": 2,
+      "tn": 59,
+      "fn": 3,
+      "tpr": 0.7857142857142857,
+      "fpr": 0.03278688524590164,
+      "precision": 0.8461538461538461,
+      "recall": 0.7857142857142857
+    },
+    {
+      "threshold": 0.9,
+      "tp": 8,
+      "fp": 2,
+      "tn": 59,
+      "fn": 6,
+      "tpr": 0.5714285714285714,
+      "fpr": 0.03278688524590164,
+      "precision": 0.8,
+      "recall": 0.5714285714285714
+    }
+  ],
+  "resultsFile": "bench/results/corrective-action-v1.receipts.jsonl",
+  "invalidJudgments": 0,
+  "answeredAccuracy": 0.9009009009009009,
+  "caseSuccessRate": 1,
+  "caseExactMatchRate": 0.7948717948717948,
+  "systemDecisionAccuracy": 0.8611111111111112,
+  "systemDecisionQuestion": "next",
+  "confusion": {
+    "next": {
+      "classes": [
+        "ask_user",
+        "change_approach",
+        "continue",
+        "done",
+        "retry"
+      ],
+      "matrix": {
+        "ask_user": {
+          "ask_user": 5,
+          "change_approach": 0,
+          "continue": 0,
+          "done": 0,
+          "retry": 0,
+          "__invalid__": 0
+        },
+        "change_approach": {
+          "ask_user": 0,
+          "change_approach": 10,
+          "continue": 0,
+          "done": 0,
+          "retry": 0,
+          "__invalid__": 0
+        },
+        "continue": {
+          "ask_user": 0,
+          "change_approach": 2,
+          "continue": 6,
+          "done": 1,
+          "retry": 0,
+          "__invalid__": 0
+        },
+        "done": {
+          "ask_user": 0,
+          "change_approach": 0,
+          "continue": 0,
+          "done": 4,
+          "retry": 0,
+          "__invalid__": 0
+        },
+        "retry": {
+          "ask_user": 0,
+          "change_approach": 1,
+          "continue": 0,
+          "done": 1,
+          "retry": 6,
+          "__invalid__": 0
+        }
+      },
+      "perClass": {
+        "ask_user": {
+          "precision": 1,
+          "recall": 1,
+          "support": 5
+        },
+        "change_approach": {
+          "precision": 0.7692307692307693,
+          "recall": 1,
+          "support": 10
+        },
+        "continue": {
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "support": 9
+        },
+        "done": {
+          "precision": 0.6666666666666666,
+          "recall": 1,
+          "support": 4
+        },
+        "retry": {
+          "precision": 1,
+          "recall": 0.75,
+          "support": 8
+        }
+      }
+    }
+  },
+  "failuresByCode": {},
+  "accountingVersion": "inclusive/1",
+  "accountingProvenance": "recomputed from stored receipts without new model calls; failed-case labels recovered per round-2 OpenRouter runs (Oct 2026): 3 failed completion cases and 1 failed 2-question adversarial case from the stored assessment; labels are the authored ground-truth labels for those same case ids (identical ids and labels in mission-completion-v1/adversarial-review-v1 datasets), not model output"
+}

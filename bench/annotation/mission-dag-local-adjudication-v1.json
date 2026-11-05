@@ -1,0 +1,35 @@
+{
+  "schema": "jev-dag-local-adjudication/1",
+  "reviewerId": "jev-dag-local-ai-adjudicator-2026-11-03",
+  "reviewStatus": "AI-generated; not human-reviewed",
+  "criterionCases": [
+    {
+      "caseRef": "090939033e7d4670",
+      "criterionId": "criterion-01",
+      "expected": "UNCERTAIN",
+      "rationale": "The criterion requires an encrypted nightly backup record. The trusted claimedOutcome says a host-observed record covers the primary region, but does not establish encryption. The verifier reports result: satisfied and observedResult: ‘all 1 paths match (tree f11d27bfbbdc2467875849406b663e5747384ea61f962fd6f901169e3314e5c2)’; that path match confirms file state but does not expose encryption. So the supplied evidence establishes a record exists, but does not establish that it is encrypted. The original objective also requires backups in every region. The claim explicitly says secondary regions are not represented, which leaves that broader regional scope uncovered. That affects objective coverage, but does not change this criterion-local decision: the criterion itself does not specify regional coverage.",
+      "resolvesDisagreement": "Reviewer A=FULFILLED vs reviewer B=UNCERTAIN; adjudicated UNCERTAIN because encryption is not substantiated by the supplied evidence."
+    }
+  ],
+  "disagreements": [
+    {
+      "caseRef": "090939033e7d4670",
+      "criterionId": "criterion-01",
+      "reviewerA": "FULFILLED",
+      "reviewerB": "UNCERTAIN",
+      "adjudicator": "UNCERTAIN",
+      "rationale": "The criterion requires an encrypted nightly backup record. The trusted claimedOutcome says a host-observed record covers the primary region, but does not establish encryption. The verifier reports result: satisfied and observedResult: ‘all 1 paths match (tree f11d27bfbbdc2467875849406b663e5747384ea61f962fd6f901169e3314e5c2)’; that path match confirms file state but does not expose encryption. So the supplied evidence establishes a record exists, but does not establish that it is encrypted. The original objective also requires backups in every region. The claim explicitly says secondary regions are not represented, which leaves that broader regional scope uncovered. That affects objective coverage, but does not change this criterion-local decision: the criterion itself does not specify regional coverage."
+    }
+  ],
+  "independenceAttestation": {
+    "reviewerId": "jev-dag-local-ai-adjudicator-2026-11-03",
+    "schema": "jev-dag-local-independence-attestation/1",
+    "reviewStatus": "AI-generated; not human-reviewed",
+    "annotationSha256": "bd6a494630a4b74a99089507fa1097b86882b7981f88d77238a833610b8f17a2",
+    "declaration": "I adjudicated only the supplied disputed case and both review rationales; I did not see Jev predictions or other cases/results; I did not author cases or policy. This is AI-generated and not human-reviewed.",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAbRavMxMYBbQPCSr/3LEw3JGIBOJNteEkHpdHqLO3B7M=\n-----END PUBLIC KEY-----\n",
+    "signatureBase64": "D+HILmgygxtSAEuyS93e67qu++Y+ySwdjNGF4WlBw5QbyZciT8l3ItXliIGidDFZBPOJTx3GaoZW5H5Cb5vJBg==",
+    "keyType": "Ed25519",
+    "humanSignature": false
+  }
+}

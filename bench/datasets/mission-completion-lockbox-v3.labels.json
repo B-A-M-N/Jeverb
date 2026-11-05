@@ -1,0 +1,1304 @@
+{
+  "f3-billing-refund-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-full-complete-v0": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-full-complete-v1": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-full-complete-v2": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-full-complete-v3": {
+    "category": "full-complete",
+    "rationale": "positive control: every clause attested with solid outcomes and receipts",
+    "expected": "COMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-search-index-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-backup-restore-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-notify-sms-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-rate-limit-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-audit-log-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-feature-flag-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-cert-rotate-unresolved-blocker": {
+    "category": "unresolved-blocker",
+    "rationale": "an external credential dependency is unresolved",
+    "expected": "BLOCKED",
+    "preflight": "BLOCKED"
+  },
+  "f3-log-retention-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-pagination-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-oauth-scope-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cache-ttl-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-queue-dlq-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-health-probe-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-metrics-dash-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-secret-rotate-pending-operations": {
+    "category": "pending-operations",
+    "rationale": "two operations are still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-billing-refund-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-search-index-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-backup-restore-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-notify-sms-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-rate-limit-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-audit-log-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-feature-flag-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cert-rotate-uncertain-operations": {
+    "category": "uncertain-operations",
+    "rationale": "one operation outcome is unknown",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-log-retention-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-pagination-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-oauth-scope-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cache-ttl-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-queue-dlq-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-health-probe-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-metrics-dash-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-secret-rotate-missing-evidence-ref": {
+    "category": "missing-evidence-ref",
+    "rationale": "criterion 1 has an outcome but no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-billing-refund-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-search-index-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-backup-restore-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-notify-sms-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-rate-limit-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-audit-log-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-feature-flag-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cert-rotate-missing-outcome": {
+    "category": "missing-outcome",
+    "rationale": "criterion 1 has no recorded outcome",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-log-retention-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-pagination-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-oauth-scope-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cache-ttl-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-queue-dlq-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-health-probe-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-metrics-dash-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-secret-rotate-tests-failed": {
+    "category": "tests-failed",
+    "rationale": "the test suite did not pass",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-billing-refund-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-search-index-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-backup-restore-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-notify-sms-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-rate-limit-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-audit-log-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-feature-flag-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cert-rotate-tests-not-independent": {
+    "category": "tests-not-independent",
+    "rationale": "tests passed but were not independently verified",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-log-retention-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-pagination-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-oauth-scope-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-cache-ttl-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-queue-dlq-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-health-probe-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-metrics-dash-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-secret-rotate-tests-ref-missing": {
+    "category": "tests-ref-missing",
+    "rationale": "tests passed but carry no evidence reference",
+    "expected": "INCOMPLETE",
+    "preflight": "INCOMPLETE"
+  },
+  "f3-billing-refund-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-search-index-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-backup-restore-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-notify-sms-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-rate-limit-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-audit-log-empty-objective": {
+    "category": "empty-objective",
+    "rationale": "no objective is stated; nothing can be judged fulfilled",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-feature-flag-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-cert-rotate-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-log-retention-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-pagination-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-oauth-scope-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-cache-ttl-duplicate-criterion-ids": {
+    "category": "duplicate-criterion-ids",
+    "rationale": "two criteria share one id; coverage cannot be established",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "INSUFFICIENT_EVIDENCE"
+  },
+  "f3-queue-dlq-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-narrow-outcome": {
+    "category": "narrow-outcome",
+    "rationale": "criterion 1 outcome covers only part of its statement",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-contradictory-outcome": {
+    "category": "contradictory-outcome",
+    "rationale": "criterion 1 outcome states the work was deferred",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-pagination-missing-scope": {
+    "category": "missing-scope",
+    "rationale": "the objective's second clause has no criterion at all",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-search-index-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-vague-outcome": {
+    "category": "vague-outcome",
+    "rationale": "criterion 1 outcome is non-empty but unverifiable",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-pagination-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-stale-build": {
+    "category": "stale-build",
+    "rationale": "the evidence cites a superseded build; current behavior unmeasured",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-search-index-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-ambiguous-outcome": {
+    "category": "ambiguous-outcome",
+    "rationale": "the outcome supports two readings; fulfillment cannot be decided",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-pagination-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-oauth-scope-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-cache-ttl-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-queue-dlq-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-health-probe-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-metrics-dash-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-secret-rotate-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-search-index-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-contradictory-pair": {
+    "category": "contradictory-pair",
+    "rationale": "the two criterion outcomes contradict each other",
+    "expected": "INSUFFICIENT_EVIDENCE",
+    "preflight": "ready"
+  },
+  "f3-billing-refund-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-search-index-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-backup-restore-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-notify-sms-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-rate-limit-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-audit-log-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-feature-flag-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-cert-rotate-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  },
+  "f3-log-retention-pending-item": {
+    "category": "pending-item",
+    "rationale": "the outcome admits the named item is still pending",
+    "expected": "INCOMPLETE",
+    "preflight": "ready"
+  }
+}

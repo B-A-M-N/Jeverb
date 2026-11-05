@@ -1,0 +1,27 @@
+{
+  "schema": "jeverb-dag-local-coverage-gap-attempt/1",
+  "trustMode": "untrusted local development; advisory decision only",
+  "requestCount": 1,
+  "provider": "jev-gateway",
+  "model": "typesafe/jev-1.14-20261014",
+  "questionHash": "a7ba61997e1c13a6e1c0d50049d2d6cc656070a9c787c03a1a2361f2000df4dc",
+  "evidenceDigest": "bf66f765890bd2d5aa4311538352bb07b6f9bcdb3b7f350a8955308a70ae0b7d",
+  "graphRevision": "ccfb7161f6e468d309adfe62096f43eb8626afcd2f515e3e6ecbd362d1cf0ebb",
+  "contextHash": "827b2f5ec5fd00ef9a9872cd2a2a0ac4f1dc3bf5eb6ad5b5e814149ae2bbb69d",
+  "disposition": "UNCERTAIN",
+  "choice": "UNCERTAIN",
+  "confidence": 0.18,
+  "probabilities": {
+    "FULFILLED": 0.34,
+    "NOT_FULFILLED": 0.21,
+    "UNCERTAIN": 0.45
+  },
+  "latencyMs": 339,
+  "inputTokens": 1926,
+  "outputTokens": 90,
+  "costUsd": 0.000080892,
+  "selectedProbe": "revoked-membership",
+  "probeSelectionSource": "jev",
+  "probeSelectionReason": null,
+  "productionTerminalAuthorized": false
+}

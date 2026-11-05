@@ -1,0 +1,1 @@
+{"event":"PostToolUseFailure","stdin":{"session_id":"jeverb-qualification-failure","hook_event_name":"PostToolUseFailure","tool_name":"Bash","tool_use_id":"qualification-failure-1","tool_input":{"command":"npm test"},"error":"Exit code 1"}}

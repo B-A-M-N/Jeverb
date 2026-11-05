@@ -1,0 +1,94 @@
+{
+  "schema": "jev-live-graph-integration/v1",
+  "createdAt": "2026-11-03T22:45:57.497Z",
+  "endpoint": "https://openrouter.ai/api/v1",
+  "requestedModel": "typesafe/jev-latest",
+  "graphTool": "jev_execute_graph",
+  "scope": "advisory Jev branch traversal only; no shell nodes; no qualification admission claimed",
+  "requestCeiling": 2,
+  "calls": [
+    {
+      "provider": "openrouter",
+      "model": "typesafe/jev-1.14-20261014",
+      "correlationId": "gen-dec-1793745957-f9dKkfLVJ43nf2IAkDN8",
+      "questionHash": "d684358bd748f1e0076d3c6aad13228f56ed43705e7970efe33814cfe2bbc396",
+      "answers": {
+        "route": {
+          "type": "choice",
+          "choice": "defer",
+          "probabilities": {
+            "execute": 0.05,
+            "defer": 0.95
+          },
+          "confidence": 0.9
+        }
+      },
+      "usage": {
+        "input_tokens": 376,
+        "output_tokens": 33,
+        "cost_usd": 0.000015792
+      },
+      "latency_ms": 289
+    },
+    {
+      "provider": "openrouter",
+      "model": "typesafe/jev-1.14-20261014",
+      "correlationId": "gen-dec-1793745957-JMgd21VNMbOX3LiPc1HJ",
+      "questionHash": "333eab7807b0f0b868df0b5494be7ae74a685b6a0167fb12a0f49e0dcc13e7bd",
+      "answers": {
+        "q": {
+          "type": "noul",
+          "noul": 0.44
+        }
+      },
+      "usage": {
+        "input_tokens": 631,
+        "output_tokens": 20,
+        "cost_usd": 0.000026502
+      },
+      "latency_ms": 153
+    }
+  ],
+  "graph": {
+    "runId": "69a22cfd-f2cc-48ce-9f40-724edaccf581",
+    "graphHash": "8df42a2b2c0fb60e3c252d5fa4f71770e563c3fbc93f15cd03f724cd55cb9f6d",
+    "succeeded": 2,
+    "skipped": 1,
+    "failed": 0,
+    "results": [
+      {
+        "nodeId": "route",
+        "status": "succeeded",
+        "attempts": 1,
+        "decision": {
+          "route": {
+            "type": "choice",
+            "choice": "defer",
+            "probabilities": {
+              "execute": 0.05,
+              "defer": 0.95
+            },
+            "confidence": 0.9
+          }
+        }
+      },
+      {
+        "nodeId": "execute-branch",
+        "status": "skipped",
+        "attempts": 0
+      },
+      {
+        "nodeId": "defer-branch",
+        "status": "succeeded",
+        "attempts": 1,
+        "decision": {
+          "q": {
+            "type": "noul",
+            "noul": 0.44
+          }
+        }
+      }
+    ]
+  },
+  "elapsed_ms": 549
+}

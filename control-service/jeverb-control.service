@@ -1,0 +1,32 @@
+[Unit]
+Description=Jeverb protected master-switch control service
+After=polkit.service
+Requires=polkit.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+RuntimeDirectory=jeverb-control
+RuntimeDirectoryMode=0755
+StateDirectory=jeverb
+StateDirectoryMode=0755
+ExecStart=/usr/bin/python3 /usr/lib/jeverb/control-service/jeverb_control_service.py
+Restart=on-failure
+RestartSec=1
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/jeverb-control /var/lib/jeverb
+RestrictAddressFamilies=AF_UNIX
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+LockPersonality=true
+MemoryDenyWriteExecute=true
+RestrictRealtime=true
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

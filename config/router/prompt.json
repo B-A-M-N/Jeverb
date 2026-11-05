@@ -1,0 +1,1 @@
+{"advisory_only":true,"note":"Effort router is a classifier only in v1; it never changes model or reasoning effort.","routes":[{"effort":"high","patterns":["urgent","blocking","security","incident","outage"]},{"effort":"standard","patterns":["refactor","migrate","benchmark"]},{"effort":"low","patterns":[]}],"version":1}

@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "jev",
+  "displayName": "Jev",
+  "version": "0.6.3",
+  "description": "Puts a fast calibrated classifier at the harness boundaries: hands Claude a note about a risky tool call, denies the two block-grade cases once with a reason Claude can answer, flags tool results that read like prompt injection, and catches a turn that stops short of the work it was asked to do. Advisory to the agent, never a prompt to you, and fail-open.",
+  "author": {
+    "name": "Brainwires"
+  },
+  "homepage": "https://github.com/Brainwires/jevwire#claude-code-plugin",
+  "repository": "https://github.com/Brainwires/jevwire",
+  "license": "MIT",
+  "keywords": [
+    "hooks",
+    "permissions",
+    "guardrails",
+    "prompt-injection",
+    "typesafe",
+    "jev",
+    "decision-model",
+    "mcp"
+  ],
+  "userConfig": {
+    "api_key": {
+      "type": "string",
+      "title": "TypeSafe API key",
+      "description": "Key for TypeSafe's Jev API, issued at https://typesafe.ai. Without it the judgment hooks stay inactive and only the deterministic pattern checks run.",
+      "sensitive": true,
+      "required": false
+    },
+    "gate": {
+      "type": "string",
+      "title": "Tool-call gate",
+      "description": "off: no PreToolUse gate at all. advisory: judge writes outside the project, sensitive paths, unrecognized shell commands and MCP tools with unknown effects, then hand Claude a note about what was scored; the two block-grade cases are denied once with a reason Claude can answer. strict: also judge ordinary edits inside the project, and note the cases advisory mode keeps to itself. You are never prompted in any of the three.",
+      "default": "advisory",
+      "options": [
+        "off",
+        "advisory",
+        "strict"
+      ]
+    },
+    "ask_on_trip": {
+      "type": "boolean",
+      "title": "Ask me when a call is denied",
+      "description": "Turn the tripwire's deny into a permission prompt, so you decide instead of Claude. Off by default: the point of this plugin is that it talks to the agent, not to you. It has no effect in dontAsk or bypassPermissions, where there is no prompt to show.",
+      "default": false
+    },
+    "stop_check": {
+      "type": "boolean",
+      "title": "Check the final message before stopping",
+      "description": "When the final message of a turn says part of the requested work is unfinished and is not waiting on you, ask Claude to continue. At most one block per prompt.",
+      "default": true
+    },
+    "screen_results": {
+      "type": "boolean",
+      "title": "Screen fetched text for injected instructions",
+      "description": "Judge WebFetch, WebSearch and MCP tool results for text that gives orders to an AI agent, and tell Claude to treat such a result as data. Never blocks and never rewrites the result.",
+      "default": true
+    },
+    "route_prompts": {
+      "type": "boolean",
+      "title": "Classify each prompt",
+      "description": "Add one advisory line naming the kind of task a prompt is asking for, and whether it reads as ambiguous. Off by default: it costs a call on every prompt.",
+      "default": false
+    },
+    "auto_threshold": {
+      "type": "number",
+      "title": "Certainty threshold",
+      "description": "Probability at or above which a signal counts as established. Lower means more notes. 0.85 is the default; /jev:calibrate replays your own log at other values.",
+      "default": 0.85,
+      "min": 0.5,
+      "max": 0.99
+    },
+    "confidence_threshold": {
+      "type": "number",
+      "title": "Choice confidence threshold",
+      "description": "How peaked a Choice answer's distribution has to be before the prompt-kind line is printed. This is a peakedness statistic, not a probability, so it has its own bar rather than sharing the certainty threshold. Only route_prompts uses it.",
+      "default": 0.85,
+      "min": 0.5,
+      "max": 0.99
+    },
+    "model": {
+      "type": "string",
+      "title": "Jev model",
+      "description": "Versioned id the hooks and MCP server send. Pinned so an alias move cannot shift every probability under thresholds you have tuned. Set jev-latest to follow releases.",
+      "default": "jev-1.13.0"
+    },
+    "lint": {
+      "type": "string",
+      "title": "Semantic code lint on edits",
+      "description": "Judge in-project edits with the model: 'advisory' notes on a swallowed error, a hardcoded URL, a new suppression, a placeholder, or a CLAUDE.md-convention break, and denies a hardcoded secret or an unrequested removed test; 'tripwire' keeps only those two denials; 'off' disables it. A regex gate keeps most edits at zero calls.",
+      "default": "advisory",
+      "options": [
+        "off",
+        "tripwire",
+        "advisory"
+      ]
+    },
+    "lint_conventions": {
+      "type": "boolean",
+      "title": "Check edits against CLAUDE.md",
+      "description": "When linting, also check each edit against the rule lines in your CLAUDE.md (up to 12). Off leaves the built-in checks only.",
+      "default": true
+    },
+    "verify_claims": {
+      "type": "boolean",
+      "title": "Verify the final message's claims",
+      "description": "At Stop, when the final message names a file, identifier or change, check it against git diff HEAD. The file/identifier checks run in code regardless; this toggles only the model reading the diff.",
+      "default": true
+    }
+  },
+  "mcpServers": {
+    "jev": {
+      "command": "node",
+      "args": [
+        "${CLAUDE_PLUGIN_ROOT}/dist/mcp.mjs"
+      ],
+      "env": {
+        "JEV_PLUGIN_API_KEY": "${user_config.api_key}",
+        "JEV_PLUGIN_DAEMON": "1",
+        "JEV_PLUGIN_ROOT": "${CLAUDE_PLUGIN_ROOT}",
+        "CLAUDE_PLUGIN_OPTION_API_KEY": "${user_config.api_key}",
+        "CLAUDE_PLUGIN_OPTION_GATE": "${user_config.gate}",
+        "CLAUDE_PLUGIN_OPTION_ASK_ON_TRIP": "${user_config.ask_on_trip}",
+        "CLAUDE_PLUGIN_OPTION_STOP_CHECK": "${user_config.stop_check}",
+        "CLAUDE_PLUGIN_OPTION_SCREEN_RESULTS": "${user_config.screen_results}",
+        "CLAUDE_PLUGIN_OPTION_ROUTE_PROMPTS": "${user_config.route_prompts}",
+        "CLAUDE_PLUGIN_OPTION_AUTO_THRESHOLD": "${user_config.auto_threshold}",
+        "CLAUDE_PLUGIN_OPTION_CONFIDENCE_THRESHOLD": "${user_config.confidence_threshold}",
+        "CLAUDE_PLUGIN_OPTION_MODEL": "${user_config.model}",
+        "CLAUDE_PLUGIN_OPTION_LINT": "${user_config.lint}",
+        "CLAUDE_PLUGIN_OPTION_LINT_CONVENTIONS": "${user_config.lint_conventions}",
+        "CLAUDE_PLUGIN_OPTION_VERIFY_CLAIMS": "${user_config.verify_claims}"
+      }
+    }
+  }
+}
