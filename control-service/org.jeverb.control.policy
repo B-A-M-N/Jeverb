@@ -4,7 +4,7 @@
  "http://www.freedesktop.org/standards/PolicyKit/1/policyconfig.dtd">
 <policyconfig>
   <vendor>Jeverb</vendor>
-  <vendor_url>https://github.com/Brainwires/jevwire</vendor_url>
+  <vendor_url>https://github.com/B-A-M-N/Jeverb</vendor_url>
   <action id="org.jeverb.control.set-off">
     <description>Turn Jeverb OFF</description>
     <message>Authorize switching Jeverb OFF</message>

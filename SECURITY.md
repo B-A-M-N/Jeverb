@@ -1,7 +1,9 @@
 # Security
 
-Security policy for **jevwire** ([Brainwires/jevwire](https://github.com/Brainwires/jevwire)),
-published on npm as `jevwire` and installed as the Claude Code plugin `jev`.
+Security policy for **Jeverb** ([B-A-M-N/Jeverb](https://github.com/B-A-M-N/Jeverb)).
+The repository retains the `jevwire` npm package and `jev` Claude Code plugin identities
+for compatibility; it is separate from the upstream [`@brainwires/jevwire`](https://github.com/Brainwires/jevwire)
+package and source project.
 
 ## What leaves the machine
 
@@ -203,7 +205,7 @@ permission rules, not in this plugin.
 ## Reporting a vulnerability
 
 Please report security issues privately through GitHub's security advisory flow:
-<https://github.com/Brainwires/jevwire/security/advisories/new>.
+<https://github.com/B-A-M-N/Jeverb/security/advisories/new>.
 
 Do not open a public issue for anything exploitable. This is a small project maintained on a
 best-effort basis, so there is no guaranteed response time — but reports are read, and a fix or an

@@ -10,9 +10,11 @@ API unchanged). `tests/versions.test.ts` pins both identities.
 Distribution (`package.json` `files`) now includes `.muse-plugin/`,
 `config/`, and `THIRD_PARTY_NOTICES.md`.
 
-All notable changes to jevwire ([Brainwires/jevwire](https://github.com/Brainwires/jevwire)) are
-documented in this file. The npm package is published as `jevwire` and the Claude Code plugin is
-`jev`; the repository was renamed to jevwire after 0.3.0.
+This changelog preserves the historical JevWire source and release attribution through the
+upstream [Brainwires/jevwire](https://github.com/Brainwires/jevwire) releases. Jeverb-specific
+changes are labeled separately and are maintained at [B-A-M-N/Jeverb](https://github.com/B-A-M-N/Jeverb).
+The npm package in this repository is named `jevwire` and the Claude Code plugin is `jev` for
+compatibility; they are distinct from upstream's scoped `@brainwires/jevwire` package.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
