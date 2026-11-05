@@ -36,9 +36,9 @@ Jev provides advice at defined decision points. The graph executor owns dependen
 
 ## Project identity and related work
 
-This repository is **Jeverb**, descended from the JevWire codebase and preserving its package/API compatibility track. The npm package and MCP server identify as `jevwire@0.6.3`; the native Muse plugin identifies as `jeverb@0.1.0`. These are distribution identities in the current source, not a claim that upstream JevWire and Jeverb have identical behavior. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+This is the **Jeverb** repository: a separate continuation of JevWire's source, with its own project identity and release history. The npm package and MCP server in this repository are named `jevwire@0.6.3` for compatibility; they are distinct from the upstream scoped npm package `@brainwires/jevwire`. The native Muse plugin identifies as `jeverb@0.1.0`. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
-Jeverb descends from [JevWire](https://github.com/Brainwires/jevwire). It incorporates ideas from the related [JevHook / `jev-hooks`](https://github.com/7hemas7er/jev-hooks) work, including bounded review lanes and calibration discipline, without depending on it at runtime. **JIVE integration is experimental:** Jeverb independently ports selected [JIVE](https://github.com/merijjeyn/jive) graph-execution patterns and exposes some JIVE-shaped interfaces, but does not claim full compatibility. Workspace artifact semantics and imported conversation history are not implemented as JIVE-compatible features. See [Limitations](docs/LIMITATIONS.md).
+Jeverb retains JevWire source attribution in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) but is released from its own repository at [B-A-M-N/Jeverb](https://github.com/B-A-M-N/Jeverb). It incorporates ideas from the separate [JevHook / `jev-hooks`](https://github.com/7hemas7er/jev-hooks) work, including bounded review lanes and calibration discipline, without depending on it at runtime. **JIVE integration is experimental:** Jeverb independently ports selected [JIVE](https://github.com/merijjeyn/jive) graph-execution patterns and exposes some JIVE-shaped interfaces, but does not claim full compatibility. Workspace artifact semantics and imported conversation history are not implemented as JIVE-compatible features. See [Limitations](docs/LIMITATIONS.md).
 
 ### Meta technology
 
@@ -127,4 +127,4 @@ See [Limitations](docs/LIMITATIONS.md), [Traceability](docs/TRACEABILITY.md), an
 
 Read [Development](docs/DEVELOPMENT.md) before changing code. Preserve the domain ownership rules in [`AGENTS.md`](AGENTS.md) and add tests for behavioral changes. Report vulnerabilities using [`SECURITY.md`](SECURITY.md); do not include credentials in issues or logs.
 
-The repository is MIT-licensed; see [`LICENSE`](LICENSE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). The current GitHub remote and package identity retain JevWire lineage. The Jeverb public repository/umbrella navigation should be updated when its canonical public URL is established; no unverified project URL is presented here.
+The repository is MIT-licensed; see [`LICENSE`](LICENSE) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). The canonical repository is [B-A-M-N/Jeverb](https://github.com/B-A-M-N/Jeverb); it is currently private. The upstream JevWire project is separately credited in the third-party notices.

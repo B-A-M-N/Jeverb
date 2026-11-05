@@ -2,7 +2,7 @@
   "name": "jevwire",
   "version": "0.6.3",
   "type": "module",
-  "description": "MCP server and embeddable decision layer for TypeSafe AI's Jev System One model. This fork (Jeverb) adds a native Muse Code plugin track; see README for the dual-track identity.",
+  "description": "Jeverb's MCP server and embeddable decision layer for TypeSafe AI's Jev model, published as jevwire for compatibility. Distinct from the upstream @brainwires/jevwire package.",
   "license": "MIT",
   "bin": {
     "jevwire": "dist/index.js",
@@ -41,12 +41,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Brainwires/jevwire.git"
+    "url": "git+https://github.com/B-A-M-N/Jeverb.git"
   },
   "bugs": {
-    "url": "https://github.com/Brainwires/jevwire/issues"
+    "url": "https://github.com/B-A-M-N/Jeverb/issues"
   },
-  "homepage": "https://github.com/Brainwires/jevwire#readme",
+  "homepage": "https://github.com/B-A-M-N/Jeverb#readme",
   "keywords": [
     "mcp",
     "model-context-protocol",

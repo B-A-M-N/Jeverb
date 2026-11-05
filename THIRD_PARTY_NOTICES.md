@@ -1,5 +1,12 @@
 # Third-party notices
 
+## Brainwires/jevwire (MIT; upstream source)
+Jeverb is a separate continuation of the JevWire source. The original project
+is maintained at [Brainwires/jevwire](https://github.com/Brainwires/jevwire).
+The MIT copyright and permission notice is retained in [`LICENSE`](LICENSE).
+This repository's npm package is named `jevwire` for compatibility; it is
+distinct from the upstream scoped npm package `@brainwires/jevwire`.
+
 ## 7hemas7er/jev-hooks (MIT)
 Review lanes (BLOCK, SECURITY REVIEW, NITS, MERGE), checks/policy calibration
 methodology, and deterministic detector escalation approach. Upstream
